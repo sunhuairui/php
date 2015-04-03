@@ -9,21 +9,55 @@ class IndexController extends Controller {
     }
     
     public function test(){
-    	
     	echo "test";
     }
     
-    public function helloAction(){
+    public function userAction(){
 //     	$this->error('dfafdafda', 'http://www.baidu.com');
 		//$connection = "DB_CONFIG1";
-    	$User =M("User");
-    	$User -> where("id= 10 AND age = 20") ->select();
-    	
-    	dump($User);
-    	echo "hello";
+    	$User =D("User");
+    	//$User -> where("id= 10 AND age = 20") ->select();
+    	//预处理
+//     	$id = 2;
+//     	$age = 20;
+//     	$User -> where("id = %d AND age = %s",array($id,$age)) ->select();
+//     	$User -> where("id=%d AND age = %s",$id,$age) ->select();
+//     	$map["id"] = 2;
+//     	$map["age"] = 20;
+//     	$User -> where($map) ->select();    	
+//     	$User -> field("user.name,role.label")
+//     	->table("think_user user,role role") -> select();
+//   			$data['firstName'] = "王五";
+//   			$data['sex'] = "男";
+//   			$data['age']= "18";  			
+//   			$User -> data($data) -> add();
+//   			$User -> field("id,SUM(age)") -> select();
+//   			$User -> field(array("id","firstName" => "nickname")) ->select();
+//   			$User -> field(true) -> select();
+//           $User -> field("id,sex",true)  ->select();
+// 			 $User -> field("id,firstName,sex,age")->create();
+			 //$User -> where("age=20") -> field("id,firstName") -> limit(5) -> select();
+// 			 $User -> limit("0,3") -> select();			
+// 				$User -> page(1,4)  -> select();
+// 			 $User -> page(3,3) -> select();
+// 			 $User -> field("id,firstName,sex") -> where("age = 20") -> group("firstName") -> select();
+//group and having practice.
+//           $User -> field("id,firstName") -> group("age") -> having("age > 20") -> select();
+          // join  practice.
+//           $User 
+//           -> join("role on role.id = user.role_id") 
+//           -> select();
+          //right join
+          //$User -> join("role on role.user_id = user.id","right") -> select();
+          $user_data = $User -> field("*") -> select();
+          dump($user_data);
+    	    dump($User);
+    	echo "user";
     }
 
-	public function listAction(){
-		echo 'list';
+	public function roleAction(){		
+		$Role = M("Role");		
+		dump($Role);
+		echo 'role';
 	}
 }
