@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<title>Document</title>
+	<link rel="stylesheet" href="/Public/bee/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/Public/bee/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="/Public/bee/css/style.css?20141227">
+</head>
+<body class="yh" id="index">
+	<header class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navlist">
+				<span class="sr-only"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><img src="/Public/bee/images/logo.jpg" alt=""></a>
+		</div>
+		<nav class="collapse navbar-collapse" id="navlist">
+			<ul class="nav navbar-nav">
+				<li class=""><a href="index.html"><span>—</span> 首页 <span>—</span></a></li>
+				<li class="active"><a href="step1.html"><span>—</span> 活动管理 <span>—</span></a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Odiemiao</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="swiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" style="background:url(/Public/bee/images/banner.jpg) no-repeat center / auto 100%"></div>
+			<div class="swiper-slide" style="background:url(/Public/bee/images/banner.jpg) no-repeat center / auto 100%"></div>
+			<div class="swiper-slide" style="background:url(/Public/bee/images/banner.jpg) no-repeat center / auto 100%"></div>
+		</div>
+		<div class="pagination"></div>
+	</div>
+	<div class="container">
+		<div class="tit"><img src="/Public/bee/images/wan.jpg" alt=""></div>
+		<div class="row">
+			<div class="col-lg-4">
+				<img src="/Public/bee/images/1_01.jpg" alt="">
+			</div>
+			<div class="col-lg-4">
+				<img src="/Public/bee/images/1_02.jpg" alt="">
+			</div>
+			<div class="col-lg-4">
+				<img src="/Public/bee/images/1_03.jpg" alt="">
+			</div>
+		</div>
+		<div class="tit"><img src="/Public/bee/images/kuai.jpg" alt=""></div>
+		<div class="imglist">
+			<img src="/Public/bee/images/img_01.jpg" alt="">
+			<img src="/Public/bee/images/img_02.jpg" alt="">
+			<img src="/Public/bee/images/img_03.jpg" alt="">
+			<img src="/Public/bee/images/img_04.jpg" alt="">
+		</div>
+		<div class="tit"><img src="/Public/bee/images/yue.jpg" alt=""></div>
+		<div class="link"><img src="/Public/bee/images/link.jpg" alt=""></div>
+		<div class="tit"><img src="/Public/bee/images/bu.jpg" alt=""></div>
+		<div class="row">
+			<div class="col-lg-3">
+				<img src="/Public/bee/images/1.jpg" alt="">
+			</div>
+			<div class="col-lg-3">
+				<img src="/Public/bee/images/2.jpg" alt="">
+			</div>
+			<div class="col-lg-3">
+				<img src="/Public/bee/images/3.jpg" alt="">
+			</div>
+			<div class="col-lg-3">
+				<img src="/Public/bee/images/4.jpg" alt="">
+			</div>
+		</div>
+		<div class="yue"><img src="/Public/bee/images/y.jpg" alt=""></div>
+	</div>
+	<div class="footer"><img src="/Public/bee/images/blogo.jpg" alt=""></div>
+	<script src="/Public/bee/js/jquery.min.js"></script>	
+	<script src="/Public/bee/js/bootstrap.min.js"></script>	
+	<script src="/Public/bee/js/swiper.min.js"></script>
+	<script>
+	var swiper = new Swiper(".swiper",{
+		mode:"vertical",
+		pagination:'.pagination',
+		autoplay:3000
+	});
+	
+	$(".pagination span").click(function(){
+		swiper.swipeTo($(this).index());
+	});
+	</script>
+</body>
+</html>

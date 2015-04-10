@@ -1,0 +1,2332 @@
+[ 2015-04-07T19:53:58+08:00 ] 127.0.0.1 /index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059327s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000881s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.019532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.019624s ]
+
+[ 2015-04-07T19:54:08+08:00 ] 127.0.0.1 /index.php?s=/Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+NOTIC: [8] Undefined index: lite E:\9ria-dev\bee.9ria.com\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `wp_member` [ RunTime:0.0023s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`public_count`,`extra_field` FROM `wp_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `wp_action` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `wp_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0017s ]
+SQL: UPDATE `wp_member` SET `login`=`login`+1,`last_login_time`='1428407648',`last_login_ip`='2130706433' WHERE `uid` = 1 [ RunTime:0.0015s ]
+
+[ 2015-04-07T19:54:09+08:00 ] 127.0.0.1 /index.php?s=/Admin/Index/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0020s ]
+SQL: SELECT `hide` FROM `wp_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+NOTIC: [8] Use of undefined constant SITE_VERSION - assumed 'SITE_VERSION' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\1ba496491336165adae17468d4999f66.php 第 7 行.
+NOTIC: [8] Use of undefined constant SITE_VERSION - assumed 'SITE_VERSION' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\1ba496491336165adae17468d4999f66.php 第 8 行.
+NOTIC: [8] Use of undefined constant SITE_VERSION - assumed 'SITE_VERSION' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\1ba496491336165adae17468d4999f66.php 第 9 行.
+NOTIC: [8] Use of undefined constant SITE_VERSION - assumed 'SITE_VERSION' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\1ba496491336165adae17468d4999f66.php 第 10 行.
+NOTIC: [8] Use of undefined constant SITE_VERSION - assumed 'SITE_VERSION' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\1ba496491336165adae17468d4999f66.php 第 11 行.
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `wp_addons` [ RunTime:0.0022s ]
+SQL: SELECT `config` FROM `wp_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.104138s ]
+SQL: select version() as v; [ RunTime:0.0014s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055184s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055273s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000383s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.088834s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.088913s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055780s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055273s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.000201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000467s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000541s ]
+
+[ 2015-04-07T19:54:10+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `wp_member` [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`public_count`,`extra_field` FROM `wp_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0035s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.107573s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.107674s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000524s ]
+
+[ 2015-04-07T19:54:13+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000259s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000427s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036023s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036128s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000524s ]
+
+[ 2015-04-07T19:54:17+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000599s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0019s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T19:55:33+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000242s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000329s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035838s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2015-04-07T19:55:38+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T19:55:52+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000250s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000338s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035463s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035575s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000414s ]
+
+[ 2015-04-07T19:55:54+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000666s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T19:59:17+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000250s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000338s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034870s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034974s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000542s ]
+
+[ 2015-04-07T20:02:21+08:00 ] 127.0.0.1 /index.php?s=/Admin/Index/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0020s ]
+SQL: SELECT `hide` FROM `wp_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+NOTIC: [8] Use of undefined constant SITE_VERSION - assumed 'SITE_VERSION' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\1ba496491336165adae17468d4999f66.php 第 7 行.
+NOTIC: [8] Use of undefined constant SITE_VERSION - assumed 'SITE_VERSION' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\1ba496491336165adae17468d4999f66.php 第 8 行.
+NOTIC: [8] Use of undefined constant SITE_VERSION - assumed 'SITE_VERSION' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\1ba496491336165adae17468d4999f66.php 第 9 行.
+NOTIC: [8] Use of undefined constant SITE_VERSION - assumed 'SITE_VERSION' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\1ba496491336165adae17468d4999f66.php 第 10 行.
+NOTIC: [8] Use of undefined constant SITE_VERSION - assumed 'SITE_VERSION' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\1ba496491336165adae17468d4999f66.php 第 11 行.
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `wp_addons` [ RunTime:0.0023s ]
+SQL: SELECT `config` FROM `wp_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010703s ]
+SQL: select version() as v; [ RunTime:0.0014s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004774s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004852s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000370s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.011307s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.011379s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005470s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004852s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.000327s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000512s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000586s ]
+
+[ 2015-04-07T20:16:48+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_member` [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`public_count`,`extra_field` FROM `wp_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000210s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000303s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053719s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000524s ]
+
+[ 2015-04-07T20:16:50+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000292s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000393s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036086s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000543s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2015-04-07T20:17:52+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0028s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000253s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000346s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035112s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035214s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000660s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000738s ]
+
+[ 2015-04-07T20:18:04+08:00 ] 127.0.0.1 /index.php?s=/Admin/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011281s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000589s ]
+
+[ 2015-04-07T20:18:24+08:00 ] 127.0.0.1 /index.php?s=/Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+NOTIC: [8] Undefined index: lite E:\9ria-dev\bee.9ria.com\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `wp_member` [ RunTime:0.0023s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`public_count`,`extra_field` FROM `wp_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `wp_action` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `wp_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0017s ]
+SQL: UPDATE `wp_member` SET `login`=`login`+1,`last_login_time`='1428409104',`last_login_ip`='2130706433' WHERE `uid` = 1 [ RunTime:0.0015s ]
+
+[ 2015-04-07T20:18:24+08:00 ] 127.0.0.1 /index.php?s=/Admin/Index/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `hide` FROM `wp_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+NOTIC: [8] Use of undefined constant SITE_VERSION - assumed 'SITE_VERSION' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\1ba496491336165adae17468d4999f66.php 第 7 行.
+NOTIC: [8] Use of undefined constant SITE_VERSION - assumed 'SITE_VERSION' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\1ba496491336165adae17468d4999f66.php 第 8 行.
+NOTIC: [8] Use of undefined constant SITE_VERSION - assumed 'SITE_VERSION' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\1ba496491336165adae17468d4999f66.php 第 9 行.
+NOTIC: [8] Use of undefined constant SITE_VERSION - assumed 'SITE_VERSION' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\1ba496491336165adae17468d4999f66.php 第 10 行.
+NOTIC: [8] Use of undefined constant SITE_VERSION - assumed 'SITE_VERSION' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\1ba496491336165adae17468d4999f66.php 第 11 行.
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `wp_addons` [ RunTime:0.0022s ]
+SQL: SELECT `config` FROM `wp_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010234s ]
+SQL: select version() as v; [ RunTime:0.0014s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004714s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004794s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000355s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.010954s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.011023s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005269s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004794s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.000191s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000450s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000520s ]
+
+[ 2015-04-07T20:18:27+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_member` [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`public_count`,`extra_field` FROM `wp_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000308s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052525s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052622s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000510s ]
+
+[ 2015-04-07T20:18:28+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000245s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000365s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035911s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036016s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000509s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000648s ]
+
+[ 2015-04-07T20:18:32+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+
+[ 2015-04-07T20:18:38+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+
+[ 2015-04-07T20:19:30+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000288s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000391s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036439s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036547s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000511s ]
+
+[ 2015-04-07T20:19:39+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000701s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T20:20:25+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T20:20:44+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000757s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T20:24:27+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000253s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000361s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038042s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038149s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000524s ]
+
+[ 2015-04-07T20:24:32+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: username E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 199 行.
+
+[ 2015-04-07T20:25:09+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: username E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 199 行.
+
+[ 2015-04-07T20:25:23+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T20:25:44+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000639s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: username E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 199 行.
+
+[ 2015-04-07T20:26:01+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+
+[ 2015-04-07T20:26:14+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+
+[ 2015-04-07T20:27:02+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+
+[ 2015-04-07T20:27:14+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: username E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 198 行.
+
+[ 2015-04-07T20:27:41+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+
+[ 2015-04-07T20:28:28+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: username E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 198 行.
+
+[ 2015-04-07T20:28:52+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T20:29:16+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T20:29:47+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: username E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 198 行.
+
+[ 2015-04-07T20:30:02+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000255s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000391s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037175s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037283s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000454s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000528s ]
+
+[ 2015-04-07T20:30:05+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T20:30:12+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T20:30:27+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: username E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 198 行.
+
+[ 2015-04-07T20:30:43+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000261s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000375s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037297s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037412s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000445s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000534s ]
+
+[ 2015-04-07T20:30:47+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: username E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 198 行.
+
+[ 2015-04-07T20:31:02+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000292s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000402s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037477s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037582s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000500s ]
+
+[ 2015-04-07T20:31:13+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T20:31:40+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: username E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 198 行.
+
+[ 2015-04-07T20:31:52+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0023s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000260s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000374s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038076s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038187s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2015-04-07T20:31:56+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000730s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+
+[ 2015-04-07T20:32:09+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: username E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 198 行.
+
+[ 2015-04-07T20:33:40+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000254s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000373s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039197s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039304s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000543s ]
+
+[ 2015-04-07T20:33:44+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+
+[ 2015-04-07T20:35:09+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T20:35:28+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T20:35:36+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000685s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+NOTIC: [8] Trying to get property of non-object E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 198 行.
+
+[ 2015-04-07T20:35:49+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000370s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036973s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037082s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000463s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000536s ]
+
+[ 2015-04-07T20:35:50+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+
+[ 2015-04-07T20:35:56+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000725s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T20:36:07+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+NOTIC: [8] Trying to get property of non-object E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 198 行.
+
+[ 2015-04-07T20:36:18+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000263s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000373s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037312s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037419s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000508s ]
+
+[ 2015-04-07T20:36:23+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000630s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: username E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 198 行.
+
+[ 2015-04-07T20:41:33+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000254s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000384s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037614s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000520s ]
+
+[ 2015-04-07T20:41:44+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000688s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+
+[ 2015-04-07T20:42:00+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: username E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 198 行.
+
+[ 2015-04-07T20:42:23+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000630s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: username E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 198 行.
+
+[ 2015-04-07T20:43:05+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T20:43:16+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: username E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 198 行.
+
+[ 2015-04-07T20:45:01+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: username E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 198 行.
+
+[ 2015-04-07T20:45:11+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000258s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000370s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038149s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038255s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000598s ]
+
+[ 2015-04-07T20:45:22+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: username E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\UserController.class.php 第 198 行.
+
+[ 2015-04-07T20:45:47+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000244s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000344s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000521s ]
+
+[ 2015-04-07T20:45:55+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T20:50:54+08:00 ] 127.0.0.1 /index.php?s=/Admin/Config/group.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Config/group%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `wp_config` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `wp_config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000212s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000327s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083268s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083370s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2015-04-07T20:50:57+08:00 ] 127.0.0.1 /index.php?s=/Admin/Model/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0023s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Model/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `wp_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0055s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000205s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000310s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075760s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075858s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000608s ]
+
+[ 2015-04-07T20:51:01+08:00 ] 127.0.0.1 /index.php?s=/Admin/Model/index/PHPSESSID/pgojc0jbahoovn82hk06tvgsf2/onethink_admin___forward__/%2Findex.php%3Fs%3D%2FAdmin%2FUser%2Faction.html/bee_home_logged_user/xO7kBR5Up9caZnYfxq7-dZsbx1wBm8cqR8PN-qLY9XgyH4q7ymPHOksNrGMy2Iy9U-cn%3DZBL66sdeie5HZ-RNGxCGOSpC5Vkunt5m/p/2.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Model/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0019s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `wp_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0053s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000212s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000309s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056929s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057077s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000440s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000514s ]
+
+[ 2015-04-07T20:51:05+08:00 ] 127.0.0.1 /index.php?s=/Admin/Model/index/PHPSESSID/pgojc0jbahoovn82hk06tvgsf2/Admin/User/html/bee_home_logged_user/RNGxCGOSpC5Vkunt5m/p/onethink_admin___forward__/%2Findex.php%3Fs%3D%2FAdmin%2FModel%2Findex.html/bee_home_logged_user/xO7kBR5Up9caZnYfxq7-dZsbx1wBm8cqR8PN-qLY9XgyH4q7ymPHOksNrGMy2Iy9U-cn%3DZBL66sdeie5HZ-RNGxCGOSpC5Vkunt5m/p/3.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Model/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `wp_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0053s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000203s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055773s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055871s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2015-04-07T20:51:09+08:00 ] 127.0.0.1 /index.php?s=/Admin/Model/index/PHPSESSID/pgojc0jbahoovn82hk06tvgsf2/Admin/Model/html/bee_home_logged_user/RNGxCGOSpC5Vkunt5m/p/onethink_admin___forward__/%2Findex.php%3Fs%3D%2FAdmin%2FModel%2Findex%2FPHPSESSID%2Fpgojc0jbahoovn82hk06tvgsf2%2Fonethink_admin___forward__%2F%252Findex.php%253Fs%253D%252FAdmin%252FUser%252Faction.html%2Fbee_home_logged_user%2FxO7kBR5Up9caZnYfxq7-dZsbx1wBm8cqR8PN-qLY9XgyH4q7ymPHOksNrGMy2Iy9U-cn%253DZBL66sdeie5HZ-RNGxCGOSpC5Vkunt5m%2Fp%2F2.html/bee_home_logged_user/xO7kBR5Up9caZnYfxq7-dZsbx1wBm8cqR8PN-qLY9XgyH4q7ymPHOksNrGMy2Iy9U-cn%3DZBL66sdeie5HZ-RNGxCGOSpC5Vkunt5m/p/3.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Model/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `wp_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0053s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000234s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000383s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060912s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061014s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000586s ]
+
+[ 2015-04-07T20:51:21+08:00 ] 127.0.0.1 /index.php?s=/Admin/Model/index/PHPSESSID/pgojc0jbahoovn82hk06tvgsf2/Admin/Model/html/bee_home_logged_user/RNGxCGOSpC5Vkunt5m/p/index/PHPSESSID/pgojc0jbahoovn82hk06tvgsf2/onethink_admin___forward__/onethink_admin___forward__/%2Findex.php%3Fs%3D%2FAdmin%2FModel%2Findex%2FPHPSESSID%2Fpgojc0jbahoovn82hk06tvgsf2%2FAdmin%2FUser%2Fhtml%2Fbee_home_logged_user%2FRNGxCGOSpC5Vkunt5m%2Fp%2Fonethink_admin___forward__%2F%252Findex.php%253Fs%253D%252FAdmin%252FModel%252Findex.html%2Fbee_home_logged_user%2FxO7kBR5Up9caZnYfxq7-dZsbx1wBm8cqR8PN-qLY9XgyH4q7ymPHOksNrGMy2Iy9U-cn%253DZBL66sdeie5HZ-RNGxCGOSpC5Vkunt5m%2Fp%2F3.html/bee_home_logged_user/xO7kBR5Up9caZnYfxq7-dZsbx1wBm8cqR8PN-qLY9XgyH4q7ymPHOksNrGMy2Iy9U-cn%3DZBL66sdeie5HZ-RNGxCGOSpC5Vkunt5m/p/2.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Model/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `wp_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0054s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000203s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000294s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054893s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054989s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000520s ]
+
+[ 2015-04-07T20:51:36+08:00 ] 127.0.0.1 /index.php?s=/Admin/model/edit/id/95.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Model/edit%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `wp_model` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `wp_attribute` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`name`,`title`,`is_show` FROM `wp_attribute` WHERE `model_id` = 95  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: icon E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+NOTIC: [8] Undefined index: title E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+NOTIC: [8] Undefined index: sort E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000259s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000350s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [8] Undefined index: attribute_alias E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 140 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066152s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000526s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000606s ]
+
+[ 2015-04-07T20:51:41+08:00 ] 127.0.0.1 /index.php?s=/Admin/Attribute/index/model_id/95.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Attribute/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_attribute` [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_attribute` WHERE `model_id` = 95 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type` FROM `wp_attribute` WHERE `model_id` = 95 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000284s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0024s ]
+SQL: SELECT `title` FROM `wp_model` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0014s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058096s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058182s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000439s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2015-04-07T20:51:47+08:00 ] 127.0.0.1 /index.php?s=/Admin/Attribute/edit/id/769.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Attribute/edit%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 63 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_attribute` [ RunTime:0.0025s ]
+SQL: SELECT `id`,`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type` FROM `wp_attribute` WHERE `id` = 769 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0024s ]
+SQL: SELECT `title`,`name`,`field_group` FROM `wp_model` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000275s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000368s ]
+SQL: SELECT `title` FROM `wp_model` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0016s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045979s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000520s ]
+
+[ 2015-04-07T20:52:15+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_member` [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`public_count`,`extra_field` FROM `wp_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0035s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000328s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000450s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052629s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052732s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000513s ]
+
+[ 2015-04-07T20:52:17+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000256s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000349s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036114s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000529s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000610s ]
+
+[ 2015-04-07T20:53:16+08:00 ] 127.0.0.1 /index.php?s=/Admin/Config/group.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Config/group%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_config` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `wp_config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000199s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000288s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045593s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045690s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000434s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000508s ]
+
+[ 2015-04-07T20:53:18+08:00 ] 127.0.0.1 /index.php?s=/Admin/Config/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Config/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `wp_config` [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_config` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `id`,`name`,`type`,`title`,`group`,`extra`,`remark`,`create_time`,`update_time`,`status`,`value`,`sort` FROM `wp_config` WHERE `status` = 1 ORDER BY sort,id LIMIT 0,20   [ RunTime:0.0036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000234s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+NOTIC: [8] Undefined index: 2 E:\9ria-dev\bee.9ria.com\Application\Admin\Common\function.php 第 203 行.
+NOTIC: [8] Undefined index: 2 E:\9ria-dev\bee.9ria.com\Application\Admin\Common\function.php 第 203 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.089386s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.089472s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000617s ]
+
+[ 2015-04-07T20:53:19+08:00 ] 127.0.0.1 /index.php?s=/Admin/Model/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Model/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `wp_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0055s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000205s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000299s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055547s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055666s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000424s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000500s ]
+
+[ 2015-04-07T20:53:32+08:00 ] 127.0.0.1 /index.php?s=/Admin/model/edit/id/100.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Model/edit%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0023s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `wp_model` WHERE `id` = 100 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `wp_attribute` [ RunTime:0.0037s ]
+SQL: SELECT `id`,`name`,`title`,`is_show` FROM `wp_attribute` WHERE `model_id` = 100  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: title E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+NOTIC: [8] Undefined index: desc E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+NOTIC: [8] Undefined index: cover_url E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+NOTIC: [8] Undefined index: is_show E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+NOTIC: [8] Undefined index: sort E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000351s ]
+NOTIC: [8] Undefined index: attribute_alias E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 140 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047909s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000499s ]
+
+[ 2015-04-07T20:53:35+08:00 ] 127.0.0.1 /index.php?s=/Admin/Attribute/index/model_id/100.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Attribute/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_attribute` [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_attribute` WHERE `model_id` = 100 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type` FROM `wp_attribute` WHERE `model_id` = 100 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000202s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0025s ]
+SQL: SELECT `title` FROM `wp_model` WHERE `id` = 100 LIMIT 1   [ RunTime:0.0015s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048407s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048488s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000524s ]
+
+[ 2015-04-07T20:53:37+08:00 ] 127.0.0.1 /index.php?s=/Admin/Model/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Model/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `wp_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0053s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000196s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000278s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054463s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054559s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000466s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000539s ]
+
+[ 2015-04-07T20:53:49+08:00 ] 127.0.0.1 /index.php?s=/Admin/model/edit/id/103.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Model/edit%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `wp_model` WHERE `id` = 103 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `wp_attribute` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`name`,`title`,`is_show` FROM `wp_attribute` WHERE `model_id` = 103  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: 835 E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+NOTIC: [8] Undefined index: 836 E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+NOTIC: [8] Undefined index: 837 E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000275s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000379s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 129 行.
+NOTIC: [8] Undefined index: attribute_alias E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 140 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048480s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000436s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000518s ]
+
+[ 2015-04-07T20:53:51+08:00 ] 127.0.0.1 /index.php?s=/Admin/Attribute/index/model_id/103.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Attribute/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_attribute` [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_attribute` WHERE `model_id` = 103 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT `id`,`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type` FROM `wp_attribute` WHERE `model_id` = 103 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0043s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000274s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0025s ]
+SQL: SELECT `title` FROM `wp_model` WHERE `id` = 103 LIMIT 1   [ RunTime:0.0015s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053027s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000507s ]
+
+[ 2015-04-07T20:54:25+08:00 ] 127.0.0.1 /index.php?s=/Admin/Attribute/edit/id/872.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Attribute/edit%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 63 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_attribute` [ RunTime:0.0025s ]
+SQL: SELECT `id`,`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type` FROM `wp_attribute` WHERE `id` = 872 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0024s ]
+SQL: SELECT `title`,`name`,`field_group` FROM `wp_model` WHERE `id` = 103 LIMIT 1   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000267s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000365s ]
+SQL: SELECT `title` FROM `wp_model` WHERE `id` = 103 LIMIT 1   [ RunTime:0.0015s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044897s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000493s ]
+
+[ 2015-04-07T20:55:16+08:00 ] 127.0.0.1 /index.php?s=/Admin/Model/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Model/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `wp_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0052s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000281s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055238s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055333s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000421s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000495s ]
+
+[ 2015-04-07T20:55:26+08:00 ] 127.0.0.1 /index.php?s=/Admin/model/edit/id/100.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Model/edit%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `wp_model` WHERE `id` = 100 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `wp_attribute` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`name`,`title`,`is_show` FROM `wp_attribute` WHERE `model_id` = 100  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: title E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+NOTIC: [8] Undefined index: desc E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+NOTIC: [8] Undefined index: cover_url E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+NOTIC: [8] Undefined index: is_show E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+NOTIC: [8] Undefined index: sort E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000351s ]
+NOTIC: [8] Undefined index: attribute_alias E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 140 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048287s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048384s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000520s ]
+
+[ 2015-04-07T20:55:39+08:00 ] 127.0.0.1 /index.php?s=/Admin/Model/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Model/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `wp_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0053s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000205s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000290s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054337s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054434s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000467s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000551s ]
+
+[ 2015-04-07T20:55:49+08:00 ] 127.0.0.1 /index.php?s=/Admin/model/edit/id/100.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Model/edit%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0023s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `wp_model` WHERE `id` = 100 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `wp_attribute` [ RunTime:0.0023s ]
+SQL: SELECT `id`,`name`,`title`,`is_show` FROM `wp_attribute` WHERE `model_id` = 100  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: title E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+NOTIC: [8] Undefined index: desc E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+NOTIC: [8] Undefined index: cover_url E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+NOTIC: [8] Undefined index: is_show E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+NOTIC: [8] Undefined index: sort E:\9ria-dev\bee.9ria.com\Application\Admin\Controller\ModelController.class.php 第 81 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000267s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000356s ]
+NOTIC: [8] Undefined index: attribute_alias E:\9ria-dev\bee.9ria.com\Runtime\Cache\Admin\053760c6c2de64b544ca01608e245a07.php 第 140 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048113s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048209s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000417s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000491s ]
+
+[ 2015-04-07T20:56:08+08:00 ] 127.0.0.1 /index.php?s=/Admin/Model/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Model/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `wp_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0053s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000198s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000280s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056187s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056285s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000440s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2015-04-07T20:57:14+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `wp_member` [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`public_count`,`extra_field` FROM `wp_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000237s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000357s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052300s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052398s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000441s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000515s ]
+
+[ 2015-04-07T20:57:15+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000248s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000342s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035932s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000440s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2015-04-07T20:58:12+08:00 ] 127.0.0.1 /index.php?s=/Admin/Config/group.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Config/group%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_config` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `wp_config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000200s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000527s ]
+
+[ 2015-04-07T20:58:13+08:00 ] 127.0.0.1 /index.php?s=/Admin/Model/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0019s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%Model/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_model` [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `wp_model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0053s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000222s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000372s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055442s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000423s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000496s ]
+
+[ 2015-04-07T20:58:14+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/index.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/index%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_member` [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`public_count`,`extra_field` FROM `wp_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000281s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000384s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055608s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055710s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000501s ]
+
+[ 2015-04-07T21:12:08+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000617s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000750s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036633s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036739s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000511s ]
+
+[ 2015-04-07T21:12:21+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T21:12:26+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T21:13:01+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000653s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T21:13:32+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+
+[ 2015-04-07T21:18:29+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0018s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000419s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035733s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035857s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000458s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000532s ]
+
+[ 2015-04-07T21:18:37+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000676s ]
+SQL: SHOW COLUMNS FROM `wp_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `wp_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0019s ]
+SQL: SELECT `pid` FROM `wp_menu` WHERE ( pid !=0 AND url like '%User/add%' ) ORDER BY sort desc LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `wp_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT  `group` FROM `wp_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`url` FROM `wp_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `wp_menu` WHERE `group` = '公众号管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0017s ]
+

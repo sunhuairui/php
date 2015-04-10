@@ -1,0 +1,12 @@
+[ 2015-04-09T14:06:38+08:00 ] 127.0.0.1 /admin.php?s=/Statistics/rank.html
+ERR: 非法操作:rank
+
+[ 2015-04-09T14:24:10+08:00 ] 127.0.0.1 /admin.php?s=/PublicGroup/edit/model/11.html
+ERR: 非法操作:edit
+
+[ 2015-04-09T15:18:07+08:00 ] 127.0.0.1 /admin.php?s=/Statistics/rank.html
+ERR: 非法操作:rank
+
+[ 2015-04-09T15:23:26+08:00 ] 127.0.0.1 /admin.php?s=/Statistics/rank.html
+ERR: 非法操作:rank
+

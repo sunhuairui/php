@@ -1,0 +1,373 @@
+<extend name="Bee1/common" />
+<block name="style">
+  <link rel="stylesheet" type="text/css" href="/Public/static/simpletooltip/simpletooltip.min.css">
+  <link rel="stylesheet" href="/Public/bee1/css/jquery-ui.css" type="text/css">
+  <link rel="stylesheet" href="/Public/bee1/css/main.css" />
+  <style type="text/css">
+    /*.box{width:100px;height:100px;border: 1px solid #ccc;display: inline-flex;margin: 10px;cursor: pointer;position: relative;}*/
+    .popover-title{background-color:#fff;border-bottom: none;}
+    .popover{display: block;}
+
+    .fileInputContainer{
+        height:30px;
+        line-height: 30px;
+        padding-top: 10px;
+        position:relative;
+        width: 200px;
+        cursor: pointer;
+    }
+    .fileInputContainer em{
+      position: relative;
+      bottom: 11px;
+      cursor: pointer;
+    }
+    .fileInput{
+        width: 200px;
+        height: 30px;
+        overflow: hidden;
+        font-size: 300px;
+        position:absolute;
+        right:0;
+        top:0;
+        opacity: 0;
+        filter:alpha(opacity=0);
+        cursor:pointer;
+    }
+    .uploadcoupon{
+        width: 148px;
+        height: 30px;
+        overflow: hidden;
+        font-size: 300px;
+        position:absolute;
+        /*right:0;*/
+        top:0;
+        opacity: 0;
+        filter:alpha(opacity=0);
+        cursor:pointer;
+    }
+  .edit-bar{font-size: 12px;color: #000;}
+  .label{color: #000;}
+
+  input.error{
+    border: 1px solid red!important;
+  }
+  
+  .img-preview.act{
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+  }
+
+  .img-preview.act>img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+  }
+  /** 日期组件样式 **/
+  .icoCalendar{/*display:inline-block;width:20px;height:20px;*/background: url(/Public/bee1/images/sprite.png) right center no-repeat;background-position: 177px -1265px;}
+    /*step 4*/
+    /*.error{border: 1px solid red !important;}
+    .errdlg{position: absolute;  top: 0%;  left: 0%;  width: 100%;  height: 100%;  background-color: black;  z-index:1001;  -moz-opacity: 0.5;  opacity:.5;  filter: alpha(opacity=.5);}
+    .errmsg{position: absolute; z-index:1002; left: 0;right: 0;margin: auto;bottom: 0;top: 0;}
+    .errmsg .errmsg-w{width: 30%;min-height: 20%;background-color: white;margin: auto;margin-top: 20%;position: relative;border: 1px solid #fff;-moz-border-radius: 15px;-webkit-border-radius: 15px;border-radius:15px;-webkit-box-dow: 5px 5px 6px #999;-moz-box-shadow: 5px 5px 6px #999;box-shadow: 5px 5px 6px #999;}
+    .errmsg .errmsg-c{padding: 20px;color: red;font-size: 20px;}*/
+    .imgsizetips{float: right;margin-right: 10px;font-size: 20px;}
+    .editor .cate .item{margin:5px 19px 0 0;}
+  </style>
+</block>
+<block name="script">
+  <script type="text/javascript" src="/Public/static/simpletooltip/simpletooltip.min.js"></script>
+  <script type="text/javascript" src="/Public/bee1/uploadjs/jquery.ui.widget.js"></script>
+  <script type="text/javascript" src="/Public/bee1/uploadjs/jquery.iframe-transport.js"></script>
+  <script type="text/javascript" src="/Public/bee1/uploadjs/jquery.fileupload.js"></script>
+  <script type="text/javascript" src="/Public/bee1/js/jquery-ui-1.11.3-min.js"></script>
+  <script>
+      var gamecreator = gamecreator || {};
+      gamecreator.app_id = "{$app_id}";
+      gamecreator.static_url = '/Public/gamecreator/app/';
+      gamecreator.check_app_name_url = "{:U('checkName')}";
+      gamecreator.write_file_url = "{:U('write')}";
+      gamecreator.replace_res_file = "{:U('replace')}";
+      gamecreator.get_app_libs_url = "{:U('libs')}";
+      gamecreator.get_app_files_url = "{:U('codelist')}";
+      gamecreator.mode = '{$mode}';
+      gamecreator.raffletypes = "{$raffletypes}".split(',');
+      gamecreator.time = new Date().getTime();
+
+      var setting = {$setting};
+      var prizes  = {$prizes};
+      var mode    = '{$mode}';
+      var token   = '{$token}';
+      var appid   = {$appid};
+      function AutoResizeImage(maxWidth,maxHeight,srcwidth,srcheight){ 
+            var hRatio; 
+            var wRatio; 
+            var Ratio = 1; 
+            var w = srcwidth; 
+            var h = srcheight; 
+            wRatio = maxWidth/w; 
+            hRatio = maxHeight/h; 
+            if (maxWidth == 0 && maxHeight == 0) { 
+                Ratio = 1; 
+            } else if (maxWidth == 0) {
+                if (hRatio < 1) {Ratio = hRatio;} 
+            } else if (maxHeight == 0) { 
+                if (wRatio < 1){Ratio = wRatio;} 
+            } else if (wRatio < 1 || hRatio < 1) { 
+                Ratio = (wRatio<=hRatio?wRatio:hRatio); 
+            } 
+            if (Ratio<1) { 
+                w = w * Ratio; 
+                h = h * Ratio; 
+            } 
+      	
+            var left=(160-w)/2;
+            var top=(160-h)/2;
+            return 'width:'+w+'px; height:'+h+'px;left:'+left+'px;top:'+top+'px;';
+        }
+  /**音乐关闭开启 auth@changzhengfei **/ 
+        function audioSwitch(el){
+            var switch_var = gamecreator.tmpsdata.share['setting']['switch'];
+            if($(el).find("i").hasClass('audioBtn')){
+                if(switch_var == "true" ){
+                    gamecreator.tmpsdata.share['setting']['switch']="false";
+                    bee.write_file('template.json', gamecreator.tmpsdata, function(res){
+                        $(document).trigger("bee.reloadgame");
+                        $(el).find("#audio").attr("action-name",'false'); 
+                    }, function(res){
+                    });
+                } 
+                    $(el).find("i").removeClass('audioBtn').addClass("noAudioBtn");
+                    switch_var='';
+            }else{
+                var switch_var1 = gamecreator.tmpsdata.share['setting']['switch'];
+                if(switch_var1 == "false" ){
+                    gamecreator.tmpsdata.share['setting']['switch']="true";
+                    bee.write_file('template.json', gamecreator.tmpsdata, function(res){
+                        $(document).trigger("bee.reloadgame");
+                        $(el).find("#audio").attr("action-name",'true');
+                    }, function(res){
+                    });
+                }
+                    $(el).find("i").removeClass('noAudioBtn').addClass("audioBtn");
+            }
+        }
+        
+      $(function(){
+        //监听重新加载游戏事件
+        $(document).bind("bee.reloadgame", function(event){
+          if(checkbroswer){
+            $("#preview_proxy_ifram").html('<iframe id="preview_proxy"  style="margin-left:-23px;border:none" class="frame" sandbox="allow-scripts allow-same-origin" name="preview_proxy" style="border:none;" src="'+'/app/proxy/' + new Date().getTime() + "/" + gamecreator.app_id + '/?openid=otuWJjvQKhb9nn1xL8v-IRrgxct8"></iframe>')
+            // $("#preview_proxy").attr({src:"/app/proxy/" + new Date().getTime() + "/" + gamecreator.app_id + "/?openid=otuWJjvQKhb9nn1xL8v-IRrgxct8"});
+          }
+        });
+         
+        $(document).bind("bee.removepopover", function(event){
+          if(bee.replacetabs.dlg){bee.replacetabs.dlg.remove();}
+        });
+
+        // 读取template.json文件，对替换游戏资源部分进行渲染
+        bee.get_template(gamecreator.app_id, function (data){
+          gamecreator.tmpsdata = data;
+          console.log(data);
+          var vars = data.templateVars;
+          var var1 = data.share;
+          var categories = data.templateCategory;
+          for (var cateIndex in categories) {
+            var html = '<li> <h4>'+ cateIndex +'</h4>';
+            console.log('cateIndex:' + cateIndex);
+            for (var resourcename in categories[cateIndex]) {
+              var key = categories[cateIndex][resourcename];
+              if (vars[key]) {
+                if (vars[key]['type'] == 'IMAGE') {
+                  html +='<div class="item t-image box" action-data="'+ vars[key]['texUrl'] +'" action-type="IMAGE" name="' + key + '" title="' + vars[key]['desc'] + '">\
+                    <div class="icon">\
+                      <div type="image" class="imgbox" style="background-image: url(\'/Public/gamecreator/app/'+gamecreator.app_id+'/'+vars[key]['texUrl']+'?t='+gamecreator.time+'\');'+AutoResizeImage(100,100,vars[key]['originW'],vars[key]['originH'])+'"></div>\
+                    </div>\
+                    <p><a href="#">'+vars[key]['desc']+'</a> <span>推荐尺寸：<i class="fblue">' + vars[key]['originW'] + 'px*' + vars[key]['originH'] + 'px</i></span></p>\
+                  </div>';
+                }else if(vars[key]['type'] == 'STRING'){
+                  html+='<div class="item t-text box" name="desc3" title="'+vars[key]['value']+'" action-data="'+ key +'" action-type="STRING" action-name="'+vars[key]['desc']+'">\
+                    <div class="icon">\
+                      <div type="text" class="strbox" style="word-break:break-word;">'+vars[key]['value']+'</div>\
+                    </div>\
+                    <p>'+vars[key]['desc']+'</p>\
+                  </div>';
+                }else if(vars[key]['type'] == 'AUDIO'){
+                  html+='<div class="item t-text box" name="'+vars[key]['recommendSize']+'" title="'+vars[key]['desc']+'" action-data="'+ vars[key]['texUrl'] +'" action-type="AUDIO" action-name="'+var1['setting']['switch']+'">\
+                    <div class="icon">\
+                    <div id="audio" name="'+ vars[key]['name']+'" action-name="'+var1['setting']['switch']+'"></div>\
+                      <div type="image" class="imgbox" style="word-break:break-word;background-image: url(\'/Public/bee1/images/musicicon.png\');"></div>\
+                    </div>\
+                    <p><a href="#">'+vars[key]['desc']+'</a><span>推荐时长：<i class="fblue">'+ vars[key]['recommendTime'] +'</i></span></p>\
+                  </div>';
+                }else{}
+              }else{
+                console.log('vars不存在');
+              }
+            }
+            html+='</li>';
+            $(".box-container").append(html);
+          }
+          
+        /**音乐状态设置加载 auth@changzhengfei **/ 
+            var musicSwitch =gamecreator.tmpsdata.share['setting']['switch'];
+            var bgAudio     =gamecreator.tmpsdata.share['setting']['bgAudio'];
+            if(bgAudio=='true'){ 
+                if(musicSwitch =='true'){
+                    $(".bgAudioBtn").find("i").removeClass('noAudioBtn').addClass("audioBtn");
+                }else{
+                    $(".bgAudioBtn").find("i").removeClass('audioBtn').addClass("noAudioBtn");
+                }
+            }else{ 
+                $('.bgAudioBtn').remove();
+            }
+        });
+    
+        //页面默认加载游戏
+        setTimeout(function(){
+          $(document).trigger("bee.reloadgame");
+        },2000);
+        //显示弹出框
+        $(".box-container").on("click", ".box", function (e){
+          bee.replacepanel($(e.target).closest(".box"));
+          e.stopPropagation();
+        });
+
+        //监听页面点击事件，去掉弹出框
+        $(document).on("click",function(e){
+          $(document).trigger('bee.removepopover');
+        });
+      });
+      
+    // 弹出提示
+    var tips = function(){
+        tipsEvt = $('.simpletooltip').simpletooltip({
+            themes: {
+                'blue':{
+                    background_color : '#fff',
+                    color:'#000',
+                }
+            }
+        });
+    };
+
+    var prizeupload = function(el,callback){
+      $(el).find(".prize_uploader").fileupload({
+        dataType: 'text',
+        done: function (e, data) {
+            console.log(data.result);
+            if(data.result){
+                var result = JSON.parse(data.result);
+                console.log(result);
+                if(result.success){
+                    var showbox =  $(el).find(".img-preview");
+                    showbox.addClass('act').attr("action-name",result.filename).html('<img src="/Public/gamecreator/app/'+token+'/'+result.filename+'?t='+new Date().getTime()+'">');
+                    $(this).attr('data-url','/index.php?s=/Home/editor/settingUpload/appid/'+gamecreator.app_id+'/filename/'+result.filename+'.html');
+                }else{
+                  _errDlg(result.msg);
+                }
+                callback(result);
+            }
+        },
+      });
+    };
+ 
+    function setlink(key) {
+        var value = '';
+        if (key == 'linkname') {
+            value = $("#linkname").val();
+            if (value == '') {
+                $("#showerr").html('链接描述不能为空').show();
+                return false;
+            }
+        } else if (key == 'linkpath') {
+            value = $("#linkpath").val();
+            if (value == '') {
+                $("#showerr").html('链接地址不能为空').show();
+                return false;
+            }            
+        } else if (key == 'islinkdesc') {
+            value = $("#isshow").val();
+        }
+        var urllink = "{:U('setinglink', 'id='.$appid)}";
+        var data = {};
+        data[key] = value;
+        $.post(urllink, data, function(res) {
+            if (res.error) {
+                $("#showerr").html(res.error).show();
+            } else {
+                $("#showerr").html('').hide();
+            }
+        });
+    }
+     
+
+    $(function() {
+        setting.linkname && $("#linkname").val(setting.linkname);
+        setting.linkpath && $("#linkpath").val(setting.linkpath);
+        $(".tablink li").click(function(){
+            $(".tablink li").removeClass('active');
+            $(this).addClass('active');
+
+            var val = $(this).attr('val');
+            $("#isshow").val(val);
+            setlink('islinkdesc');
+            
+            if (val == '0') {
+                $(".tablinktxt").hide();
+            } else {
+                $(".tablinktxt").show();
+            }
+        });  
+    });
+</script>
+<script type="text/javascript" src="/Public/bee1/js/bee.prizesetting.js"></script>
+</block>
+<block name="body">
+    <div class="container"> 
+      <div class="line titFix">
+        <h2 class="h2tit">创建场景<a class='bgAudioBtn' name="bgAudio" onclick="audioSwitch(this);"><i class="audioBtn"></i></a></h2>
+      </div>
+      <div class="leftBox clearfix viewFix">
+        <div class="mobile3 nobg mode{$mode}" id="preview_proxy_ifram"></div> 
+        <p class="btnBlue publish"  style="width:275px"><i class="icoSave"></i>保存修改并下一步</p> 
+      </div> 
+      <!-- 右侧 --> 
+      <div class="editorBox clearfix"> 
+        <!-- <div class="line">  -->
+          <h3>替换游戏资源</h3> 
+       <!--  </div>  -->
+        <!-- 替换资源 --> 
+        <div class="editor"> 
+          <div class="cate"> 
+            <ol class="classify box-container"></ol> 
+          </div> 
+        </div> 
+              <div class="line"> 
+               <h3>设置推广链接</h3>
+               <input type="hidden" value="1" id="isshow"/>
+            </div>
+            <p> <ul>推广链接将会显示在游戏开始页和游戏结束页</ul>
+             <ul class="tablink"><li class="active" val="1">设置此项</li><li class="" val="0">不设置此项</li></ul></p>
+          <ul class="prize-item tablinktxt" style="margin-top:18px">
+            <li id="showerr" style="color: red;padding-left: 34px;font-size:16px"></li>
+            <li><span>链接描述</span><input type="text" name="linkname" id="linkname" value="" class="txt prize_tips nowinmsg" placeholder="例如联系我们，不得超过12个汉字" class="txt" onblur="setlink('linkname');" maxlength="12"/></li>
+            <li><span>链接地址</span><input type="text" name="linkpath" id="linkpath" value="" class="txt prize_tips nowinmsg" placeholder="http://bee.9ria.com/mobile.html" class="txt" onblur="setlink('linkpath');" maxlength="150"/></li>
+          </ul>
+            <!-- 替换资源end --> 
+            <div class="line fl"> 
+              <h3>设置营销信息</h3>
+            </div>
+            <div id="settingtabs" class="btn-group" role="group" aria-label="">
+              <!-- 添加 -->
+            </div>
+            <div class="tabPanels" style="">
+              <div id="tabsraffle" class="hide"></div>
+              <div id="tabscoupon" class="hide"></div>
+              <div id="tabsrank" class="hide"></div>
+            </div>
+          </div> 
+        </div>
+</block>
+<block name="footer"></block>

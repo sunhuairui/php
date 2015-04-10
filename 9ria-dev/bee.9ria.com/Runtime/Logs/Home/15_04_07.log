@@ -1,0 +1,304 @@
+[ 2015-04-07T20:02:25+08:00 ] 127.0.0.1 /index.php?s=/home/statistics/index.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+
+[ 2015-04-07T20:02:25+08:00 ] 127.0.0.1 /index.php?s=/Home/User/newlogin.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\f50f0aaaa5ce4785777d0b2d3479f88c.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\f50f0aaaa5ce4785777d0b2d3479f88c.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\f50f0aaaa5ce4785777d0b2d3479f88c.php 第 9 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073591s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000457s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000531s ]
+
+[ 2015-04-07T20:02:45+08:00 ] 127.0.0.1 /index.php?s=/Home/User/ajaxlogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+NOTIC: [8] Undefined index: lite E:\9ria-dev\bee.9ria.com\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `wp_member` [ RunTime:0.0023s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`public_count`,`extra_field` FROM `wp_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0018s ]
+SQL: UPDATE `wp_member` SET `login`=`login`+1,`last_login_time`='1428408165',`last_login_ip`='2130706433' WHERE `uid` = 1 [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `wp_user_token` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `wp_user_token` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: UPDATE `wp_user_token` SET `uid`='1',`token`='F7fykVv0n39UBmuZH64DSNYxjTOKQP2JsXhIGweo',`time`='1428408165' WHERE ( uid=1 ) [ RunTime:0.0436s ]
+SQL: SELECT * FROM `wp_user_token` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `wp_action` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `wp_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0017s ]
+
+[ 2015-04-07T20:02:45+08:00 ] 127.0.0.1 /index.php?s=/Home/User/accountinfo.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_ucenter_member` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `wp_ucenter_member` WHERE `id` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `wp_account_info` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `wp_account_info` WHERE `uid` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000196s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000287s ]
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 55 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 56 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 59 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 60 行.
+NOTIC: [8] Undefined index: contact E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 94 行.
+NOTIC: [8] Undefined index: production E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 163 行.
+NOTIC: [8] Undefined index: qq E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 167 行.
+NOTIC: [8] Undefined index: wechat E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 171 行.
+NOTIC: [8] Undefined index: customer E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 175 行.
+NOTIC: [8] Undefined index: remarks E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 179 行.
+NOTIC: [8] Undefined index: city E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 317 行.
+NOTIC: [8] Undefined index: turnover E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 318 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053718s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053808s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000543s ]
+
+[ 2015-04-07T20:02:47+08:00 ] 127.0.0.1 /index.php?s=/home/statistics/index.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_sdk_settings` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `wp_gcreator_project` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `env` = 0 AND `uid` = 1 AND `status` <> 0  [ RunTime:0.0106s ]
+NOTIC: [8] Undefined variable: type E:\9ria-dev\bee.9ria.com\Application\Home\Controller\StatisticsController.class.php 第 24 行.
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `env` = 0 AND `uid` = 1 AND `status` <> 0 ORDER BY status DESC,id DESC  [ RunTime:0.0075s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 44 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 45 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 48 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041663s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041756s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000526s ]
+
+[ 2015-04-07T20:02:51+08:00 ] 127.0.0.1 /index.php?s=/Home/statistics/index/type/userview.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_sdk_settings` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `wp_gcreator_project` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `env` = 0 AND `uid` = 1 AND `status` <> 0  [ RunTime:0.0034s ]
+NOTIC: [8] Undefined variable: type E:\9ria-dev\bee.9ria.com\Application\Home\Controller\StatisticsController.class.php 第 24 行.
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `env` = 0 AND `uid` = 1 AND `status` <> 0 ORDER BY status DESC,id DESC  [ RunTime:0.0033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 44 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 45 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 48 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032952s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033045s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000452s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000528s ]
+
+[ 2015-04-07T20:02:52+08:00 ] 127.0.0.1 /index.php?s=/Home/statistics/index/type/sharecount.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_sdk_settings` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `wp_gcreator_project` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `env` = 0 AND `uid` = 1 AND `status` <> 0  [ RunTime:0.0034s ]
+NOTIC: [8] Undefined variable: type E:\9ria-dev\bee.9ria.com\Application\Home\Controller\StatisticsController.class.php 第 24 行.
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `env` = 0 AND `uid` = 1 AND `status` <> 0 ORDER BY status DESC,id DESC  [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000246s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 44 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 45 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 48 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032790s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032882s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000520s ]
+
+[ 2015-04-07T20:03:00+08:00 ] 127.0.0.1 /index.php?s=/Home/statistics/index/type/userview.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_sdk_settings` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `wp_gcreator_project` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `env` = 0 AND `uid` = 1 AND `status` <> 0  [ RunTime:0.0033s ]
+NOTIC: [8] Undefined variable: type E:\9ria-dev\bee.9ria.com\Application\Home\Controller\StatisticsController.class.php 第 24 行.
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `env` = 0 AND `uid` = 1 AND `status` <> 0 ORDER BY status DESC,id DESC  [ RunTime:0.0033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 44 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 45 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 48 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032724s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032831s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000434s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000509s ]
+
+[ 2015-04-07T20:03:01+08:00 ] 127.0.0.1 /index.php?s=/Home/Statistics/statDetail/appid/E4Xw14S2.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+NOTIC: [8] Undefined variable: period E:\9ria-dev\bee.9ria.com\Application\Home\Controller\StatisticsController.class.php 第 105 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_project` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `token` = 'E4Xw14S2' AND `env` = 0 AND `status` <> 0 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_settings` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `wp_sdk_settings` WHERE `appid` = 75334 AND `item_key` = 'raffletype' LIMIT 1   [ RunTime:0.0031s ]
+NOTIC: [2] Division by zero E:\9ria-dev\bee.9ria.com\Application\Home\Controller\StatisticsController.class.php 第 229 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000454s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000546s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 79 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 80 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 83 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 84 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 175 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 323 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 360 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 399 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 463 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 482 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 694 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 738 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 741 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 751 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 761 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 764 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 793 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 821 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 854 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 877 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079158s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000482s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+
+[ 2015-04-07T20:03:10+08:00 ] 127.0.0.1 /index.php?s=/Home/Statistics/statLottery/appid/E4Xw14S2/p/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_project` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `token` = 'E4Xw14S2' AND `env` = 0 AND `status` <> 0 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_lottery_log` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `wp_sdk_lottery_log` WHERE `appid` = 75334 AND `status` = 1 AND `lot_type` = 0 AND `lot_id` <> 0 ORDER BY create_time DESC,id DESC LIMIT 0,8   [ RunTime:0.0113s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_sdk_lottery_log` WHERE `appid` = 75334 AND `status` = 1 AND `lot_type` = 0 AND `lot_id` <> 0 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_lottery_prize` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `wp_sdk_lottery_prize` WHERE `appid` = 75334 AND `status` = 1  [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_user` [ RunTime:0.0021s ]
+SQL: SELECT `openid`,`nickname` FROM `wp_sdk_user` WHERE `openid` IN ('otuWJjvQKhb9nn1xL8v-IRrgxct8','oTK2yt1rZ-dprk1_zxc0sL_gnVvM','oTK2yt7wIB0hH_DpHZcjfTbmz1aI')  [ RunTime:0.1362s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_game_data` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `wp_sdk_game_data` WHERE `appid` = 75334 AND `dtype` = 'exchange' AND `openid` IN ('otuWJjvQKhb9nn1xL8v-IRrgxct8','oTK2yt1rZ-dprk1_zxc0sL_gnVvM','oTK2yt7wIB0hH_DpHZcjfTbmz1aI') ORDER BY id DESC LIMIT 0,8   [ RunTime:0.5015s ]
+
+[ 2015-04-07T20:03:10+08:00 ] 127.0.0.1 /index.php?s=/Home/Statistics/statUserdata/appid/E4Xw14S2/p/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_project` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `token` = 'E4Xw14S2' AND `env` = 0 AND `status` <> 0 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_game_data` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `wp_sdk_game_data` WHERE `appid` = 75334 AND `dtype` = 'exchange' ORDER BY create_time DESC,id DESC LIMIT 0,8   [ RunTime:0.1390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_sdk_game_data` WHERE `appid` = 75334 AND `dtype` = 'exchange' LIMIT 1   [ RunTime:0.1226s ]
+
+[ 2015-04-07T20:03:17+08:00 ] 127.0.0.1 /index.php?s=/Home/statistics/index/type/sharecount.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_sdk_settings` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `wp_gcreator_project` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `env` = 0 AND `uid` = 1 AND `status` <> 0  [ RunTime:0.0033s ]
+NOTIC: [8] Undefined variable: type E:\9ria-dev\bee.9ria.com\Application\Home\Controller\StatisticsController.class.php 第 24 行.
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `env` = 0 AND `uid` = 1 AND `status` <> 0 ORDER BY status DESC,id DESC  [ RunTime:0.0033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000236s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 44 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 45 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 48 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032587s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032679s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000511s ]
+
+[ 2015-04-07T20:03:27+08:00 ] 127.0.0.1 /index.php?s=/Home/statistics/index/type/pageview.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_sdk_settings` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `wp_gcreator_project` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `env` = 0 AND `uid` = 1 AND `status` <> 0  [ RunTime:0.0034s ]
+NOTIC: [8] Undefined variable: type E:\9ria-dev\bee.9ria.com\Application\Home\Controller\StatisticsController.class.php 第 24 行.
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `env` = 0 AND `uid` = 1 AND `status` <> 0 ORDER BY status DESC,id DESC  [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 44 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 45 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 48 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033155s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000451s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000525s ]
+

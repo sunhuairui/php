@@ -1,0 +1,12 @@
+<extend name="Bee/common" />
+<block name="body">
+<div class="main success">
+	<h2>搞定 !</h2>
+	<p>您的游戏地址：<a href="{$publish_url}" target="_blank">{$publish_url}</a></p>
+	<div class="qrcode">
+		<object type="image/svg+xml" data="{$qr_svg}" width="280" height="280" ></object>
+	</div>
+	<p>请用手机微信二维码扫描上方图片</p>
+</div>
+</block>
+<block name="footer"></block>

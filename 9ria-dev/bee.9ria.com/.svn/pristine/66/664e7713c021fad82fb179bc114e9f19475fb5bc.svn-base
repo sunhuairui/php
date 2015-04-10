@@ -1,0 +1,98 @@
+.main-body{margin-top: 20px;}
+.body-left{width: 30%;}
+.body-right{width: 70%;float: right;min-width: 500px;}
+.btnBlue.publish{width: 322px;}
+
+.label-icon{background: url(../images/sprite.png) no-repeat;padding-left: 20px;cursor: pointer;background-position:0 -2252px;color:#099bee;height: 40px;line-height: 40px;}
+.label-icon.select{background-position:0 -2260px;}
+.pptPage li{width: auto;height: auto;border-radius: 0;float: none;overflow: hidden;background: #fff;background-color: #fff;border-radius: 5px;width: 100%;margin: 5px 0 0 0;padding: 5px 20px;border: #dfdfdf solid 1px;font-size: 18px;color: #7e7e7e;}
+.pptPage input.stylename{height: 40px;}
+.styleselect{height: 40px;}
+
+      /*PPT 0402*/
+.pptPage .line{margin: 15px 0 3px 0}
+.pptPage .panelBox{display: none;}
+
+.pptPage .classify li{padding-bottom: 19px;}
+.pptPage ol.classify li h4{border: none;}
+.ui-state-default .ui-icon{background: url(images/sprite.png) no-repeat;}
+.ui-icon-triangle-1-e{background-position: 0 -2335px}
+.ui-icon-triangle-1-s{background-position: 0 -2260px}
+.pptPage select{-webkit-appearance: none;padding: 0 15px}
+.pptPage input{background-color: #F8F8F8;border: #dadada solid 1px;padding:5px 10px;}
+
+.opbtn{float: right;}
+.opbtn>div{display: inline-block;width: 30px;height: 30px;margin-left: 10px;}
+
+.addBtn{background: url(../images/sprite.png) no-repeat;background-position: 0 -2402px;}
+.addBtn:hover{background-position: 0 -2446px;}
+
+.delBtn{background: url(../images/sprite.png) no-repeat;background-position: 0px -1557px;}
+.delBtn:hover{background-position: 0px -1628px;}
+
+.moveBtn{background: url(../images/sprite.png) no-repeat;background-position: 0px -1696px;}
+.moveBtn:hover{background-position: 0px -1759px;}
+
+.pptPage h4.select-label{background-position:0 -2260px;color:#099bee;}
+
+
+/* 弹出层样式 */
+.popover-title{background-color:#fff;border-bottom: none;}
+.popover{display: block !important;}
+
+
+.fileInputContainer{
+        height:30px;
+        line-height: 30px;
+        padding-top: 10px;
+        position:relative;
+        width: 200px;
+        cursor: pointer;
+    }
+    .fileInputContainer em{
+      position: relative;
+      bottom: 11px;
+      cursor: pointer;
+    }
+    .fileInput{
+        width: 200px;
+        height: 30px;
+        overflow: hidden;
+        font-size: 300px;
+        position:absolute;
+        right:0;
+        top:0;
+        opacity: 0;
+        filter:alpha(opacity=0);
+        cursor:pointer;
+    }
+    .uploadcoupon{
+        width: 148px;
+        height: 30px;
+        overflow: hidden;
+        font-size: 300px;
+        position:absolute;
+        /*right:0;*/
+        top:0;
+        opacity: 0;
+        filter:alpha(opacity=0);
+        cursor:pointer;
+    }
+  .edit-bar{font-size: 12px;color: #000;}
+  .label{color: #000;}
+
+  input.error{
+    border: 1px solid red!important;
+  }
+  
+  .img-preview.act{
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+  }
+
+  .img-preview.act>img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+  }

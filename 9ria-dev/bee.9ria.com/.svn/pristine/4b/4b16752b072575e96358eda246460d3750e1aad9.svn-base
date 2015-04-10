@@ -1,0 +1,22 @@
+<block name="header"></block>
+<php>
+// 验证登录
+if (!is_login()) {
+    Cookie ('__forward__', $_SERVER ['REQUEST_URI']);
+    redirect(U('home/user/login'));
+}
+</php>
+<div id="main-container">
+    <div class="sidebar">
+        <ul class="sidenav">
+        	<li>
+        		<a class="sidenav_parent" href="{:U('Home/GameCreator/preview')}"><b class="ficon fa"></b>最新案例展示</a>
+                <a class="sidenav_parent" href="{:U('Home/GameCreator/view')}"><b class="ficon fa"></b>我的游戏</a>
+                <a class="sidenav_parent" href="{:U('Home/GameCreator/qa')}"><b class="ficon fa"></b>常见问题Q&A</a>
+        	</li>
+        </ul>
+    </div>
+    <div class="main_body">
+        <block name="body"></block>
+    </div>
+</div>

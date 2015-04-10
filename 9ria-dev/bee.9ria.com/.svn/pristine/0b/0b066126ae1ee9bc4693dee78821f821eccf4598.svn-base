@@ -1,0 +1,61 @@
+<extend name="Bee1/common" />
+<block name="body">
+    <style>
+        .wrap{margin:0 10px; padding:0 10px;}
+        .content{ margin:0;}
+        .content h5{ font-weight:bold; font-size:16px; line-height:50px;}
+        .content p{ line-height:26px; color:#666;}
+        .content .question {font-weight:bold;color:#3b87d5}
+        .answer { padding-bottom: 20px;}
+    </style>
+    <div class="container">
+    <div class="main templete span9 page_message">
+        <section id="contents">
+            <div class="wrap">
+                <div class="content">
+                    <h5>Q&A：</h5>
+                    <h3>PART 1：我如何开始创造我的营销方案？</h3>
+                    <p class="question">Q1：想制作游戏化营销方案如何操作？</p>
+                    <p class="answer">A1：使用游戏化营销平台制作并发布非常简单，四步轻松完成：<br/>
+           1、商业场景选择【促销方式选择】；<br/>
+           2、选择活动模板；<br/>
+           3、资源替换；<br/>
+           4、详细营销信息；<br/>
+           搞定！发布！</p>
+                    <p class="question">Q2： 游戏化营销方案背景图片尺寸比例？</p>
+                    <p class="answer">A2：游戏化营销方案背景图尺寸比例建议为 480*800 （宽*高），不得超过1000*1000，文件大小控制在500K以内，因此建议您在设计背景图片时按此比例制作。</p>
+                    <p class="question">Q3： 图片上传后是否会自动适应？</p>
+                    <p class="answer">A3：当然可以！我们将自动帮你匹配，为了最好的画面表现，请选择合理的图片尺寸。</p>
+                    <p class="question">Q4： 能否更换文案？</p>
+                    <p class="answer">A4：当然可以！文字需要在文案资源中进行更改，创造属于你自己的营销经典！</p>
+                    <p class="question">Q5： 音乐是否也可以替换，能否循环播放？</p>
+                    <p class="answer">A5：当然可以！这些都可以。</p>
+                    <p class="question">Q6： 详细信息设置如何填写？</p>
+                    <p class="answer">A6：例如游戏化营销方案中包含中奖信息，可以在制作游戏化营销方案时，自行编辑中奖说明，奖品设置中可自定中奖概率，以控制中奖人数。<br/>如奖品为多个，可继续选择添加奖品，设置多个奖品的内容。</p>
+                    <p class="question">Q7： 如何通过微信公众号发送游戏化营销方案？</p>
+                    <p class="answer">A7：微信公众平台不支持直接发送游戏化营销方案，但可借助游戏化营销方案平台发布并分享至微信：</p>
+                     1、游戏化营销方案制作后会提供作品链接，可将作品链接放到图文素材的《原文链接》，引导用户点击图文信息最左下角的《阅读原文》即可观看；<br/>
+                     2、将游戏化营销方案链接放到公众号-《自定义菜单》处，通过文字和图文信息引导用户点击<br/>
+                    <p class="question">Q8：如何管理已经发布的活动？</p>
+                    <p class="answer">A8：在平台-我的活动中可以查询，其中包括在线活动和已下线两种，鼠标放在活动图标出，会出现编辑和删除两个按钮，可以自行选择编辑或删除。</p>
+                    <h3>PART 2：我们将为您做什么？</h3>
+                    <p class="question">Q1:2035蜂群是做什么的？</p>
+                    <p class="answer">A1:2035蜂群是基于移动社交的游戏互动营销平台。简单点说，就是帮助企业借助互动有趣的营销方案，来提升粉丝的活跃度与参与度，同时，通过在营销方案中设置奖励的方式，激发粉丝分享传播，达到品牌曝光及产品销售的目的。</p>
+                    <p class="question">Q2:2035蜂群的优势是什么?</p>
+                    <p class="answer">A2:<br/>
+1、2035蜂群后台提供多种不同的商业应用场景选择，应用范围更广。<br/>
+2、企业只需几分钟即可创建即简单又好玩的互动营销方案，大大降低人力及时间成本。<br/>
+3、通过2035蜂群后台创建的活动生成的是二维码和链接，两种形式，适用的平台更广。</p>
+                    <p class="question">Q3:2035蜂群将为您做什么？</p>
+                    <p class="answer">A3:主要是三个方面：<br/>
+1、通过简单有趣的互动营销方案，提升消费者的参与度，提高消费者的服务体验。<br/>
+2、通过在营销方案中设置互惠互利的机制，激发粉丝的分享性，达到品牌曝光及产品销售的目的。<br/>
+3、企业可选择不同的商业应用场景，包括快速促销、新品上市、品牌宣传、招募新用户、节日促销等，帮助企业更好的营销落地。</p>
+                    <p class="question">Q4:如何享受2035蜂群的服务？</p>
+                    <p class="answer">A4:目前2035蜂群是按年收取平台使用费，详细情况可直接咨询官网客服。购买完成后，即刻开通账号使用！</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+</block>

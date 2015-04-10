@@ -1,0 +1,78 @@
+<extend name="Bee1/common" />
+<block name="style">
+    <link rel="stylesheet" href="/Public/bee1/css/main.css" />
+    <style>
+        body{overflow-y:scroll !important; overflow-y:auto;/*解决滚动条抖动问题*/}
+        .inner{position:relative;width: 100%;margin-top:50px;/*border: #ccc solid 1px*/}
+        .accountInfo{margin-left:175px;width: 80%;min-height:415px;padding:9px 65px 60px;margin-bottom:60px;background-color:#fff;}
+        ul.leftMenu{position:absolute;top:0;left:0;width: 175px;z-index:2;/*padding-top:13px;*/}
+        ul.leftMenu li{position: relative;height: 50px;line-height: 50px;padding:0 10px;background-color:#e5e5e5;text-align: center;color: #b4b4b4;font-size: 18px;cursor: pointer;}
+        ul.leftMenu li.active{left:30px;padding-left:24px;text-align: left;background-color:#099bee;color: #fff;}
+        .triangle{font-size: 0.8em;color: #fff;-webkit-transform:rotate(90deg);-moz-transform:rotate(90deg);transform: rotate(90deg);}
+        .triangleShadow{position:absolute;top:-14px;right:0;background:url(/Public/bee1/images/sprite.png) no-repeat;background-position:0 -1205px;width: 30px;height: 14px}
+        h2{font-size: 24px}
+        .WhiteGray{color: #525252;font-size: 20px}
+        ul.accountForm{margin-top: 40px}
+        ul.accountForm li{margin-bottom: 25px}
+        ul.accountForm li span,ul.accountForm li label{display:inline-block;width:137px;color: #b4b4b4;font-size: 18px;font-weight: normal;}
+        ul.accountForm li input,ul.accountForm li select,ul.accountForm li textarea{width: 470px;height: 30px;line-height:20px;padding:5px 20px;border: #dadada solid 1px} 
+    </style>
+</block>
+<block name="script">
+<script type="text/javascript">
+        var resetpwdurl = "{:U('profile')}";
+        (function($){
+            $(".btnBlue").click(function(){
+                $.post(resetpwdurl,{
+                    "old" : $("input[name=old]").val(),
+                    "password" : $("input[name=password]").val(),
+                    "repassword": $("input[name=repassword]").val()
+                }, function(res){
+                    if(res.status){
+                        $(".ajaxmsg").html("修改成功，请重新登录...");
+                        setTimeout(function(){
+                            location.href = "{:U('relogin')}";
+                        },1000)
+                    }else{
+                         $(".ajaxmsg").html(res.info);
+                    }
+                })
+            })
+        }(jQuery));
+
+</script>
+</block>
+<block name="body">
+<div class="container common">    
+    <div class="line mt20">
+        <h2 class="h2tit"> 账户管理</h2>
+    </div> 
+    <div class="inner">
+        <ul class="leftMenu">
+            <li><a href="{:U('accountinfo')}">账户资料</a></li>
+            <li class="active">修改密码<span class="triangle fr">▲</span><span class="triangleShadow"></span></li>
+        </ul>
+        <div class="accountInfo">
+            <div class="line">
+                <h3 class="WhiteGray">修改你的赢销+密码</h3> 
+            </div>
+            <ul class="accountForm">
+                <li> 
+                    <span>原密码</span>
+                    <input type="password" name="old" id="" value="" class="">
+                </li>
+                <li> 
+                    <span>新密码</span>
+                    <input type="password" name="password" id="" value="" class="" placeholder="6~16个字符，区分大小写">
+                </li>
+                <li> 
+                  <span>确认密码</span>
+                  <input type="password" name="repassword" id="" value="" class="" placeholder="6~16个字符，区分大小写">
+                </li>
+            </ul>
+            <p class="btnBlue" style="width:170px;margin:0 auto;position:relative;right:96px;font-size:18px">保存修改</p>
+            <p class="ajaxmsg" style="coler:red;"></p>
+        </div>
+    </div>
+</div>
+</block>

@@ -1,0 +1,57 @@
+<div id="mask" style="display: none;"></div>
+<div id="searchTips" style="display: none;">
+    <ul>
+        <li class="stepA" style="display: none;"><a>下一步</a><span>关闭</span></li>
+        <li class="stepB" style="display: none;"><a>下一步</a><span>关闭</span></li>
+        <li class="stepC" style="display: none;"><a>下一步</a><span>关闭</span></li>
+        <li class="stepD" style="display: none;"><a>开始体验</a><span>关闭</span></li>
+    </ul>
+</div>
+<script>
+$(function(){
+    var oMask = $('#mask');
+	var oSearch = $('#searchTips');
+	var aStep = oSearch.children().children();
+	$('#mask,#maskR,#searchTips,#searchTips ul li:eq(0),#searchTipsrR,#searchTipsR ul li:eq(0)').show();
+	/*  alert($('#searchTipsR ul li:eq(0)').html());  */
+	//$('.des').addClass('firstLayer');
+	$('#searchTips a').click(function(){
+		var i=[100,200,800];
+		var current = $(this).parent();
+		var num = current.prevAll().length;
+		current.hide();
+		var n = current.next();
+		n.show();
+		$('body,html').scrollTop(i[num]);
+		});
+		
+	$('#searchTipsR a').click(function(){
+		var i=[100,200,800];
+		var current = $(this).parent();
+		var num = current.prevAll().length;
+		current.hide();
+		var n = current.next();
+		n.show();
+		$('body,html').scrollTop(i[num]);
+		});
+		
+	$('#searchTips span,#searchTips a:last,#searchTipsR span,#searchTipsR a:last').click(function(){
+		$('#mask,#maskR,#searchTips,#searchTipsR').hide();
+		$('body,html').animate({scrollTop:0},400); 
+	  });
+	//if(oMaskR.length){
+		var oMaskR  = $('#maskR');
+		var oSearchR = $('#searchTipsR');
+		var aStep = oSearchR.children().children();
+		$('#maskR1,#searchTipsrR,.btnExp').show();
+		$('.des,.help,.downLoad').addClass('firstLayer')	
+		$('.btnExp').click(function(){
+			$('#maskR,#searchTipsR').hide();
+			$('body,html').animate({scrollTop:0},400); 
+			$('.des,.help,.downLoad').removeClass('firstLayer');
+			
+		  });
+		
+	//}
+});
+</script>

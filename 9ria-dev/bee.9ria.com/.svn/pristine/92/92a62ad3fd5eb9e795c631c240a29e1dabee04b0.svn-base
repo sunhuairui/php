@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type"/>
+<meta content="no-cache,must-revalidate" http-equiv="Cache-Control"/>
+<meta content="no-cache" http-equiv="pragma"/>
+<meta content="0" http-equiv="expires"/>
+<meta content="telephone=no, address=no" name="format-detection"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<title>17173游戏学院</title>
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+<link href="css/default_home.css" rel="stylesheet" type="text/css" />
+</head>
+<body padding="0" margin="0">
+<center>
+<table width="300" border="0" cellpadding="0" cellspacing="2">
+  <tr>
+    <td align="center"><img src="res/home/image_u18.png" width="332" height="184" /></td>
+  </tr>
+  <tr>
+    <td height='4'></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+       <tr>
+          <td width="80" align="center"><img src="res/home/image_u71.png" width="70" height="70" /></td>
+          <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="6">
+             <tr>
+                <td align="left" class="item-title-hot">每日最热门游戏推荐</td>
+                <td width="60" align="center" class="title"><img src="res/home/image_u126.gif" width="56" height="11" /></td>
+             </tr>
+             <tr>
+                <td colspan="2" align="left" class="item-note">每日最火爆热门游戏Top10聚集多种精品和最新游戏。</td>
+             </tr>
+          </table></td>
+       </tr>
+    </table></td>
+  </tr>
+  <tr height='1px'>
+    <td align="center"><img src="res/home/u16_line.png" width="338" height="1" /></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+       <tr>
+          <td width="80" align="center"><img src="res/home/image_u93.png" width="70" height="70" /></td>
+          <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="6">
+             <tr>
+                <td align="left" class="item-title-normal">跑酷V1.2版本更新</td>
+                <td width="60" align="center" class="title"><img src="res/home/image_u126.gif" alt="" width="56" height="11" /></td>
+             </tr>
+             <tr>
+                <td colspan="2" align="left" class="item-note">每日最火爆热门游戏Top10聚集多种精品和最新游戏。</td>
+             </tr>
+          </table></td>
+       </tr>
+    </table></td>
+  </tr>
+  <tr height='1px'>
+    <td align="center"><img src="res/home/u16_line.png" width="338" height="1" /></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+       <tr>
+          <td width="80" align="center"><img src="res/home/image_u81.png" width="70" height="70" /></td>
+          <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="6">
+             <tr>
+                <td align="left" class="item-title-normal">GameMei</td>
+                <td width="60" align="center" class="title">&nbsp;</td>
+             </tr>
+             <tr>
+                <td colspan="2" align="left" class="item-note">全新界面，全新智能模块，开发游戏只需思考创意和逻辑关系。</td>
+             </tr>
+          </table></td>
+       </tr>
+    </table></td>
+  </tr>
+  <tr height='1px'>
+    <td align="center"><img src="res/home/u16_line.png" width="338" height="1" /></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+       <tr>
+          <td width="80" align="center"><img src="res/home/image_u12.png" width="70" height="70" /></td>
+          <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="6">
+             <tr>
+                <td align="left" class="item-title-normal">北京开发者沙龙</td>
+                <td width="60" align="center" class="title">&nbsp;</td>
+             </tr>
+             <tr>
+                <td colspan="2" align="left" class="item-note">跑酷Maker全新更新，假如更多玩法和自定义功能。</td>
+             </tr>
+          </table></td>
+       </tr>
+    </table></td>
+  </tr>
+</table>
+</center>
+</body>
+</html>

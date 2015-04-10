@@ -1,0 +1,1065 @@
+[ 2015-04-08T09:46:22+08:00 ] 127.0.0.1 /index.php?s=/
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+
+[ 2015-04-08T09:46:22+08:00 ] 127.0.0.1 /index.php?s=/Home/template/index.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_template` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `wp_gcreator_template` WHERE `is_show` = 1 AND `status` <> 0 ORDER BY sort desc, id desc LIMIT 0,20   [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_gcreator_template` WHERE `is_show` = 1 AND `status` <> 0 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_tag` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `wp_sdk_tag` WHERE `status` = 1 ORDER BY sort desc, id desc LIMIT 0,20   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_category` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `wp_sdk_category` WHERE `status` = 1 ORDER BY sort desc, id desc  [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000282s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000398s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 52 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 53 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_template` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 878 AND `status` = 1 LIMIT 1   [ RunTime:0.0027s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 876 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 873 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 870 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 871 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 877 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 869 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 869 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 861 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 860 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 881 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 879 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 846 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 880 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 847 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 865 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 854 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 851 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 849 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 863 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.283574s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.283719s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004432s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004593s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004399s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004519s ]
+
+[ 2015-04-08T09:50:21+08:00 ] 127.0.0.1 /
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+
+[ 2015-04-08T09:50:21+08:00 ] 127.0.0.1 /index.php?s=/Home/template/index.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_template` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `wp_gcreator_template` WHERE `is_show` = 1 AND `status` <> 0 ORDER BY sort desc, id desc LIMIT 0,20   [ RunTime:0.0053s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_gcreator_template` WHERE `is_show` = 1 AND `status` <> 0 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_tag` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `wp_sdk_tag` WHERE `status` = 1 ORDER BY sort desc, id desc LIMIT 0,20   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_category` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `wp_sdk_category` WHERE `status` = 1 ORDER BY sort desc, id desc  [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000211s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 52 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 53 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_template` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 878 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 876 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 873 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 870 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 871 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 877 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 869 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 869 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 861 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 860 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 881 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 879 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 846 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 880 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 847 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 865 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 854 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 851 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 849 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 863 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.109306s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.109385s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000562s ]
+
+[ 2015-04-08T09:50:47+08:00 ] 127.0.0.1 /index.php?s=/Home/template/index.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_template` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `wp_gcreator_template` WHERE `is_show` = 1 AND `status` <> 0 ORDER BY sort desc, id desc LIMIT 0,20   [ RunTime:0.0053s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_gcreator_template` WHERE `is_show` = 1 AND `status` <> 0 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_tag` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `wp_sdk_tag` WHERE `status` = 1 ORDER BY sort desc, id desc LIMIT 0,20   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_category` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `wp_sdk_category` WHERE `status` = 1 ORDER BY sort desc, id desc  [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000322s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000450s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 52 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 53 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_template` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 878 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 876 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 873 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 870 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 871 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 877 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 869 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 869 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 861 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 860 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 881 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 879 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 846 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 880 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 847 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 865 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 854 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 851 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 849 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 863 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.134704s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.134809s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000497s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000572s ]
+
+[ 2015-04-08T09:50:53+08:00 ] 127.0.0.1 /index.php?s=/Home/template/index.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_template` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `wp_gcreator_template` WHERE `is_show` = 1 AND `status` <> 0 ORDER BY sort desc, id desc LIMIT 0,20   [ RunTime:0.0053s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_gcreator_template` WHERE `is_show` = 1 AND `status` <> 0 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_tag` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `wp_sdk_tag` WHERE `status` = 1 ORDER BY sort desc, id desc LIMIT 0,20   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_category` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `wp_sdk_category` WHERE `status` = 1 ORDER BY sort desc, id desc  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000268s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000379s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 52 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 53 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_template` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 878 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 876 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 873 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 870 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 871 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 877 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 869 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 869 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 861 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 860 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 881 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 879 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 846 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 880 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 847 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 865 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 854 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 851 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 849 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 863 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.119477s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.119577s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000603s ]
+
+[ 2015-04-08T09:51:20+08:00 ] 127.0.0.1 /index.php?s=/Home/User/ajaxlogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000885s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001519s ]
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+NOTIC: [8] Undefined index: lite E:\9ria-dev\bee.9ria.com\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `wp_member` [ RunTime:0.0027s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`public_count`,`extra_field` FROM `wp_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0021s ]
+SQL: UPDATE `wp_member` SET `login`=`login`+1,`last_login_time`='1428457879',`last_login_ip`='2130706433' WHERE `uid` = 1 [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `wp_user_token` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `wp_user_token` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `wp_user_token` SET `uid`='1',`token`='KshBztb4RP9pHaFiJyWXOdUTnQM6Nf1S0LrDmE3k',`time`='1428457879' WHERE ( uid=1 ) [ RunTime:0.0663s ]
+NOTIC: [8] Undefined offset: 1 E:\9ria-dev\bee.9ria.com\Application\Home\Model\MemberModel.class.php 第 142 行.
+SQL: SELECT * FROM `wp_user_token` WHERE `uid` = null LIMIT 1   [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `wp_action` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `wp_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2015-04-08T09:51:20+08:00 ] 127.0.0.1 /index.php?s=/Home/template/index.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_template` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `wp_gcreator_template` WHERE `is_show` = 1 AND `status` <> 0 ORDER BY sort desc, id desc LIMIT 0,20   [ RunTime:0.0052s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_gcreator_template` WHERE `is_show` = 1 AND `status` <> 0 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_tag` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `wp_sdk_tag` WHERE `status` = 1 ORDER BY sort desc, id desc LIMIT 0,20   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_category` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `wp_sdk_category` WHERE `status` = 1 ORDER BY sort desc, id desc  [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000366s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000511s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 48 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 49 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 52 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 53 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_template` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 878 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 876 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 873 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 870 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 871 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 877 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 869 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 869 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 861 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 860 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 881 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 879 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 846 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 880 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 847 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 865 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 854 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 851 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 849 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 863 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.129449s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.129578s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000567s ]
+
+[ 2015-04-08T09:51:30+08:00 ] 127.0.0.1 /index.php?s=/Home/Template/demo/name/dianqing.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_project` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `name` = 'dianqing' AND `is_diy` = 2 AND `env` = 0  [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `wp_gcreator_template` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `wp_gcreator_template` WHERE `name` = 'dianqing' AND `is_show` = 1  [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_category` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `wp_sdk_category` WHERE `status` = 1 ORDER BY sort desc, id desc  [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\20b8f245670e74c56e8346e492839581.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\20b8f245670e74c56e8346e492839581.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\20b8f245670e74c56e8346e492839581.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\20b8f245670e74c56e8346e492839581.php 第 39 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\20b8f245670e74c56e8346e492839581.php 第 40 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\20b8f245670e74c56e8346e492839581.php 第 43 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\20b8f245670e74c56e8346e492839581.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032826s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032924s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000460s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2015-04-08T09:51:37+08:00 ] 127.0.0.1 /index.php?s=/home/statistics/index.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_sdk_settings` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `wp_gcreator_project` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `env` = 0 AND `uid` = 1 AND `status` <> 0  [ RunTime:0.0109s ]
+NOTIC: [8] Undefined variable: type E:\9ria-dev\bee.9ria.com\Application\Home\Controller\StatisticsController.class.php 第 24 行.
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `env` = 0 AND `uid` = 1 AND `status` <> 0 ORDER BY status DESC,id DESC  [ RunTime:0.0082s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000233s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000375s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 44 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 45 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 48 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058943s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000439s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000524s ]
+
+[ 2015-04-08T09:51:39+08:00 ] 127.0.0.1 /index.php?s=/Home/statistics/index/type/userview.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_sdk_settings` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `wp_gcreator_project` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `env` = 0 AND `uid` = 1 AND `status` <> 0  [ RunTime:0.0054s ]
+NOTIC: [8] Undefined variable: type E:\9ria-dev\bee.9ria.com\Application\Home\Controller\StatisticsController.class.php 第 24 行.
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `env` = 0 AND `uid` = 1 AND `status` <> 0 ORDER BY status DESC,id DESC  [ RunTime:0.0035s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000321s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000517s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 44 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 45 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 48 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\2eb575ebe7b8ec6462aa1737917cce9e.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070770s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070974s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000833s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000968s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001139s ]
+
+[ 2015-04-08T09:51:44+08:00 ] 127.0.0.1 /index.php?s=/Home/Statistics/statDetail/appid/E4Xw14S2.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+NOTIC: [8] Undefined variable: period E:\9ria-dev\bee.9ria.com\Application\Home\Controller\StatisticsController.class.php 第 105 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_project` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `wp_gcreator_project` WHERE `token` = 'E4Xw14S2' AND `env` = 0 AND `status` <> 0 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_settings` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `wp_sdk_settings` WHERE `appid` = 75334 AND `item_key` = 'raffletype' LIMIT 1   [ RunTime:0.0034s ]
+NOTIC: [2] Division by zero E:\9ria-dev\bee.9ria.com\Application\Home\Controller\StatisticsController.class.php 第 229 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000692s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000839s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 79 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 80 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 83 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 84 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 175 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 323 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 360 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 399 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 463 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 482 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 694 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 738 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 741 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 751 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 761 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 764 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 793 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 821 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 854 行.
+NOTIC: [8] Use of undefined constant appid - assumed 'appid' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\8d20c867dbca1f5b8d67cafbbf44d9de.php 第 877 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.106526s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106642s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000588s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2015-04-08T10:51:32+08:00 ] 127.0.0.1 /
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+
+[ 2015-04-08T10:51:32+08:00 ] 127.0.0.1 /index.php?s=/Home/template/index.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_template` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `wp_gcreator_template` WHERE `is_show` = 1 AND `status` <> 0 ORDER BY sort desc, id desc LIMIT 0,20   [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_gcreator_template` WHERE `is_show` = 1 AND `status` <> 0 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_tag` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `wp_sdk_tag` WHERE `status` = 1 ORDER BY sort desc, id desc LIMIT 0,20   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `wp_sdk_category` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `wp_sdk_category` WHERE `status` = 1 ORDER BY sort desc, id desc  [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+NOTIC: [8] Undefined variable: meta_title E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 7 行.
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 48 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 49 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 52 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 53 行.
+SQL: SHOW COLUMNS FROM `wp_gcreator_template` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 878 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 876 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 873 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 870 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 871 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 877 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 869 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 869 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 861 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 860 AND `status` = 1 LIMIT 1   [ RunTime:0.0024s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 881 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 879 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 846 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 880 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 847 AND `status` = 1 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 865 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 854 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 851 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 849 AND `status` = 1 LIMIT 1   [ RunTime:0.0024s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+SQL: SELECT * FROM `wp_picture` WHERE `id` = 863 AND `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Use of undefined constant codeurl - assumed 'codeurl' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 118 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 120 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b42cc33d1e32716158876d253c329d47.php 第 121 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.110249s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.110329s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000511s ]
+
+[ 2015-04-08T10:51:34+08:00 ] 127.0.0.1 /index.php?s=/Home/User/accountinfo.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_ucenter_member` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `wp_ucenter_member` WHERE `id` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `wp_account_info` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `wp_account_info` WHERE `uid` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000321s ]
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 55 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 56 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 59 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 60 行.
+NOTIC: [8] Undefined index: contact E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 94 行.
+NOTIC: [8] Undefined index: production E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 163 行.
+NOTIC: [8] Undefined index: qq E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 167 行.
+NOTIC: [8] Undefined index: wechat E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 171 行.
+NOTIC: [8] Undefined index: customer E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 175 行.
+NOTIC: [8] Undefined index: remarks E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 179 行.
+NOTIC: [8] Undefined index: city E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 317 行.
+NOTIC: [8] Undefined index: turnover E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 318 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043506s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043609s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000497s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000573s ]
+
+[ 2015-04-08T10:52:24+08:00 ] 127.0.0.1 /index.php?s=/Home/User/updateaccountinfo.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000893s ]
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_ucenter_member` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `wp_ucenter_member` WHERE `id` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0022s ]
+SQL: UPDATE `wp_ucenter_member` SET `username`='spcent',`password`='58acefd01bac5df7f145fa008ec87654',`email`='spcent@qq.com',`category`='2',`brand_name`='fdafd',`mobile`='13800138000',`reg_time`='1426589562',`reg_ip`='176111850',`last_login_time`='1428461425',`last_login_ip`='2130706433',`update_time`='1428461544',`status`='1',`openid`=NULL,`token`=NULL WHERE `id` = 1 [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `wp_account_info` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `wp_account_info` WHERE `uid` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: INSERT INTO `wp_account_info` (`uid`,`contact`,`city`,`turnover`,`production`,`qq`,`wechat`,`customer`,`remarks`,`status`,`create_time`,`update_time`) VALUES ('1','fdafd','3','2','dfafda','591902420','','','','1','1428461544','0') [ RunTime:0.0417s ]
+
+[ 2015-04-08T11:00:05+08:00 ] 127.0.0.1 /index.php?s=/Home/User/resetpwd.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b1885143554abb6dc6ab198705ec1845.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b1885143554abb6dc6ab198705ec1845.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b1885143554abb6dc6ab198705ec1845.php 第 55 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b1885143554abb6dc6ab198705ec1845.php 第 56 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b1885143554abb6dc6ab198705ec1845.php 第 59 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\b1885143554abb6dc6ab198705ec1845.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046168s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046275s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000556s ]
+
+[ 2015-04-08T11:15:36+08:00 ] 127.0.0.1 /index.php?s=/Home/User/accountinfo.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_ucenter_member` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `wp_ucenter_member` WHERE `id` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `wp_account_info` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `wp_account_info` WHERE `uid` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000208s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000296s ]
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 55 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 56 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 59 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027179s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027271s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000453s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000530s ]
+
+[ 2015-04-08T11:15:47+08:00 ] 127.0.0.1 /index.php?s=/Home/User/accountinfo.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_ucenter_member` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `wp_ucenter_member` WHERE `id` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `wp_account_info` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `wp_account_info` WHERE `uid` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000203s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 55 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 56 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 59 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026261s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026359s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000467s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000546s ]
+
+[ 2015-04-08T11:15:54+08:00 ] 127.0.0.1 /index.php?s=/Home/User/accountinfo.html
+NOTIC: [8] Undefined index: uid E:\9ria-dev\bee.9ria.com\Application\Home\Controller\HomeController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `wp_ucenter_member` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `wp_ucenter_member` WHERE `id` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `wp_account_info` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `wp_account_info` WHERE `uid` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000196s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+NOTIC: [8] Undefined variable: meta_desc E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 8 行.
+NOTIC: [8] Undefined variable: meta_keyword E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 9 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 55 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 56 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 59 行.
+NOTIC: [8] Undefined variable: Think E:\9ria-dev\bee.9ria.com\Runtime\Cache\Home\ee6e0372a203dd0bf1977e53e6c2b540.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026545s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026638s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000452s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000529s ]
+
