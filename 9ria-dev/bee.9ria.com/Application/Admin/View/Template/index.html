@@ -14,9 +14,36 @@
         </div>
         <!-- 高级搜索 -->
         <div class="search-form fr cf">
-            <div class="sleft">
-                <input type="text" name="{$model['search_key']|default='title'}" class="search-input" value="{:I('title')}" placeholder="请输入关键字">
-                <a class="sch-btn" href="javascript:;" id="search" url="{:U('Project/index','model='.$model['name'],false)}"><i class="btn-search"></i></a>
+            <span class="status-style">{$statusExtra['title']}&nbsp;</span>
+            <div class="sleft"> 
+                <div class="drop-down a1">
+                    <span id="sch-sort-txt" class="sort-txt" data="{$status}">
+                        <if condition="get_status_value($statusExtra['extra'],$_GET['status']) eq ''">所有<else/>{:get_status_value($statusExtra['extra'],$_GET['status'])}</if>
+                    </span>
+                    <i class="arrow arrow-down"></i>
+                    <ul id="sub-sch-menu" class="nav-list hidden" name="{$statusExtra.name}">
+                        <li><a href="javascript:;" value="">所有</a></li>
+                        <volist name=":parse_field_attr($statusExtra['extra'])" id="vo">
+                            <li><a href="javascript:;" value="{$key}">{$vo}</a></li>
+                        </volist>
+                    </ul>
+                </div>
+                <div class="drop-down  a2">
+                    <span id="select-search" class="sort-txt" data="{$search_key}">
+                        <if condition="$search_key eq 'token' || $_GET['type'] eq 'token'">Token
+                           <elseif condition="$search_key eq 'title' || $_GET['type'] eq 'title'"/>标题
+                           <else/>名称
+                        </if>
+                    </span>
+                    <i class="arrow arrow-down"></i>
+                    <ul id="sub-sch-menu1" class="nav-list hidden">
+                            <li><a href="javascript:;" value="name">名称</a></li>
+                            <li><a href="javascript:;" value="title">标题</a></li>
+                            <li><a href="javascript:;" value="token">Token</a></li>
+                    </ul>
+                </div>
+                <input type="text" name="{$model['search_key']|default='name'}" class="search-input" value="{:I($model['search_key'])}" placeholder="请输入关键字">
+                <a class="sch-btn" href="javascript:;" id="search" url="{:U('Template/index','model='.$model['name'],false)}"><i class="btn-search"></i></a>
             </div>
         </div>
     </div>
@@ -58,17 +85,55 @@
 $(function(){
     //搜索功能
     $("#search").click(function(){
-        var url = $(this).attr('url');
+        var url = $(this).attr('url');  
+        var status = $("#sch-sort-txt").attr("data");//状态
+        var search_key = $("#select-search").attr("data");//下拉选择查询
         var query  = $('.search-form').find('input').serialize();
         query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
         query = query.replace(/^&/g,'');
+        query = query.replace("=","/");　
+        if(status != ''){
+	    query = 'status/' + status + "/" + query;
+        }
+        if(search_key != ''){
+	    query = 'type/' + search_key + "/" + query;
+        }
         if( url.indexOf('?')>0 ){
-            url += '&' + query;
+            url += '/' + query;
         }else{
             url += '?' + query;
         }
         window.location.href = url;
     });
+    
+    
+      //状态
+    $(".search-form").find(".a1").hover(function(){
+            $("#sub-sch-menu").removeClass("hidden");
+    },function(){
+            $("#sub-sch-menu").addClass("hidden");
+    });
+    //
+    $(".search-form").find(".a2").hover(function(){
+            $("#sub-sch-menu1").removeClass("hidden");
+    },function(){
+            $("#sub-sch-menu1").addClass("hidden");
+    });
+    $("#sub-sch-menu1 li").find("a").each(function(){
+            $(this).click(function(){
+                    var text = $(this).text();
+                    $("#select-search").attr("data",$(this).attr("value"));
+                    $("#sub-sch-menu1").addClass("hidden");
+            })
+    });
+    $("#sub-sch-menu li").find("a").each(function(){
+            $(this).click(function(){
+                    var text = $(this).text();
+                    $("#sch-sort-txt").text(text).attr("data",$(this).attr("value"));
+                    $("#sub-sch-menu").addClass("hidden");
+            })
+    });
+     
     //回车自动提交
     $('.search-form').find('input').keyup(function(event){
         if(event.keyCode===13){

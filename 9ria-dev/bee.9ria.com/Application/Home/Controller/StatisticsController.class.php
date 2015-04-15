@@ -84,10 +84,10 @@ class StatisticsController extends HomeController {
         // 分页
         $count = count($games);
         if ($count > $row) {
-            $page = new \Think\Page($count, $row);
-            $page->rollPage = $row;
-            $page->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
-            $htmlPage = $page->show();
+            $pageObj = new \Think\Page($count, $row);
+            $pageObj->rollPage = $row;
+            $pageObj->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
+            $htmlPage = $pageObj->show();
             $this->assign('page', $htmlPage);
         }
          
@@ -281,9 +281,9 @@ class StatisticsController extends HomeController {
 		    
 		    // 分页
 		    if ($count > $row) {
-		        $page = new \Think\Page ( $count, $row, array('appid' => $appid) );
-		        $page->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
-		        $htmlPage = $page->show();
+		        $pageObj = new \Think\Page ( $count, $row, array('appid' => $appid) );
+		        $pageObj->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
+		        $htmlPage = $pageObj->show();
 		    }
 		    
 		    $openIds = array();
@@ -310,15 +310,6 @@ class StatisticsController extends HomeController {
 		    foreach ($gamedataArr as $val) {
 		        $dval = $val['dvalue'] ? json_decode($val['dvalue'], true) : array();
 		        $gameDatas[$val['dkey']]['tel'] = $dval['tel'];
-		        /* if(is_numeric($val['dvalue'])) {
-		            if(is_numeric($val['dvalue'])) $gameDatas[$val['openid']]['tel'][] = $val['dvalue'];
-		        } else {
-		            $dval = $val['dvalue'] ? json_decode($val['dvalue'], true) : array();
-		            if(isset($dval['mobil']) && is_numeric($dval['mobil']))       $gameDatas[$val['openid']]['tel'][] = $dval['mobil'];
-		            elseif (isset($dval['phone']) && is_numeric($dval['phone']))  $gameDatas[$val['openid']]['tel'][] = $dval['phone'];
-		            elseif (isset($dval['mobi']) && is_numeric($dval['mobi']))    $gameDatas[$val['openid']]['tel'][] = $dval['mobi'];
-		            elseif (isset($dval['tel']) && is_numeric($dval['tel']))      $gameDatas[$val['openid']]['tel'][] = $dval['tel'];
-		        } */
 		    }
 		    $lId = 0;
 		    foreach ($lotterysArrs as $val) {
@@ -332,7 +323,7 @@ class StatisticsController extends HomeController {
 		    }
 		}
 		
-		$this->success ( array('lotterys' => $lotteryDatas, 'pages' => $htmlPage) );
+		$this->success ( array('lotterys' => $lotteryDatas, 'curPage' => $page, 'pages' => $htmlPage) );
     }
     
     public function statUserdata($appid) {
@@ -366,9 +357,9 @@ class StatisticsController extends HomeController {
 		    $count = $GameDataModel->where($gamedataMap)->count();
 		    // 分页
 		    if ($count > $row) {
-		        $page = new \Think\Page ( $count, $row, array('appid' => $appid) );
-		        $page->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
-		        $htmlPage = $page->show();
+		        $pageObj = new \Think\Page ( $count, $row, array('appid' => $appid) );
+		        $pageObj->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
+		        $htmlPage = $pageObj->show();
 		    }		  
 		    
 		    $gdId = 0;
@@ -381,7 +372,7 @@ class StatisticsController extends HomeController {
 		    }
 		}
     	
-        $this->success ( array('gamedatas' => $gameDatas, 'pages' => $htmlPage) );
+        $this->success ( array('gamedatas' => $gameDatas, 'curPage' => $page, 'pages' => $htmlPage) );
     }
     
     public function statCoupon($appid) {
@@ -441,9 +432,9 @@ class StatisticsController extends HomeController {
 
             // 分页
             if ($count > $row) {
-                $page = new \Think\Page ( $count, $row, array('appid' => $appid) );
-                $page->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
-                $htmlPage = $page->show();
+                $pageObj = new \Think\Page ( $count, $row, array('appid' => $appid) );
+                $pageObj->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
+                $htmlPage = $pageObj->show();
             }
 
             $gameCodes = array();
@@ -483,7 +474,7 @@ class StatisticsController extends HomeController {
             }
         }
         
-        $this->success ( array('coupondatas' => $couponDatas, 'type' => $type, 'pages' => $htmlPage) );
+        $this->success ( array('coupondatas' => $couponDatas, 'type' => $type, 'curPage' => $page, 'pages' => $htmlPage) );
     }
     
     public function changeCouponStatus($appid) {
@@ -543,9 +534,11 @@ class StatisticsController extends HomeController {
         $redis = redis();
         $rkey = 'rank:appid:'. $id .':lot_id:'. $lot_id;
         $count = $redis->zcard($rkey);
-        
+           echo $rkey."<hr>";
+        echo $count."<hr>";
         $LotteryPrizeModel = D('LotteryPrize');
         $prizeArrs = $LotteryPrizeModel->getAllPrize($id);
+                
         if($prizeArrs) {
             $prizeCount = $firstNum = $lastNum = $lotCount = 0;
             $prizeDescArrs = $prizeSortArrs = $prizeSort = array();
@@ -582,12 +575,13 @@ class StatisticsController extends HomeController {
                 
                 // 分页
                 if ($count > $row) {
-                    $page = new \Think\Page ( $count, $row, array('appid' => $appid) );
-                    $page->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
-                    $htmlPage = $page->show();
+                    $pageObj = new \Think\Page ( $count, $row, array('appid' => $appid) );
+                    $pageObj->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
+                    $htmlPage = $pageObj->show();
                 }
-                
+echo $prizeCount."A<br>B".$count.'B<br>C'.$rowEnd."<hr>";
                 $rankdataArr = $redis->zrevrange($rkey, $rowStart, $rowEnd, 'withscores');
+                echo "<pre>";var_dump($rankdataArr);echo "</pre>";
                 $openIds = array();
                 foreach ($rankdataArr as $key => $val) {
                     $openIds[] = $key;
@@ -601,7 +595,6 @@ class StatisticsController extends HomeController {
                         $nickNames[$val['openid']] = $val['nickname'];
                     }
                 }
-                
                 foreach ($rankdataArr as $key => $val) {
                     $rankDatas[$rankId]['nickname'] = isset($nickNames[$key]) ? $nickNames[$key] : '未知';
                     $rankDatas[$rankId]['rank_id']  = $rankId;
@@ -609,9 +602,8 @@ class StatisticsController extends HomeController {
                     $rankId++;
                 }
             }
-        }
-        
-        $this->success ( array('rankdatas' => $rankDatas, 'pages' => $htmlPage) );
+        } 
+        //$this->success ( array('rankdatas' => $rankDatas, 'curPage' => $page, 'pages' => $htmlPage) );
     }
     
     public function statForm($appid) {
@@ -647,7 +639,6 @@ class StatisticsController extends HomeController {
         $formModel = D('FormDict');
         $formItems = $formModel->getFormItemInfo($formItemIds);
         
-        
         $GameDataModel = D('GameData');
 	    $gamedataMap = array('appid' => $id, 'dtype' => 'baoming', 'status' => 1);
 	    if($code) $gamedataMap['dvalue'] = array('LIKE', '%'. str_replace(array('"', '\\'), array('', '\\\\'), json_encode($code)) .'%');
@@ -670,6 +661,6 @@ class StatisticsController extends HomeController {
 	        
 	    }
 	    
-	    $this->success ( array('formTotal' => $count,'formItems' => $formItems,'formDatas' => $formDatas, 'curPage'=>$page, 'pages' => $htmlPage) );
+	    $this->success ( array('formTotal' => $count, 'formItems' => $formItems,'formDatas' => $formDatas, 'curPage'=>$page, 'pages' => $htmlPage) );
     }
 }

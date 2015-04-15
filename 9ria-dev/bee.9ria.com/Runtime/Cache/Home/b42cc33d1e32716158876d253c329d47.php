@@ -8,7 +8,7 @@
     <meta name="description" content="<?php echo ($meta_desc ? $meta_desc : C('WEB_SITE_DESCRIPTION')); ?>" />
     <meta name="keywords" content="<?php echo ($meta_keyword ? $meta_keyword : C('WEB_SITE_KEYWORD')); ?>" />
     <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="/Public/bee/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Public/bee1/css/bootstrap.min.css" />
     <script href="/Public/bee1/js/ie-css3.htc"></script>
     
 <link rel="stylesheet" href="/Public/bee1/css/main.css" />
@@ -33,28 +33,22 @@
     <![endif]-->
 </head> 
 <body>
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <!--  <a href="" style="float:left"><img src="images/logo.png" alt=""></a> --> 
-        <a href="<?php echo U('index/index');?>" class="logo"></a>
-        <div class="loginInfo">
-          <?php if(is_login()): ?><a href="<?php echo U('User/accountinfo');?>"><?php echo get_username();?></a> <a href="<?php echo U('home/user/logout');?>" style="margin-left:20px;" class="logout">退出</a>
-          <?php else: ?>
-              <a href="#" data-toggle="modal" class="login">登录</a><?php endif; ?>
-        </div>
-        <div class="container" style="width:60%;position: absolute;top: 0;left: 264px;">
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                <?php if(is_login()): ?><li class="<?php if($Think.CONTROLLER_NAME == 'Project') echo 'active';?>"><a href="<?php echo U('home/project/index');?>">我的项目</a></li>
-                <li class="<?php if( $Think.CONTROLLER_NAME == 'Statistics') echo 'active';?>">
-                    <a href="<?php echo U('home/statistics/index');?>">我的数据</a>
-                </li><?php endif; ?>
-                <li class="<?php if($Think.CONTROLLER_NAME == 'Template') echo 'active';?>"><a href="<?php echo U('home/template/index');?>">模板库</a></li>
-                <li class="<?php if($Think.CONTROLLER_NAME == 'Index' && $Think.ACTION_NAME == 'qa') echo 'active';?>"><a href="<?php echo U('home/index/qa');?>">帮助中心</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<div class="headerTop">
+  <nav class="navNew">
+    <a href="<?php echo U('index/index');?>" class="logo"></a>
+    <?php if(is_login()): ?><a class="<?php if($Think.CONTROLLER_NAME == 'Project') echo 'active';?>" href="<?php echo U('home/project/index');?>">我的项目</a>
+    <a class="<?php if( $Think.CONTROLLER_NAME == 'Statistics') echo 'active';?>" href="<?php echo U('home/statistics/index');?>">我的数据</a><?php endif; ?>
+    <a href="<?php echo U('home/case/index');?>" class="<?php if($Think.CONTROLLER_NAME == 'Case') echo 'active';?>">用户案例</a>
+    <a href="<?php echo U('home/template/index');?>" class="<?php if($Think.CONTROLLER_NAME == 'Template') echo 'active';?>">模板库</a>
+    <a href="<?php echo U('home/index/qa');?>" class="<?php if($Think.CONTROLLER_NAME == 'Index' && $Think.ACTION_NAME == 'qa') echo 'active';?>">帮助中心</a>
+    <div class="loginInfo">
+       <?php if(is_login()): ?><a href="<?php echo U('home/user/logout');?>" class="logout">退出</a>
+        <a href="<?php echo U('User/accountinfo');?>" class="userName"><?php echo get_username();?></a> 
+       <?php else: ?>
+       <a href="#" data-toggle="modal" class="login">登录</a><?php endif; ?>
+    </div>
+  </nav>
+</div>
  
 <div class="mainContainer">
  <div class="modal fade" id="create_add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -136,19 +130,19 @@
     <img src="/Public/bee1/images/footerLogo.png" alt="">
 </div>    
  
- <!--返回顶部+建议-->
-    <a id="sugest" href="mailto:sunxiao@cyou-inc.com"></a>
-    <a id="goTop" href="javascript:void(0)"></a>
-    <script src="/Public/static/jquery.min.js"></script>
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="/Public/static/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/Public/static/ie10-viewport-bug-workaround.js"></script>
-    <script src="/Public/static/qrcode.min.js"></script>  <!-- 二维码文件 -->
-    <script type="text/javascript" src="/Public/bee1/js/bee.js"></script>
-    <script type="text/javascript">
-        var is_login = '<?php echo is_login();?>';
-        var checkbroswer = checkBroswer();
+<!--返回顶部+建议-->
+<a id="sugest" href="mailto:sunxiao@cyou-inc.com"></a>
+<a id="goTop" href="javascript:void(0)"></a>
+<script src="/Public/static/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="/Public/static/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/Public/static/ie10-viewport-bug-workaround.js"></script>
+<script src="/Public/static/qrcode.min.js"></script>  <!-- 二维码文件 -->
+<script type="text/javascript" src="/Public/bee1/js/bee.js"></script>
+<script type="text/javascript">
+var is_login = '<?php echo is_login();?>';
+var checkbroswer = checkBroswer();
 $(function(){
     $(".login").click(function(){
         bee.login();
@@ -196,66 +190,63 @@ $(function(){
         });
     });
 
-        // 宽度liuna
-        var screenW = document.body.clientWidth;
-        if(screenW > 1400){
-            $('.mainContainer').css('width','1345px');
-            // $('ul.main li').css('margin-right','48px');
-            $('a.more').css('width','1294px');
-            $('.editorBox').css('width','840px');
+    // 宽度liuna
+    var screenW = document.body.clientWidth;
+    if(screenW > 1400) {
+        $('.mainContainer').css('width','1345px');
+        // $('ul.main li').css('margin-right','48px');
+        $('a.more').css('width','1294px');
+        $('.editorBox').css('width','840px');
+    }
 
-        }
-
-        // 手机预览位置固定
-        $(window).on('scroll',function(){
-            if($(document).scrollTop() > 90){
-                $('.viewFix').css({'position':'fixed','top':'95px'});
-                $('.titFix').css({'position':'fixed','top':'70px'});
-                $('.editorBox').css('margin-left','333px');
-            }else{
-                $('.viewFix').css('position','static');
-                $('.titFix').css('position','static');
-                $('.editorBox').css('margin-left','0');   
-            }    
-        });
-
-        // 返回顶部
-        function b(){
-            h = $(window).height();
-            topH = document.documentElement.scrollTop + document.body.scrollTop;
-            if(topH > h){
-                $('#goTop').fadeIn(200);
-            }else{
-                $('#goTop').fadeOut(200);
-            }
-        }
-        
-        b();
-        $(window).scroll(function(e){
-            b();    
-            // console.log(h + '<br>滚动距离:' + t);    
-        })
-
-        $('#goTop').click(function(){
-            // $(document).scrollTop(0);  
-            $("html,body").animate({scrollTop:"0px"},200); 
-        });
-
-        // 反馈意见距离左边的距离
-        if($('ul.main')[0]){
-            var goTopLeft = $('ul.main').offset().left + $('ul.main').width();
-            $('#sugest').css('left',goTopLeft);
-            $('#goTop').css('left',goTopLeft);
-        }
-         if($('.mainContainer')[0]){
-            var goTopLeft = $('.mainContainer').offset().left + $('.mainContainer').width();
-            $('#sugest').css('left',goTopLeft);
-            $('#goTop').css('left',goTopLeft);
-        }
-        
+    // 手机预览位置固定
+    $(window).on('scroll',function() {
+        if($(document).scrollTop() > 90){
+            $('.viewFix').css({'position':'fixed','top':'95px'});
+            $('.titFix').css({'position':'fixed','top':'70px'});
+            $('.editorBox').css('margin-left','333px');
+        }else{
+            $('.viewFix').css('position','static');
+            $('.titFix').css('position','static');
+            $('.editorBox').css('margin-left','0');   
+        }    
     });
-    </script>
-    
+
+    // 返回顶部
+    function b(){
+        h = $(window).height();
+        topH = document.documentElement.scrollTop + document.body.scrollTop;
+        if(topH > h) {
+            $('#goTop').fadeIn(200);
+        } else {
+            $('#goTop').fadeOut(200);
+        }
+    }
+
+    b();
+    $(window).scroll(function(e){
+        b();    
+    });
+
+    $('#goTop').click(function(){
+        $("html,body").animate({scrollTop:"0px"}, 200); 
+    });
+
+    // 反馈意见距离左边的距离
+    if ($('ul.main').length > 0) {
+        var goTopLeft = $('ul.main').offset().left + $('ul.main').width();
+        $('#sugest').css('left',goTopLeft);
+        $('#goTop').css('left',goTopLeft);
+    }
+    if ($('.mainContainer').length > 0) {
+        var goTopLeft = $('.mainContainer').offset().left + $('.mainContainer').width();
+        $('#sugest').css('left',goTopLeft);
+        $('#goTop').css('left',goTopLeft);
+    }
+
+});
+</script>
+
 <script>
   function setList(page,s_cate,s_tag,s_new,s_hot,el){
       console.log(el);
@@ -320,7 +311,6 @@ $(function(){
           
           codeBox.show();
           codeBoxTop.show();
-          
           var codeHtml = codeShow.html();
           if(codeHtml == '') {
               //异步加载

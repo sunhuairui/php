@@ -10,14 +10,16 @@ use Think\Model;
 class TemplateModel extends Model {
 	
     // 操作状态
-    const TEMPLATE_STATUS_ONLINE     =   2;      //  模板状态已上线
-    const TEMPLATE_STATUS_OFFLINE    =   1;      //  更新模型数据
-    const TEMPLATE_STATUS_DELETE     =   0;      //  包含上面两种方式
+    const TEMPLATE_STATUS_PREVIEW	 =   3;		 // 模板预发布
+    const TEMPLATE_STATUS_ONLINE     =   2;      // 模板状态已上线
+    const TEMPLATE_STATUS_OFFLINE    =   1;      // 更新模型数据
+    const TEMPLATE_STATUS_DELETE     =   0;      // 包含上面两种方式
     
     private static $_templateStatus = array(
-            self::TEMPLATE_STATUS_ONLINE     => '已上线',
-            self::TEMPLATE_STATUS_OFFLINE    => '已下线',
-            self::TEMPLATE_STATUS_DELETE     => '已删除',
+    	self::TEMPLATE_STATUS_PREVIEW	 => '预发布',
+		self::TEMPLATE_STATUS_ONLINE     => '已上线',
+        self::TEMPLATE_STATUS_OFFLINE    => '已下线',
+        self::TEMPLATE_STATUS_DELETE     => '已删除',
     );
     
     // 生产环境
@@ -138,12 +140,7 @@ class TemplateModel extends Model {
 	}
 	
 	public function getInfoById($templateid, $columns = '*') {
-		return $this->where(array('id'=>$templateid))->find();
-		if(!$row){
-			return false;
-		}
-		
-		return true;
+		return $this->field($field)->where(array('id'=>$templateid))->find();
 	}
 
 	public function get_cover_url($cover_id){

@@ -95,6 +95,11 @@ class HomeController extends Controller {
         is_login() || $this->error('您还没有登录，请先登录！', U('User/login'));
     }
     
+    // 是否是超级管理员
+    protected function isAdmin() {
+    	return $this->mid == 1 ? true : false;
+    }
+    
     protected function ajaxOutput($data, $code=0, $msg='success') {
         $res = array();
         $res['code'] = $code;

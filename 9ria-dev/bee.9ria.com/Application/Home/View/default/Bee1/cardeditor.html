@@ -1,0 +1,189 @@
+<extend name="Bee1/common" />
+<block name="body">
+<div class="commonContainer clearfix"> 
+   <div class="line"> 
+    <h2 class="h2tit"> 创建场景</h2> 
+   </div> 
+   <div class="leftBox clearfix viewFix"> 
+    <div class="mobile3 nobg mode1" id="preview_proxy_ifram"> 
+    </div> 
+    <p class="btnBlue publish" style="width:275px"><i class="icoSave"></i>保存修改并下一步</p> 
+   </div> 
+   <!-- 右侧 --> 
+   <div class="editorBox clearfix"> 
+    <div class="line">  
+      <h3>替换游戏资源</h3> 
+    </div> 
+    <!-- 替换资源 --> 
+    <div class="editor"> 
+     <div class="cate"> 
+      <ol class="classify box-container">
+        <li>
+          <!-- 二维码  -->
+          <h4>二维码制作</h4>
+          <div class="erCode">
+            <label for="">链接地址</label>
+            <input type="text" name="linkpath" id="linkpath" value="" class="txt prize_tips nowinmsg" placeholder="http://bee.9ria.com/mobile.html" onblur="setlink('linkpath');" maxlength="150">
+          </div>
+    <!-- 二维码 -->
+        </li> 
+      </ol> 
+     </div> 
+    </div> 
+    <!-- 替换资源end --> 
+    <div class="line">
+      <h3>设置名片内容</h3> 
+    </div>
+    <p class="f16">说明：您可在此处编写员工名片所需填写内容</p>
+    <div class="prize-list fl clearfix businessCard"> 
+      <div class="prize-item registerBox registPrize-item" style=""> 
+        <h4>员工简介部分</h4>
+        <div class="tips f16">拖动右侧箭头可直接变换各信息的顺序</div>
+        <form action="" name="form1" id="sortable" class="ui-sortable"> 
+        <div class="ui-state-default"> 
+         <label for="">员工姓名</label> 
+         <input type="text" disabled="true" placeholder="用户填写姓名">
+         <label for="" class="pr"><i class="selectBlue2"></i>设置可编写外链</label>
+         <div class="desBlock">
+           <label for="">链接描述</label>  
+           <input type="text" disabled="true" placeholder="例：详情">
+         </div>  
+         <i class="addBtn"></i>
+         <i class="moveBtn"></i> 
+         <i class="delBtn"></i> 
+        </div> 
+        <div class="ui-state-default" style="height:auto"> 
+         <label for="">员工职位</label> 
+         <input type="text" disabled="true" placeholder="用户填写手机号码">
+         <label for="" class="pr"><i class="selectBlue2"></i>设置可编写外链</label>
+         <div class="desBlock">
+           <label for="">链接描述</label>  
+           <input type="text" disabled="true" placeholder="例：详情">
+         </div> 
+         <i class="addBtn"></i>
+         <i class="moveBtn"></i> 
+         <i class="delBtn"></i> 
+        </div> 
+        <div class="ui-state-default"> 
+         <label for="">联系电话</label> 
+         <input type="text" disabled="true" placeholder="用户填写通讯地址">
+         <label for="" class="pr"><i class="selectBlue2"></i>设置可编写外链</label>  
+         <div class="desBlock">
+           <label for="">链接描述</label>  
+           <input type="text" disabled="true" placeholder="例：详情">
+         </div> 
+         <i class="addBtn"></i>
+         <i class="moveBtn"></i> 
+         <i class="delBtn"></i> 
+        </div> 
+       </form>
+      </div>
+    </div>
+    <!-- 报名表单 --> 
+    <div class="tabPanels regist" style="display:block"> 
+      <div class="prize-list fl clearfix"> 
+      <div class="prize-item registerBox  padding0 mt20"> 
+        <h4 class="pl20">员工信息部分</h4>
+         <!-- <div class="tips f16 pl20">
+           拖动右侧箭头可以直接变换各信息的顺序，最多不超过4个。（以下表单仅为示范不可填写）
+         </div> 
+         <div class="line mt20"></div> -->
+
+         <div class="checkboxBlock"> 
+         <div class="active"> 
+           <input type="checkbox" name="" value="姓名" palceholder="用户填写QQ号码" action-data="姓名"/>
+           <i class="selectBlue"></i>姓名 
+          </div>
+          <div class="active"> 
+           <input type="checkbox" name="" value="手机" palceholder="用户填写QQ号码" action-data="手机"/>
+           <i class="selectBlue"></i>手机 
+          </div>
+          <div class="active"> 
+           <input type="checkbox" name="" value="地址" palceholder="用户填写QQ号码" action-data="地址"/>
+           <i class="selectBlue"></i>地址 
+          </div>
+          <div> 
+           <input type="checkbox" name="" value="生日" palceholder="用户填写QQ号码" action-data="生日"/>
+           <i class="selectBlue"></i>生日 
+          </div>
+          <div> 
+           <input type="checkbox" name="" value="性别" palceholder="用户填写QQ号码" action-data="性别"/>
+           <i class="selectBlue"></i>性别 
+          </div>
+          <div> 
+           <input type="checkbox" name="" value="QQ" palceholder="用户填写QQ号码" action-data="QQ"/>
+           <i class="selectBlue"></i>QQ 
+          </div> 
+          <div> 
+           <input type="checkbox" name="" value="微信号" palceholder="用户填写微信号（非昵称）" action-data="微信号"/>
+           <i class="selectBlue"></i>微信号 
+          </div> 
+          <div> 
+           <input type="checkbox" name="" value="年龄" palceholder="用户填写年龄" action-data=""/>
+           <i class="selectBlue"></i>年龄 
+           <i class="delBtnHid"></i>
+          </div> 
+          <div> 
+           <input type="checkbox" name="" value="职业" palceholder="用户填写工作职业" action-data=""/>
+           <i class="selectBlue"></i>职业 
+          </div> 
+          <div> 
+           <input type="checkbox" name="" value="公司" palceholder="用户填写所在公司" action-data=""/>
+           <i class="selectBlue"></i>公司 
+          </div> 
+          <div> 
+           <input type="checkbox" name="" value="工作时间" palceholder="用户填写工作年限" action-data=""/>
+           <i class="selectBlue"></i>工作时间 
+          </div> 
+          <div> 
+           <input type="checkbox" name="" value="邮箱" palceholder="用户填写通信邮箱" action-data=""/>
+           <i class="selectBlue"></i>邮箱 
+          </div> 
+          <div> 
+           <input type="checkbox" name="" value="爱好" palceholder="用户填写个人爱好" action-data="aihao"/>
+           <i class="selectBlue"></i>爱好 
+          </div> 
+          <div> 
+           <input type="checkbox" name="" value="所在地" palceholder="用户填写个人现所在地" action-data=""/>
+           <i class="selectBlue"></i>所在地 
+          </div> 
+      </div>
+      <div class="line mt20"></div>
+      <div class="checkboxBlockAdd mb20">
+        <!-- <div style="width:227px;overflow:visible">  -->
+           <a href="javascript:;" class="aBlue mt20" id="addInpA">+添加其他信息</a> 
+           <div class="hiddenInp"> 
+            <input type="text" class="inpBox" id="addInp" value="" palceholder="用户输入字段需求信息"/> 
+            <input type="button" class="btnBlue1" value="确定" /> 
+           </div> 
+        <!-- </div>  -->
+      </div> 
+      </div> 
+     </div>
+     <p class="infoTit fl" style="margin-top:22px">拖动右侧箭头可直接变换各信息的顺序，为保证体验，报名信息建议不超过5个为宜 </p>
+     <div class="prize-list fl"> 
+      <div class="prize-item registPrize-item registerBox  padding0"> 
+       <form action="  " name="form1" id="sortable"> 
+        <div class="ui-state-default"> 
+         <label for="">姓名</label> 
+         <input type="text" disabled="true" value="用户填写姓名" /> 
+         <i class="moveBtn"></i> 
+         <i class="delBtn"></i> 
+        </div> 
+        <div class="ui-state-default"> 
+         <label for="">手机</label> 
+         <input type="text" disabled="true" value="用户填写手机号码" /> 
+         <i class="moveBtn"></i> 
+         <i class="delBtn"></i> 
+        </div> 
+        <div class="ui-state-default"> 
+         <label for="">地址</label> 
+         <input type="text" disabled="true" value="用户填写通讯地址" /> 
+         <i class="moveBtn"></i> 
+         <i class="delBtn"></i> 
+        </div> 
+       </form> 
+      </div> 
+     </div> 
+    </div>
+</block>

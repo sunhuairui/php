@@ -5,9 +5,12 @@ namespace Home\Controller;
 class EditorController extends HomeController {    
     // 设置游戏配置
     public function setting($appid) {
-        $addprizes = array(); //定义奖品数组
-
-        //获取抽奖类型
+        $projectinfo = $this->filterProjectInfo($appid);
+        $appid = $projectinfo['id'];
+        
+        // 定义奖品数组
+        $addprizes = array();
+        // 获取抽奖类型
         $raffletype = (int)I('post.raffletype');
         if($raffletype >= 0 && $raffletype <=4){        
             $this->_updateSetting($appid, 'raffletype', $raffletype);
@@ -205,11 +208,6 @@ class EditorController extends HomeController {
             $gamecodetable->addAll($rows);
         }
     }
-
-    
-    
-   
-
     
     // 编辑
 	public function editor($appid) {
@@ -224,11 +222,10 @@ class EditorController extends HomeController {
         $project = D('Project');
         $map = array();
         $map['token'] = $appid;
-        $env = (APP_STATUS == 'production') ? 1 : 0;
+        $env = (APP_STATUS == 'production') ? 1 : (strpos($_SERVER['HTTP_HOST'], 'dev.9tech.cn') !== false ? 2 : 0);
         $map['env'] = $env;
         $map['status'] = array('neq', 0);
         $projectinfo = $project->where($map)->find();
-
         if($this->mid != $projectinfo['uid'] && $this->mid != 1) {
             $this->error('项目('.$appid.')不属于你！');
         }
@@ -237,6 +234,9 @@ class EditorController extends HomeController {
         $appid = $projectinfo['id'];
         $template = D('Template');
         $template->where(array('id'=>$project->template_id))->find();
+
+
+
 
         //获取raffletypes
         $raffletypes = '3';
@@ -255,11 +255,16 @@ class EditorController extends HomeController {
 
         $raffletypeArrs = explode(',', $raffletypes);
         
+        // 方便测试，开启所有页面的表单功能
+        if (!in_array(4, $raffletypeArrs)) {
+            $raffletypeArrs[] = 4;
+            $raffletypes = implode(',', $raffletypeArrs);
+        }
         $this->assign("raffletypes", $raffletypes);
 
         $this->assign('mode', $template->mode);
-        $sdk_settings = D('sdk_settings');
-        $rows = $sdk_settings->where(array('appid'=>$appid))->select();
+        $settingModel = D('Settings');
+        $rows = $settingModel->where(array('appid'=>$appid))->select();
         if(empty($rows)){
             $setting = array();
         }else{
@@ -267,28 +272,34 @@ class EditorController extends HomeController {
                 $item_key = $row['item_key'];
                 if($item_key == "starttime" || $item_key == "endtime"){
                     $row['item_value'] = date("m/d/Y",$row['item_value']);
+                } elseif ($item_key == "formitems") {
+                    $row['item_value'] = json_decode($row['item_value'], true);
                 }
 
                 $setting[$item_key] = $row['item_value'];
 
             }
-            if(in_array(4, $raffletypeArrs)) {
-                $formDictModel = D('FormDict');
-                $defaultFormItems = $formDictModel->getFormItemByDefault();
-                $setting['default_formitems'] = $defaultFormItems;
-                
-                $customFormItems = $formDictModel->getFormItemByUid($this->mid);
-                $setting['custom_formitems'] = $customFormItems;
-                
-                $settingModel = D('Settings');
-                $formItems = $settingModel->getConf($appid, 'formitems', '');
-                $formItemIds = json_decode($formItems, true);
-                
-                $setting['formitems']       = $formItemIds;
-                $setting['formruledesc']    = $settingModel->getConf($appid, 'formruledesc', '');
+        }
+
+        if (!isset($setting['raffletype'])) {
+            if (in_array(3, $raffletypeArrs)) {
+                $setting['raffletype'] = 3;
+            } else {
+                $setting['raffletype'] = $raffletypeArrs[0];
             }
         }
 
+        if(in_array(4, $raffletypeArrs)) {
+            $formDictModel = D('FormDict');
+            $defaultFormItems = $formDictModel->getFormItemByDefault();
+            $setting['default_formitems'] = $defaultFormItems;
+        
+            $customFormItems = $formDictModel->getFormItemByUid($this->mid);
+            $setting['custom_formitems'] = $customFormItems;
+            
+            $setting["formitems"] = isset($setting["formitems"]) ? $setting["formitems"] : array(1,2,3);
+        }
+        
         $sdk_lottery_prize = D('sdk_lottery_prize');
         $prizes = $sdk_lottery_prize->where(array('appid'=>$appid))->select();
         foreach ($prizes as &$row) {
@@ -318,6 +329,27 @@ class EditorController extends HomeController {
         echo file_get_contents($gamecreator_app_path.$appid.'/template.json');
     }
 	
+    // 读取游戏配置信息
+    public function readTemplateJson($appid) {
+    	$gamecreator_app_path = SITE_PATH.'/webroot/Public/gamecreator/app/';
+    	$json = file_get_contents($gamecreator_app_path.$appid.'/template.json');
+    	//$json = str_replace(array(" ", "\r", "\n", "\t", "\n\r"), '', $json);
+    	//var_dump($json);
+    	return json_decode($json, true);
+    }
+    
+    // 写入游戏配置信息
+    public function writeTemplateJson($appid, $data) {
+    	$basepath = SITE_PATH.'/webroot/Public/gamecreator/app/'.$appid.'/';
+    	if (is_dir($basepath)) {
+    		if (is_array($data)) $data = json_encode($data);
+    		file_put_contents($basepath.'template.json', $data);
+    		return true;
+    	} else {
+    		return false;
+    	}    	
+    }
+    
     // 更新数据
 	public function write($appid, $filename) {
 		$filedata = isset($_POST['filedata']) ? $_POST['filedata'] : '';
@@ -368,7 +400,7 @@ class EditorController extends HomeController {
         $template = D('Template');
         $templateInfo = $template->where(array('id'=>$row['template_id']))->find();
         $publish_url = "http://".SITE_DOMAIN.'/play/'.$appid;
-        //$qr_svg = "http://". SITE_DOMAIN ."/index.php?s=/Home/Bee1/publishQRCode/appid/{$appid}";
+
         $qr_svg = U('publishQRCode', array('appid'=>$appid));
         $this->assign('appid', $appid);
         $this->assign('template_name', $row['name']);
@@ -392,45 +424,68 @@ class EditorController extends HomeController {
 	}
 
     public function upload($appid) {
-        $filename = $_GET['filename'];
+    	$this->filterProjectInfo($appid, false);
+    	
+        $GP = array_merge($_GET, $_POST);
+    	$filename = isset($GP['filename']) ? $GP['filename'] : '';
+    	if (empty($filename)) {
+    		$this->ajaxOutput('', 1, '文件名不能为空');
+    	}
+    	
         $basepath = SITE_PATH.'/webroot/Public/gamecreator/app/'.$appid.'/';
-        if ($_FILES['files']['name'][0] != '') {
-            // var_dump($_FILES['files']['error'][0]);exit;
-            if ($_FILES['files']['error'][0]) {
-                $this->ajaxReturn(array('code'=>'1','msg'=>uploadErr($_FILES['files']['error'][0]),'data'=>array()));
-            } else {
+        $this->uploadFile($filename, $basepath);
+    }
 
-                if(!in_array(strtolower(substr(strrchr($_FILES['files']['name'][0], '.'), 1)), array('jpg','jpeg','png'))){
-                    $this->ajaxReturn(array('code'=>'1','msg'=>'上传文件格式错误','data'=>array()));
+    /**
+     * ppt 编辑upload
+     */
+    public function pptupload($appid){
+        $oldname = $_GET['filename'];
+        $basepath = SITE_PATH.'/webroot/Public/gamecreator/app/'.$appid.'/';
+
+        $filename_arr = explode('/', $oldname);
+        array_pop($filename_arr);
+        $filename = implode('/', $filename_arr) . '/' . time() . '.jpg';
+        $re = copy($basepath.$oldname, $basepath.$filename);
+
+        $this->uploadFile($filename, $basepath);
+    }
+
+    protected function uploadFile($filename, $basepath){
+        if ($_FILES['files']['name'][0] != '') {
+            if ($_FILES['files']['error'][0]) {
+            	$this->ajaxOutput('', 1, uploadErr($_FILES['files']['error'][0]));
+            } else {
+                if(!in_array(strtolower(substr(strrchr($_FILES['files']['name'][0], '.'), 1)), array('jpg','jpeg','png'))) {
+                	$this->ajaxOutput('', 1, '上传文件格式错误');
                 }
 
-            	$file_size = $_FILES['files']['size'][0];
-            	$imageInfotmp = @getimagesize($_FILES['files']['tmp_name'][0]);
-            	$imageInfo= @getimagesize($basepath . $filename);
-            	if($file_size>800*1024){
-                    $this->ajaxReturn(array('code'=>'1','msg'=>'上传图片不能超出800KB','data'=>array()));
-            	 
-            	//}elseif(($imageInfotmp[0]!=$imageInfo[0])||($imageInfotmp[1]!=$imageInfo[1])){
-                  //$res = array('error'=>'尺寸不正确!');
-            		
-            	}else{
-                	$result= move_uploaded_file($_FILES['files']['tmp_name'][0] , $basepath . $filename);
+                $file_size = $_FILES['files']['size'][0];
+                $imageInfotmp = @getimagesize($_FILES['files']['tmp_name'][0]);
+                $imageInfo= @getimagesize($basepath . $filename);
+                if($file_size>800*1024){
+                    return array('code'=>'1','msg'=>'上传图片不能超出800KB','data'=>array());
+                }else{
+                    $result= move_uploaded_file($_FILES['files']['tmp_name'][0] , $basepath . $filename);
                     if($result){
                         //执行压缩类
                         $image = new \Org\Util\ImageFile($basepath . $filename, $imageInfo[0], $imageInfo[1], '0',$basepath . $filename);
                          // 执行打包命令
                         D('Picture')->packPicture($basepath);
                     }
-                    $res = array('success'=>1);
-            	}
+                    
+                    $this->ajaxOutput(array('filename'=>$filename));
+                }
             }
         } else {
-            $this->ajaxReturn(array('code'=>'1','msg'=>'请上传文件！','data'=>array()));
+        	$this->ajaxOutput('', 1, '请上传文件！');
         }
-        
-        $this->ajaxReturn($res);
     }
 
+
+    /**
+     * 上传奖项图片
+     */
     public function settingUpload($appid){
         $filename =  $_GET['filename'];
         if(empty($filename)){
@@ -458,7 +513,7 @@ class EditorController extends HomeController {
                     $result= move_uploaded_file($_FILES['files']['tmp_name'][0] , $basepath . $filename);
                     if($result){
                         $image = new \Org\Util\ImageFile($basepath . $filename, 300, 300, '0',$basepath . $filename);
-                        $res = array('success'=>1,'filename'=>$filename);
+                        $res = array('success'=>1,'filename'=>$filename, 'code'=>0, 'msg'=>'','data'=>array('filename'=>$filename));
                     }
                 }
             }
@@ -486,108 +541,64 @@ class EditorController extends HomeController {
         vendor('phpqrcode.phpqrcode');
         $publish_url = "http://" . SITE_DOMAIN . '/play/'.$appid;
 		header("content-disposition: attachment; filename=qrcode.png");
-       \QRcode::png($publish_url,$outfile = false, $level = QR_ECLEVEL_L,$size = 8);
+    	\QRcode::png($publish_url, $outfile = false, QR_ECLEVEL_L, 8);
     }
     
-    public function editScene($appid){
-    	$time = time();
-    	$this->assign('t', $time);
+    public function editScene($appid) {
+		$projectinfo = $this->filterProjectInfo($appid);
+    	$template = D('Template')->getInfoById($projectinfo['template_id']);
+    	$this->assign('mode', $template['mode']);
+    	
+        $endtitle = D('Settings')->getConf($projectinfo['id'], 'endtitle', '活动已结束，敬请关注更多精彩！');
+    	$this->assign('endtitle', $endtitle);
+
+    	$templateJson = $this->readTemplateJson($appid);
+    	//var_dump(json_last_error());
+    	$share = isset($templateJson['share']) ? $templateJson['share'] : array();
+    	$this->assign('share', $share);
+    	
+    	$this->assign('t', time());
     	$this->assign('app_id', $appid);
-    	
-    	$project = D('Project');
-    	$env = (APP_STATUS == 'production') ? 1 : 0;
-    	$projectinfo = $project->where(array('token'=>$appid, 'env'=>$env))->find();
-    	if($this->mid != $projectinfo['uid'] && $this->mid != 1) {
-    		$this->error('项目('.$appid.')不属于你！');
-    	}
-    	
-    	$template = D('Template');
-    	$template->where(array('id'=>$project->template_id))->find();
-    	$name=$template->name;
-    	$url = "http://".SITE_DOMAIN.'/Public/gamecreator/templates/'.$name.'/?appid='.$appid;
-    	$this->assign('url', $url);
-    	$this->assign('mode', $template->mode);
-    	// $setting=$project->setting;
-    	
-    	// $setarr=!empty($setting)?json_decode($setting):null;
-    	// $endtitle=isset($setarr->endtitle)?$setarr['endtitle']:'';
-        $setting = D('sdk_settings');
-        $row = $setting->where(array('appid'=>$projectinfo['id'], 'item_key'=>'endtitle'))->find();
-        $endtitle = empty($row) ? '活动已结束，敬请关注更多精彩！' : $row['item_value'];
-    	$this->assign('endtitle',$endtitle);
     	$this->display('Bee1/editScene');
     }
 
-    public function editshare($appid){
-        $project = D('Project');
-        $env = (APP_STATUS == 'production') ? 1 : 0;
-        $projectinfo = $project->where(array('token'=>$appid, 'env'=>$env))->find();
-        if($this->mid != $projectinfo['uid']) {
-            $this->error('项目('.$appid.')不属于你！');
-        }
+    public function editShare($appid) {
+    	$projectinfo = $this->filterProjectInfo($appid);
 
         // 下线提示入sdk_setting库
         $endtitle = isset($_POST['endtitle']) ? $_POST['endtitle'] : '';
-        if(!empty($endtitle)){
-            $project = D('sdk_settings');
-            $project->where(array('appid'=>$projectinfo['id'], 'item_key'=>'endtitle'))->delete();
-            $time = time();
-            $project->add(array(
-                'appid'=>$projectinfo['id'],
-                'item_key'=>'endtitle',
-                'item_value'=>$endtitle,
-                'status'=>1,
-                'create_time'=>$time,
-                'modify_time'=>$time
-            ));
-        }
-
-        //分享图片覆盖icon.png
-        $data = isset($_POST['imgdata']) ? $_POST['imgdata'] : '';
-        $filename = 'icon.png';
-        if(!empty($data)){
-            $basepath = SITE_PATH.'/webroot/Public/gamecreator/app/'.$appid.'/';
-            if(!empty($data) && is_dir($basepath)){
-                file_put_contents($basepath . $filename, file_get_contents($data));
-                $image = new \Org\Util\ImageFile($basepath . $filename, 300, 300, '0',$basepath . $filename);
-                $res = array('success'=>1,'filename'=>$filename);
-            } else {
-                $this->ajaxReturn(array('error'=>1,'msg'=>'请上传文件！'));
-            }
+        if (!empty($endtitle)) {
+        	D('Settings')->updateItemValue($projectinfo['id'], 'endtitle', $endtitle);
         }
 
         // 写入template.json文件
-        $filedata = isset($_POST['filedata']) ? $_POST['filedata'] : '';
-        if(!empty($filedata)){
-            $this->write($appid, 'template.json');
+        $sharedata = isset($_POST['sharedata']) ? $_POST['sharedata'] : '';
+        if (empty($sharedata)) {
+        	$this->ajaxOutput('', 1, 'sharedata参数为空');
+        } else {
+        	$sharedata = json_decode($sharedata, true);
+        	if ($sharedata) {
+        		$data = $this->readTemplateJson($appid);
+        		$data['share'] = $sharedata;
+        		$this->writeTemplateJson($appid, $data);
+        		$this->ajaxOutput($sharedata);
+        	} else {
+        		$this->ajaxOutput('', 1, '数据格式异常');	
+        	}
         }
     }
     
     // 修改链接描述
-    public function setinglink($id) {
-    	$app = D('Project');
-    	$appdata = $app->field(true)->where(array('id'=>$id) )->select();
-    	if (empty($appdata)) {
-    		$this->ajaxReturn(array('error'=>'项目不存在！'));
-    	}
-    	
-        $time = time();
+    public function setinglink($appid) {
+		$projectinfo = $this->filterProjectInfo($appid);
+		
+		$res = '';
         $settingModel = D('Settings');
-        $settingData = array('appid'=>$id,'status'=>1,'create_time'=>$time,'modify_time'=>0);
         if (isset($_POST['linkname'])) {
             if (empty($_POST['linkname'])) {
                 $this->ajaxReturn(array('error'=>'链接描述不能为空！'));
             } else {
-                $res = $settingModel->where(array('appid'=>$id, 'status'=>1, 'item_key'=>'linkname'))->find();
-                if ($res) {
-                    $settingModel->item_value = $_POST['linkname'];
-                    $settingModel->modify_time = $time;
-                    $res = $settingModel->save();
-                } else {
-                    $settingData['item_key'] = 'linkname';
-                    $settingData['item_value'] = $_POST['linkname'];
-                    $res = $settingModel->add($settingData);
-                }
+            	$res = $settingModel->updateItemValue($projectinfo['id'], 'linkname', $_POST['linkname']);
             }
         }
 
@@ -595,35 +606,19 @@ class EditorController extends HomeController {
             if (empty($_POST['linkpath'])) {
                 $this->ajaxReturn(array('error'=>'链接地址不能为空！'));
             } else {
-                $ss = preg_match_all('/(http|https|ftp|file){1}(:\/\/)?([\da-z-\.]+)\.([a-z]{2,6})([\/\w \.-?&%-=]*)*\/?/', $_POST['linkpath'], $urlall);
+                $ss = preg_match_all('/(http|https|ftp|file){1}(:\/\/)?([\da-z-\.]+)\.([a-z]{2,6})([\/\w \.-?&%-=]*)*\/?/', 
+                	$_POST['linkpath'], $urlall);
+                
                 if (empty($ss)) {
                     $this->ajaxReturn(array('error'=>'链接地址有误！！'));	
                 }
                 
-                $res = $settingModel->where(array('appid'=>$id, 'status'=>1, 'item_key'=>'linkpath'))->find();
-                if ($res) {
-                    $settingModel->item_value = $_POST['linkpath'];
-                    $settingModel->modify_time = $time;
-                    $res = $settingModel->save();
-                } else {
-                    $settingData['item_key'] = 'linkpath';
-                    $settingData['item_value'] = $_POST['linkpath'];
-                    $res = $settingModel->add($settingData);
-                }
+                $res = $settingModel->updateItemValue($projectinfo['id'], 'linkpath', $_POST['linkpath']);
             }
         }
         
         if (isset($_POST['islinkdesc'])) {
-            $res = $settingModel->where(array('appid'=>$id, 'status'=>1, 'item_key'=>'islinkdesc'))->find();
-            if ($res) {
-                $settingModel->item_value = $_POST['islinkdesc'];
-                $settingModel->modify_time = $time;
-                $res = $settingModel->save();
-            } else {
-                $settingData['item_key'] = 'islinkdesc';
-                $settingData['item_value'] = $_POST['islinkdesc'];
-                $res = $settingModel->add($settingData);
-            }
+        	$res = $settingModel->updateItemValue($projectinfo['id'], 'islinkdesc', $_POST['islinkdesc']);
         }
 
         if ($res) {
@@ -772,5 +767,19 @@ class EditorController extends HomeController {
         } else {
             $this->error('删除表单项失败');
         }
+    }
+    
+    // 项目操作的权限判断
+    private function filterProjectInfo($appid, $return = true) {
+    	$projectinfo = D('Project')->getInfoByToken($appid);
+    	if (empty($projectinfo)) {
+    		$this->error('项目('.$appid.')不存在！');
+    	}
+    	 
+    	if (!$this->isAdmin() && $this->mid != $projectinfo['uid']) {
+    		$this->error('项目('.$appid.')不属于你！');
+    	}
+
+    	if ($return) return $projectinfo;
     }
 }

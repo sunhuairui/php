@@ -1,13 +1,12 @@
 <extend name="Bee1/common" />
 <block name="style">
-  <link rel="stylesheet" type="text/css" href="/Public/static/simpletooltip/simpletooltip.min.css">
-  <link rel="stylesheet" href="/Public/bee1/css/jquery-ui.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/Public/static/simpletooltip/simpletooltip.min.css" />
+  <link rel="stylesheet" href="/Public/bee1/css/jquery-ui.css" type="text/css" />
   <link rel="stylesheet" href="/Public/bee1/css/main.css" />
   <style type="text/css">
     /*.box{width:100px;height:100px;border: 1px solid #ccc;display: inline-flex;margin: 10px;cursor: pointer;position: relative;}*/
     .popover-title{background-color:#fff;border-bottom: none;}
     .popover{display: block;}
-
     .fileInputContainer{
         height:30px;
         line-height: 30px;
@@ -65,14 +64,8 @@
   }
   /** 日期组件样式 **/
   .icoCalendar{/*display:inline-block;width:20px;height:20px;*/background: url(/Public/bee1/images/sprite.png) right center no-repeat;background-position: 177px -1265px;}
-    /*step 4*/
-    /*.error{border: 1px solid red !important;}
-    .errdlg{position: absolute;  top: 0%;  left: 0%;  width: 100%;  height: 100%;  background-color: black;  z-index:1001;  -moz-opacity: 0.5;  opacity:.5;  filter: alpha(opacity=.5);}
-    .errmsg{position: absolute; z-index:1002; left: 0;right: 0;margin: auto;bottom: 0;top: 0;}
-    .errmsg .errmsg-w{width: 30%;min-height: 20%;background-color: white;margin: auto;margin-top: 20%;position: relative;border: 1px solid #fff;-moz-border-radius: 15px;-webkit-border-radius: 15px;border-radius:15px;-webkit-box-dow: 5px 5px 6px #999;-moz-box-shadow: 5px 5px 6px #999;box-shadow: 5px 5px 6px #999;}
-    .errmsg .errmsg-c{padding: 20px;color: red;font-size: 20px;}*/
-    .imgsizetips{float: right;margin-right: 10px;font-size: 20px;}
-    .editor .cate .item{margin:5px 19px 0 0;}
+  .imgsizetips{float: right;margin-right: 10px;font-size: 20px;}
+  .editor .cate .item{margin:5px 19px 0 0;}
   </style>
 </block>
 <block name="script">
@@ -93,47 +86,45 @@
       gamecreator.mode = '{$mode}';
       gamecreator.raffletypes = "{$raffletypes}".split(',');
       gamecreator.time = new Date().getTime();
-
+      gamecreator.uploadurl = '/index.php?s=Home/editor/upload/appid/' + gamecreator.app_id;
       var setting = {$setting};
       var prizes  = {$prizes};
       var mode    = '{$mode}';
       var token   = '{$token}';
-      var appid   = {$appid};
-  /**音乐关闭开启 auth@changzhengfei **/ 
-        function audioSwitch(el){
-            var switch_var = gamecreator.tmpsdata.share['setting']['switch'];
-            if($(el).find("i").hasClass('audioBtn')){
-                if(switch_var == "true" ){
-                    gamecreator.tmpsdata.share['setting']['switch']="false";
-                    bee.write_file('template.json', gamecreator.tmpsdata, function(res){
-                        $(document).trigger("bee.reloadgame");
-                        $(el).find("#audio").attr("action-name",'false'); 
-                    }, function(res){
-                    });
-                } 
-                    $(el).find("i").removeClass('audioBtn').addClass("noAudioBtn");
-                    switch_var='';
-            }else{
-                var switch_var1 = gamecreator.tmpsdata.share['setting']['switch'];
-                if(switch_var1 == "false" ){
-                    gamecreator.tmpsdata.share['setting']['switch']="true";
-                    bee.write_file('template.json', gamecreator.tmpsdata, function(res){
-                        $(document).trigger("bee.reloadgame");
-                        $(el).find("#audio").attr("action-name",'true');
-                    }, function(res){
-                    });
-                }
-                    $(el).find("i").removeClass('noAudioBtn').addClass("audioBtn");
+      /**音乐关闭开启 auth@changzhengfei **/ 
+      function audioSwitch(el){
+        var switch_var = gamecreator.tmpsdata.share['setting']['switch'];
+        if($(el).find("i").hasClass('audioBtn')){
+            if(switch_var == "true" ){
+                gamecreator.tmpsdata.share['setting']['switch']="false";
+                bee.write_file('template.json', gamecreator.tmpsdata, function(res){
+                    $(document).trigger("bee.reloadgame");
+                    $(el).find("#audio").attr("action-name",'false'); 
+                }, function(res){
+                });
+            } 
+            $(el).find("i").removeClass('audioBtn').addClass("noAudioBtn");
+            switch_var = '';
+        } else {
+            var switch_var1 = gamecreator.tmpsdata.share['setting']['switch'];
+            if(switch_var1 == "false" ){
+                gamecreator.tmpsdata.share['setting']['switch']="true";
+                bee.write_file('template.json', gamecreator.tmpsdata, function(res){
+                    $(document).trigger("bee.reloadgame");
+                    $(el).find("#audio").attr("action-name",'true');
+                }, function(res){
+                });
             }
+            $(el).find("i").removeClass('noAudioBtn').addClass("audioBtn");
         }
+    }
         
-      $(function(){
+      $(function() {
         //监听重新加载游戏事件
-        $(document).bind("bee.reloadgame", function(event){
-          if(checkbroswer){
-
-            $("#preview_proxy_ifram").html('<iframe id="preview_proxy"  style="margin-left:-23px;border:none" class="frame" sandbox="allow-scripts allow-same-origin" name="preview_proxy" style="border:none;" src="'+'/app/proxy/' + new Date().getTime() + "/" + gamecreator.app_id + '/?openid=otuWJjvQKhb9nn1xL8v-IRrgxct8"></iframe>')
-            // $("#preview_proxy").attr({src:"/app/proxy/" + new Date().getTime() + "/" + gamecreator.app_id + "/?openid=otuWJjvQKhb9nn1xL8v-IRrgxct8"});
+        $(document).bind("bee.reloadgame", function(event) {
+          if(checkbroswer) {
+            $("#preview_proxy_ifram").html('<iframe id="preview_proxy"  style="margin-left:-23px;border:none" class="frame" sandbox="allow-scripts allow-same-origin" name="preview_proxy" style="border:none;" src="'
+                +'/app/proxy/' + new Date().getTime() + "/" + gamecreator.app_id + '/?openid=otuWJjvQKhb9nn1xL8v-IRrgxct8"></iframe>');
           }
         });
          
@@ -184,8 +175,8 @@
             html+='</li>';
             $(".box-container").append(html);
           }
-          
-        /**音乐状态设置加载 auth@changzhengfei **/ 
+
+            /**音乐状态设置加载 auth@changzhengfei **/ 
             var musicSwitch =gamecreator.tmpsdata.share['setting']['switch'];
             var bgAudio     =gamecreator.tmpsdata.share['setting']['bgAudio'];
             if(bgAudio=='true'){ 
@@ -250,22 +241,33 @@
  
     function setlink(key) {
         var value = '';
+        var linkname = $("#linkname").val();
+        var linkpath = $("#linkpath").val();
         if (key == 'linkname') {
-            value = $("#linkname").val();
-            if (value == '') {
-                $("#showerr").html('链接描述不能为空').show();
+            value = linkname;
+            if (linkname == '') {
+                if (linkpath != '') {
+                    $("#showerr").html('链接描述不能为空').show();
+                } else {
+                    $("#showerr").html('');
+                }
                 return false;
             }
         } else if (key == 'linkpath') {
-            value = $("#linkpath").val();
-            if (value == '') {
-                $("#showerr").html('链接地址不能为空').show();
+            value = linkpath;
+            if (linkpath == '') {
+                if (linkname != '') {
+                    $("#showerr").html('链接地址不能为空').show();
+                } else {
+                    $("#showerr").html("");
+                }
                 return false;
             }            
         } else if (key == 'islinkdesc') {
             value = $("#isshow").val();
         }
-        var urllink = "{:U('setinglink', 'id='.$appid)}";
+        
+        var urllink = "{:U('setinglink', 'appid='.$token)}";
         var data = {};
         data[key] = value;
         $.post(urllink, data, function(res) {
@@ -276,7 +278,6 @@
             }
         });
     }
-     
 
     $(function() {
         setting.linkname && $("#linkname").val(setting.linkname);
@@ -284,11 +285,9 @@
         $(".tablink li").click(function(){
             $(".tablink li").removeClass('active');
             $(this).addClass('active');
-
             var val = $(this).attr('val');
             $("#isshow").val(val);
             setlink('islinkdesc');
-            
             if (val == '0') {
                 $(".tablinktxt").hide();
             } else {
@@ -306,7 +305,7 @@
       </div>
       <div class="leftBox clearfix viewFix">
         <div class="mobile3 nobg mode{$mode}" id="preview_proxy_ifram"></div> 
-        <p class="btnBlue publish"  style="width:275px"><i class="icoSave"></i>保存修改并下一步</p> 
+        <p class="btnBlue publish" style="width:275px"><i class="icoSave"></i>保存修改并下一步</p> 
       </div> 
       <!-- 右侧 --> 
       <div class="editorBox clearfix"> 

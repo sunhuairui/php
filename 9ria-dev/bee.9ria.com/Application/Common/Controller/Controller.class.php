@@ -308,7 +308,7 @@ class Controller extends \Think\Controller {
 		$this->assign('placeholder', $placeholder);
 		
 		if (isset($_REQUEST[$key]) && !isset($map[$key])) {
-			$map[$key] = array('like','%' . htmlspecialchars ($_REQUEST[$key]) . '%');
+			$map[$key] = array('like','%' . htmlspecialchars(trim($_REQUEST[$key])) . '%');
 			unset($_REQUEST[$key]);
 		}
 		

@@ -6,7 +6,7 @@ class TemplateController extends HomeController {
     protected $pagesize = 20;
 
     // 模板显示页
-    public function index() {
+    public function index() {    	
         $map = array('is_show'=>1);
         if (APP_STATUS == 'production') {
             if ($this->mid == 1) {
@@ -55,7 +55,6 @@ class TemplateController extends HomeController {
         }
 
         $count = $template->where($map)->count();
-//         print_r($template->getLastSql());exit;
         $tags = D('Tag')->where(array('status'=>1))
             ->order('sort desc, id desc')
             ->page($pageno, $row)
@@ -90,7 +89,6 @@ class TemplateController extends HomeController {
         } else {
             $map['status'] = array('neq', 0);
         }
-        
         //查询条件
          $s_cate=!empty($_POST['s_cate'])?$_POST['s_cate']:'';
          $s_tag=!empty($_POST['s_tag'])?$_POST['s_tag']:'';
@@ -99,7 +97,6 @@ class TemplateController extends HomeController {
          $order='sort desc, create_time desc';
          if($s_cate){
          	$map['_string']="FIND_IN_SET($s_cate, category)";
-         
          }
          if($s_tag){
          	$map['_string']="FIND_IN_SET($s_tag, tag)";

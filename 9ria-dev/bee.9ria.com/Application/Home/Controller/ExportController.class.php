@@ -16,7 +16,7 @@ class ExportController extends HomeController {
      * auth@changzhengfei
      * 中奖信息
      */
-    public function lotterys($appid){
+    public function lotterys($appid) {
         $Model = D('Project');
         $env = (APP_STATUS == 'production') ? $Model::PROJECT_ENV_PRODUCTION : $Model::PROJECT_ENV_TEST;
         $map = array('token' => $appid, 'env' => $env);
@@ -204,7 +204,8 @@ class ExportController extends HomeController {
         $redis = redis();
         $rkey = 'rank:appid:' . $id . ':lot_id:' . $lot_id;
         $count = $redis->zcard($rkey);
-
+        echo $rkey."<hr>";
+echo $count."<hr>";
         $LotteryPrizeModel = D('LotteryPrize');
         $prizeArrs = $LotteryPrizeModel->getAllPrize($id);
         if($prizeArrs){
@@ -238,7 +239,10 @@ class ExportController extends HomeController {
             if($prizeCount > 0){
                 $rankId = 1;
                 $count = $count > $prizeCount ? $prizeCount : $count;
+                
+                echo $prizeCount."A<br>B".$count.'B<br>C'.$rowEnd."<hr>";
                 $rankdataArr = $redis->zrevrange($rkey, 0, $count, 'withscores');
+                echo "<pre>";var_dump($rankdataArr);echo "</pre>";
                 $openIds = array();
                 foreach($rankdataArr as $key => $val){
                     $openIds[] = $key;
@@ -261,7 +265,7 @@ class ExportController extends HomeController {
             }
         }
         $headArr = array("奖项", "排行", "用户昵称"); //表头
-        exportExcel($project['title'].'-排行榜信息-' . date("Ymd", time()), $headArr, $rankDatas);
+        //exportExcel($project['title'].'-排行榜信息-' . date("Ymd", time()), $headArr, $rankDatas);
     }
 
     /* 用户数据 */
@@ -319,7 +323,7 @@ class ExportController extends HomeController {
         $settingModel = D('Settings');
         $formItems = $settingModel->getConf($id, 'formitems', '');
         $formItemIds = json_decode($formItems, true);
-
+                
         $formModel = D('FormDict');
         $formItems = $formModel->getFormItemInfo($formItemIds);
 
@@ -344,7 +348,8 @@ class ExportController extends HomeController {
             foreach($nameKeys as $key){
                 $nameKey['id'] = $k;
                 if($key == 'sex'){
-                    if($d[$key]){
+                    $kv=(string)$d[$key];
+                    if($kv=='1'  OR $kv=='男'){
                         $nameKey[$key] = '男';
                     }else{
                         $nameKey[$key] = '女';

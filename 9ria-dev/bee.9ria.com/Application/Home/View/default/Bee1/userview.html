@@ -86,7 +86,7 @@
 	        <li class="borderN">
 	            <a href="{:U('template/index')}"><span class="icoCreat fl tl">创建场景</span></a>
 	        </li>
-	        <li>{$gamecount.appcount}<span><i class="icoC"></i>场景数</span></li>
+	        <li>{$totalPage}<span><i class="icoC"></i>场景数</span></li>
 	        <li>{$gamecount.pageview}<span><i class="icoView"></i>浏览量</span></li>
 	        <li>{$gamecount.userview}<span><i class="icoVistor"></i>访客数</span></li>
 	        <li class="borderN">{$gamecount.sharecount}<span><i class="icoZ"></i>转发量</span></li>
@@ -191,27 +191,18 @@ $(function(){
     }
 
     var setStatus = function(rid, status) {
-        var target = '{:U("setStatus")}';
-        $.post(target, { appid: rid, status: status},function(data) {
-            if(data == 1) {
+        $.post('{:U("setStatus")}', {appid: rid, status: status}, function(res) {
+            if (res.code == 0) {
                 location.reload();
+            } else {
+                alert(res.msg);
             }
         });
     };
     bootstart();
     //当前页码
-    var s_page = 3;
-    var swith = document.body.clientWidth;
-    if( swith<1400 ) {
-        var row=8;
-        if($(".main li").length > 8) {
-            $(".main li").eq(8).remove();
-            $(".main li").eq(8).remove();
-        }
-    } else {
-        var row=10;
-    }
-    
+    var s_page = 2;
+	var row = 20;
     var totalPage = Math.ceil({$totalPage}/row);
     $(".more").bind("click", function(){
         var page = s_page;
@@ -255,12 +246,13 @@ $(function(){
         var rid = cur_offline_rid;
         setStatus(rid, 1);
     });
+    
     $('#delbox .btn-primary').bind("click", function() {
-        var rid = cur_del_rid;
-        var target = '{:U("delete")}';
-        $.post(target, { appid: rid },function(data) {
-            if(data == 1) {
+        $.post('{:U("delete")}', {appid: cur_del_rid}, function(res) {
+            if (res.code == 0) {
                 location.reload();
+            } else {
+                alert(res.msg);
             }
         });
     });

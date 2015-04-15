@@ -333,6 +333,7 @@ bee.replacepanel = function(el){
     if(type == 'IMAGE'){
         var size = el.find('.fblue').html();
         var filename = el.attr('action-data');
+        var templateVarName = el.attr("name");
         bee.replacetabs.dlg.append('<div class="popover-title">\
                 <ul class="nav nav-tabs">\
                   <li role="presentation" class="tabs active" action-data="uploader" style="height:42px;border:none;overflow:hidden"><a href="javascript:;style="display:inline-block;height:42px;font-weight:bold;">上传</a></li>\
@@ -340,7 +341,7 @@ bee.replacepanel = function(el){
             </div>\
             <div class="popover-content">\
                 <form name="app_file_upload" method="post" target="app_file_proxy" enctype="multipart/form-data">\
-                    <div class="popcont fileInputContainer upload" style="margin:auto;display:block;"><em class="f16"><i class="icoDownload"></i>点击上传</em><input id="fileupload" type="file" name="files[]" data-url="'+'/index.php?s=Home/editor/upload/appid/' + gamecreator.app_id + '&filename=' + filename+'" class="fileInput" multiple></div>\
+                    <div class="popcont fileInputContainer upload" style="margin:auto;display:block;"><em class="f16"><i class="icoDownload"></i>点击上传</em><input id="fileupload" type="file" name="files[]" data-url="'+gamecreator.uploadurl + '&filename=' + filename+'" class="fileInput" multiple></div>\
                 </form>\
                 <div style="text-align:center;margin-top:30px;" class="f12">推荐使用.png格式图片，推荐尺寸'+size+'</div>\
             </div>');
@@ -351,14 +352,26 @@ bee.replacepanel = function(el){
                     _errDlg("上传文件超时...");
                     $(document).trigger('bee.removepopover');
                     return;
+
                 }).success(function(result, textStatus, jqXHR){
                     if(uploadtimelistener) clearTimeout(uploadtimelistener);
                     if(result) {
                         var result = JSON.parse(result);
-                        if (result.success) {
-                            $(document).trigger("bee.reloadgame");
-                            $(document).trigger('bee.removepopover');
-                            el.find('.imgbox').css('background-image', 'url(\'/Public/gamecreator/app/'+gamecreator.app_id+'/'+ filename +'?t='+ new Date().getTime() +'\')');
+                        if (!result.code) {
+                            el.find('.imgbox').css('background-image', 'url(\'/Public/gamecreator/app/'+gamecreator.app_id+'/'+ result.data.filename +'?t='+ new Date().getTime() +'\')');
+                            el.attr({"action-data": result.data.filename});
+                            if(filename == result.data.filename){
+                                //替换
+                                $(document).trigger("bee.reloadgame");
+                                $(document).trigger('bee.removepopover');
+                            }else{
+                                // 新建图片
+                                gamecreator.tmpsdata.templateVars[templateVarName] && gamecreator.tmpsdata.templateVars[templateVarName].texUrl ?  gamecreator.tmpsdata.templateVars[templateVarName].texUrl = result.data.filename : null;
+                                bee.write_file('template.json', gamecreator.tmpsdata, function(res){
+                                    $(document).trigger("bee.reloadgame");
+                                    $(document).trigger('bee.removepopover');
+                                });
+                            }
                         }else{
                             $(document).trigger('bee.removepopover');
                             _errDlg(result.msg);
@@ -374,30 +387,6 @@ bee.replacepanel = function(el){
                 bee.replacetabs.dlg.find(".popover-content").html('<div style="width:50px;height:50px;margin:auto;"><img style="width:50px;height:50px;" src="/Public/bee1/images/loading.gif"></div>');
             }
         });
-
-        // bee.replacetabs.dlg.find("input[type=file]").change(function(e){
-            
-        //     var formData = new FormData();
-        //         formData.append('file', $(this)[0].files[0]);
-        //     $.ajax({
-        //         url: '/index.php?s=Home/Bee1/upload/appid/' + gamecreator.app_id + '&filename=' + filename,
-        //         type: 'POST',
-        //         data: formData,
-        //         async: false,
-        //         success: function (data) {
-        //             if(data.success){
-        //                 $(document).trigger("bee.reloadgame");
-        //                 $(document).trigger('bee.removepopover');
-        //                 el.find('.imgbox').css('background-image', 'url(\'/Public/gamecreator/app/'+gamecreator.app_id+'/'+ filename +'?t='+ new Date().getTime() +'\')');
-        //             }
-        //         },
-        //         cache: false,
-        //         contentType: false,
-        //         processData: false
-        //     });
-        //     return false;
-        // });
-
     }else if(type == 'STRING'){
         var title = el.attr('title');
         var name = el.attr('action-name'); 
@@ -408,7 +397,7 @@ bee.replacepanel = function(el){
                 </ul>\
             </div>\
             <div class="popover-content">\
-                <p>温馨提示:为了保证展现效果，请按照默认格式填写内容</p>\
+                <p class="word-tips">温馨提示:为了保证展现效果，请按照默认格式填写内容</p>\
                 <textarea class="content"  style="width:80%;padding:0 5px;min-height:60px;line-height:30px;resize:none"  type="text" title="'+ title +'">'+title+'</textarea>\
                 <input type="submit" value="提交" style="background:#099bee;color:#fff;border:none;height:30px;line-height:23px;float:right;margin-right:15px;"></submit>\
                 <div class="errormsg" style="color:red;"></div>\
@@ -563,10 +552,10 @@ function checkBroswer()
 
 bee.previewgame = function(el, appid){
     $(document).bind("bee.reloadgame", function(event){
-      if(checkbroswer){
-        $(el).html('<iframe id="preview_proxy"  style="margin-left:-23px;border:none" class="frame" sandbox="allow-scripts allow-same-origin" name="preview_proxy" style="border:none;" src="'+'/app/proxy/' + new Date().getTime() + "/" + appid + '/?openid=otuWJjvQKhb9nn1xL8v-IRrgxct8"></iframe>')
-        // $("#preview_proxy").attr({src:"/app/proxy/" + new Date().getTime() + "/" + gamecreator.app_id + "/?openid=otuWJjvQKhb9nn1xL8v-IRrgxct8"});
-      }
+        if(checkbroswer){
+            $(el).html('<iframe id="preview_proxy"  style="margin-left:-23px;border:none" class="frame" sandbox="allow-scripts allow-same-origin" name="preview_proxy" style="border:none;" src="'+'/app/proxy/' + new Date().getTime() + "/" + appid + '/?openid=otuWJjvQKhb9nn1xL8v-IRrgxct8"></iframe>')
+            // $("#preview_proxy").attr({src:"/app/proxy/" + new Date().getTime() + "/" + gamecreator.app_id + "/?openid=otuWJjvQKhb9nn1xL8v-IRrgxct8"});
+        }
     });
     $(document).trigger('bee.reloadgame');
 }
@@ -583,5 +572,27 @@ if (typeof console === "undefined" || typeof console.log === "undefined") {
      console.log = function() {};
  }
 }
-
-
+/**
+ * @desc 系统消息前台显示
+ * @auth changzhengfei
+ * @time 2015/04/15
+ * **/
+bee.message = function(title,message){
+  messagedlg = $('<div class="modal fade" id="registdlg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">\
+   <div class="modal-dialog">\
+     <div class="modal-content">\
+        <div class="modal-header">\
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>\
+            <h3 id="myModalLabel">'+(title || '消息提示')+'</h3>\
+        </div>\
+        <div class="modal-body content">'+(message || '&hellip;')+'</div>\
+        <div class="modal-footer" style="text-align:center">\
+            <button class="btn" data-dismiss="modal" aria-hidden="true">朕知道了</button>\
+        </div>\
+     </div>\
+   </div>\
+</div>');
+  $("body").append(messagedlg);
+  messagedlg.modal('show');
+  return;
+}

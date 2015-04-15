@@ -15,13 +15,24 @@ class PagetemplateController extends HomeController {
     /**
      * 解析template.json文件，返回ppt模板识别的格式
      * $token 项目token
+     * type : publish editor editScene demo
      */
-    public function combinePagesData( $token ) {
+    public function combinePagesData( $token, $type ) {
         $this->token = $token;
+        $this->type  = $type;
+        $this->time  = time();
+
         $pptData = array(
             'obj'=>array(),
             'list'=>array()
         );
+
+        if($this->type == 'demo'){
+            $this->preurl = '/Public/';
+        }else{
+            $this->preurl = '/play/';
+        }
+
 
         $templateArray = $this->_getTemplateData( $token );
 
@@ -53,7 +64,7 @@ class PagetemplateController extends HomeController {
         $obj['desc'] = $share['wechat']['desc'];
         $obj['imgUrl'] = $share['wechat']['imgUrl'];
 
-        $obj['audiourl'] = '/play/' . $this->token . '/' . $obj['audiourl'];
+        $obj['audiourl'] = $this->preurl . $this->token . '/' . $obj['audiourl'];
 
         return $obj;
     }
@@ -65,10 +76,11 @@ class PagetemplateController extends HomeController {
         if($templateArray['pages']){
             $pageSortNumber = 0;
             foreach ($templateArray['pages'] as $pageName => $pageElements) {
-              $pptdataList[$pageSortNumber] = array(
-                  'id'  =>$pageSortNumber + 1,
-                  'name'=>$pageName,
-                  'properties'=>isset($pageElements['properties']) ? $pageElements['properties'] : null
+                // $pageElements = isset($templateArray['templateType'][$templateId]) ? $templateArray['templateType'][$templateId]['detail'] : array();
+                $pptdataList[$pageSortNumber] = array(
+                    'id'  =>$pageSortNumber + 1,
+                    'name'=>$pageName,
+                    'properties'=>isset($pageElements['properties']) && $this->type != 'editor' ? $pageElements['properties'] : null
                 );
                 $pptdataList[$pageSortNumber] = $this->_combineElements($pptdataList[$pageSortNumber], $pageElements['elements'], $templateArray['templateVars']);
                 $pageSortNumber ++ ;
@@ -110,7 +122,8 @@ class PagetemplateController extends HomeController {
               case 4:
                 isset($element['originW']) ? $animationArrayData['properties']['width'] = $element['originW'] : NULL;
                 isset($element['originH']) ? $animationArrayData['properties']['height'] = $element['originH']: NULL;
-                $animationArrayData['properties']['src'] = preg_match("/^\/Public\//", $element['texUrl']) ? $element['texUrl'] : '/play/' . $this->token . '/' .$element['texUrl'];
+                $animationArrayData['properties']['src'] = preg_match("/^\/Public\//", $element['texUrl']) ? $element['texUrl'] : $this->preurl . $this->token . '/' .$element['texUrl'];
+                if($this->type == 'editor') $animationArrayData['properties']['src'] .= '?time=' . $this->time;
                 break;
               default:
                 # code...

@@ -1,93 +1,76 @@
 <extend name="Bee1/common" />
-<block name="style">
-  <link rel="stylesheet" href="/Public/bee1/css/main.css" />
-  <style type="text/css">
-    .weixinCon{
-      width: 430px;
-      height: 180px;
-      font-size: 18px;
-    }
-    #apptitle{
-      height: 25px;
-      line-height: 25px;
-      font-weight: bold;
-      word-wrap: break-word;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      -o-text-overflow: ellipsis;
-      overflow: hidden;
-      font-size: 22px;
-    }
-    #appdesc{
-      margin-left: 112px;
-      overflow: hidden;
-      word-wrap: break-word;
-      height: 100px;
-      line-height: 25px;
-    }
-    input.set-upload{
-      position: absolute;
-      opacity: 0;
-      filter:alpha(opacity=0);
-      width: 167px;
-      height: 50px;
-    }
-    .upload{
-      margin-right: 20px;
-    }
-    #iconupload{z-index: 2;}
-  </style>
-</block>
 <block name="body">
-  <div class="container"> 
-   <div class="line titFix"> 
-    <h2 class="h2tit"> 编辑模板</h2> 
-   </div> 
-   <div class="wrapper"> 
-    <div class="leftBox clearfix viewFix"> 
-     <div id="preview_proxy_ifram" class="mobile3 mode{$mode}" style="padding: 20% 5%;margin-left:-13px">
+<div class="mainContainer editorTplPage">
+   <div class="line titFix">
+    <h2 class="h2tit">编辑模板</h2>
+   </div>
+   <div class="wrapper clearfix pr">
+    <div class="leftBox clearfix viewFix">
+     <div id="preview_proxy_iframe" class="mobile3 mode{$mode}" style="padding: 20% 5%;margin-left:-13px">
      </div> 
      <p class="btnBlue" id="publish" style="width:135px;float:right;margin-right:12px"><i class="icoPublish "></i>发布</p>
-     <a class="btnBlue" style="display:inline-block;width:130px;padding:5px 0" href="/index.php?s=Home/editor/editor/appid/{$app_id}.html"><i class="preStep"></i>上一步<button type="button" class="btn btn-default" style="opacity:0;padding:0 30px 10px;position:relative;right:20px">上一步</button></a> 
+     <a class="btnBlue" style="display:inline-block;width:130px;padding:5px 0" href="{:U('editor/editor', 'appid='.$app_id)}"><i class="preStep"></i>上一步<button type="button" class="btn btn-default" style="opacity:0;padding:0 30px 10px;position:relative;right:20px">上一步</button></a> 
     </div> 
-    <div class="editorBox clearfix"> 
-      <h3>修改微信转发标题和内容</h3> 
-     <img src="/Public/bee/images1/avatars.png" alt="" />
-     <div class="weixinShare clearfix"> 
-      <span>赢销+客服</span> 
-      <div class="weixinCon clearfix"> 
-       <div id="apptitle" style="font-size:18px"></div> 
-       <div class="clearfix mt10"> 
-        <img src="" alt=""  id="appicon"/> 
-        <div id="appdesc"></div> 
-       </div>
+    <div class="editorBox clearfix">
+      <div class="line">
+        <h3 class="lTit">修改微信转发标题和内容</h3>
       </div> 
-     </div> 
-     <div class="editorBoxIn clearfix"> 
-      <p> <span>分享标题</span>
-        <input type="text"  class="fenxiang" url="apptitle"/> 
-      </p>
-      <p> <span class="areaLable">分享文案</span> <textarea class="fenxiang" url="appdesc"></textarea> </p> 
-      <div>
-        <span>分享图标</span>
-        <div class="upload" style="top:0">
-           <input id="iconupload" type="file" name="files[]" data-url="/index.php?s=Home/editor/upload/appid/{$app_id}&filename=icon.png" class="set-upload" multiple>
-          <em><i class="icoDownload"></i>
-          点击上传</em>
+      <div class="tips">
+        分享到朋友圈时标题将不会显示并且文案只展示26个汉字，分享图标将作为该项目的默认展示图标
+      </div>
+      <empty name="share['shareAfter']">
+      <h4>分享文案</h4>
+      <div class="editorBoxIn clearfix">
+        <input type="text" id="share_wechat_title" class="fenxiang" value="{$share['wechat']['title']}" placeholder="分享标题" />
+        <div class="bBlock">
+          <div class="avatarBlock">
+            <img id="share_wechat_icon" src="/Public/gamecreator/app/{$app_id}/{$share['wechat']['imgUrl']}" alt="{$share['wechat']['title']}" />
+            <input id="wechat_icon_upload" type="file" class="set-upload" multiple="" />
+            <div class="intr">点击更换图片</div>
+          </div>
+          <textarea id="share_wechat_desc" cols="30" rows="10" placeholder="分享内容">{$share['wechat']['desc']}</textarea>
         </div>
-        <span class="fgray f12">推荐大小：300px*300px</span>
-      </div> 
-      <div class="tips" style="margin-left:106px">上传后的图片将在上方预览区域显示</div>
-     </div> 
+      </div>
+      <else />
+      <h4>未完成游戏时分享文案</h4>
+      <div class="editorBoxIn clearfix">
+        <input type="text" id="share_wechat_title" class="fenxiang" value="{$share['wechat']['title']}" placeholder="分享标题">
+        <div class="bBlock">
+          <div class="avatarBlock">
+            <img id="share_wechat_icon" src="/Public/gamecreator/app/{$app_id}/{$share['wechat']['imgUrl']}" alt="{$share['wechat']['title']}" />
+            <input id="wechat_icon_upload" type="file" class="set-upload" multiple="" />
+            <div class="intr">点击更换图片</div>
+          </div>
+          <textarea id="share_wechat_desc" cols="30" rows="10" placeholder="分享内容">{$share['wechat']['desc']}</textarea>
+        </div>
+      </div>
+      <h4>完成游戏后分享文案</h4>
+      <div class="tips">
+        您可在玩家完成游戏后的分享文案中添加玩家所获得的称号和分数
+输入{积分}显示玩家本次游戏得分，输入{称号}显示玩家本次获得游戏称号
+<p>注：{$share['shareAfter']['tips']}</p>
+      </div>
+      <div class="editorBoxIn clearfix">
+        <input type="text" id="share_after_title" readonly="readonly" class="fenxiang" value="{$share['wechat']['title']}" />
+        <div class="bBlock">
+          <div class="avatarBlock">
+            <img id="share_after_appicon" src="/Public/gamecreator/app/{$app_id}/{$share['shareAfter']['imgUrl']}" alt="{$share['shareAfter']['title']}">
+            <input id="share_after_icon_upload" type="file" class="set-upload" multiple="" />
+            <div class="intr">点击更换图片</div>
+          </div>
+          <textarea id="share_after_desc" cols="30" rows="10" placeholder="分享内容">{$share['shareAfter']['desc']}</textarea>
+        </div> 
+      </div>
+	</empty>
      <div class="line fl"> 
       <h3>活动下线提示</h3> 
      </div> 
      <div class="editorBoxIn2 clearfix fgray mb60 mt10">
        当活动已结束并在“我的项目”页面将此项目置为“已下线”时，用户打开项目会看到此提示。 
-      <textarea placeholder="{$endtitle}" class="f14" id="offlinemsg">{$endtitle}</textarea> 
-     </div> 
-    </div> 
-   </div> 
+      <textarea placeholder="活动已结束，敬请关注更多精彩！" class="f14" id="offlinemsg">{$endtitle}</textarea>
+     </div>
+    </div>
+   </div>
   </div>
 </block>
 <block name="script">
@@ -95,118 +78,99 @@
   <script type="text/javascript" src="/Public/bee1/uploadjs/jquery.iframe-transport.js"></script>
   <script type="text/javascript" src="/Public/bee1/uploadjs/jquery.fileupload.js"></script>
   <script>
-     var gamecreator = gamecreator || {};
-      gamecreator.app_id = "{$app_id}";
-      gamecreator.static_url = '/Public/gamecreator/app/';
-      gamecreator.check_app_name_url = "{:U('checkName')}";
-      gamecreator.write_file_url = "{:U('write')}";
-      gamecreator.replace_res_file = "{:U('replace')}";
-      gamecreator.get_app_libs_url = "{:U('libs')}";
-      gamecreator.get_app_files_url = "{:U('codelist')}";
-      gamecreator.mode = "{$mode}";
-    $(function(){
-    // 上下线按钮，在父元素上绑定事件，提高效率
-      $(".main").on("click","a.offline",function(){
-          $(this).removeClass('offline');
-          $(this).addClass('online');
-      });
+  var gamecreator = gamecreator || {};
+  gamecreator.app_id = "{$app_id}";
+  gamecreator.static_url = '/Public/gamecreator/app/';
+  gamecreator.check_app_name_url = "{:U('checkName')}";
+  gamecreator.write_file_url = "{:U('write')}";
+  gamecreator.replace_res_file = "{:U('replace')}";
+  gamecreator.get_app_libs_url = "{:U('libs')}";
+  gamecreator.get_app_files_url = "{:U('codelist')}";
+  gamecreator.mode = "{$mode}";
+  gamecreator.share = {:json_encode($share)};
+  
+  //判断浏览器类型 加载iframe
+  if (checkbroswer) {
+    $("#preview_proxy_iframe").html('<iframe src="/app/proxy/' + new Date().getTime() + "/" + gamecreator.app_id+'/?openid=otuWJjvQKhb9nn1xL8v-IRrgxct8" class="frame"></iframe>');
+  }
+  
+  $(function() {
+  	$("#wechat_icon_upload").fileupload({
+  	  url: "{:U('editor/upload', 'appid='.$app_id)}",
+  	  formData: {filename:'icon.png'},
+      dataType: 'text',
+      done: function (e, data) {
+          $("#share_wechat_icon").attr({src:gamecreator.static_url+gamecreator.app_id+'/icon.png?t='+new Date().getTime()});
+      }
+    });
+  	
+  	$("#share_after_icon_upload").fileupload({
+  	  url: "{:U('editor/upload', 'appid='.$app_id)}",
+  	  formData: {filename:'shareafter.png'},
+      dataType: 'text',
+      done: function (e, data) {
+          $("#share_after_appicon").attr({src:gamecreator.static_url+gamecreator.app_id+'/shareafter.png?t='+new Date().getTime()});
+      }
+    });
+    
+    $("#share_wechat_title").bind('input propertychange', function() {
+        var title = $(this).val();
+        $("#share_after_title").val(title);
+    });
+    
+    $("#publish").click(function() {
+    	gamecreator.share = gamecreator.share || {};
+    	gamecreator.share.wechat = gamecreator.share.wechat || {};
+    	gamecreator.share.wechat.title = $("#share_wechat_title").val();
+    	gamecreator.share.wechat.desc = $("#share_wechat_desc").val();
 
-      $(".main").on("click","a.online",function(){
-          $(this).removeClass('online');
-          $(this).addClass('offline');
-      });
-
-      $("#iconupload").fileupload({
-        dataType: 'text',
-        done: function (e, data) {
-            _errDlg("微信分享图标修改成功");
-            $("#appicon").attr({src:gamecreator.static_url+gamecreator.app_id+'/icon.png?t='+new Date().getTime()});
+        if (gamecreator.share.wechat.title == '') {
+           bee._errDlg('分享标题不能为空。');
+           return;
         }
-      });
+
+        if (gamecreator.share.wechat.desc == '') {
+          bee._errDlg('分享描述不能为空。');
+          return;
+        }
+        
+        if ($("#share_after_title").length > 0 && $("#share_after_desc").length > 0) {
+            gamecreator.share.shareAfter = gamecreator.share.shareAfter || {};
+        	gamecreator.share.shareAfter.desc = $("#share_after_desc").val();
+            if (gamecreator.share.shareAfter.desc == '') {
+              bee._errDlg('游戏结束后的分享描述不能为空。');
+              return;
+            }
+        }
+
+        var endtitle = $("#offlinemsg").val();
+        if (endtitle == '') {
+          bee._errDlg('下线提示信息不能为空。');
+          return;
+        }
+
+        var editShareUrl = "{:U('editor/editShare', 'appid='.$app_id)}";
+        $.post(editShareUrl, {sharedata:JSON.stringify(gamecreator.share), endtitle:endtitle}, function(res) {
+            if (res.code == 0) {
+              	location.href = "{:U('editor/publish', 'appid='.$app_id)}";
+            } else {
+            	alert(res.msg);
+            }
+        });
     });
 
-      //判断浏览器类型 加载ifram
-      if(checkbroswer){
-        $("#preview_proxy_ifram").html('<iframe src="/app/proxy/' + new Date().getTime() + "/" + gamecreator.app_id+'/?openid=otuWJjvQKhb9nn1xL8v-IRrgxct8"  class="frame"></iframe>');
-      }
-      
-      $(function(){
-        // 读取template.json文件，对页面进行渲染
-        bee.get_template(gamecreator.app_id, function (data){
-          gamecreator.tmpdata = data;
-          var vars = data.templateVars;
-          var categories = data.templateCategory;
-       
-          // 微信的分享文案
-          var app_info = data.share.wechat;
-          var app_setting = data.share.setting = data.share.setting || {};
-          var app_icon=gamecreator.static_url+gamecreator.app_id+'/'+app_info.imgUrl;
-          $("#apptitle").html(app_info.title);
-          $("input.fenxiang").val(app_info.title);
-          $("#appdesc").html(app_info.desc);
-          $("textarea.fenxiang").html(app_info.desc);
-          $("#appicon").attr('src',app_icon);
-
-         });
-         
-        $(".fenxiang").keyup(function(){
-        	var value=$(this).val();
-        	var idu=$(this).attr('url');
-        	$("#"+idu).html(value);
-        });
-
-        $("#publish").click(function(){
-            var title = $("#apptitle").html();
-            var desc = $("#appdesc").html();
-
-            // if(title != gamecreator.tmpdata.share.wechat.title || desc != gamecreator.tmpdata.share.wechat.desc){
-              gamecreator.tmpdata.share.wechat.desc = desc;
-              gamecreator.tmpdata.share.wechat.title = title;
-
-            //   bee.write_file('template.json', gamecreator.tmpsdata, function(res){
-
-            //   });
-            // }
-
-            if(title == ''){
-               bee._errDlg('分享标题不能为空。');
-               return;
-            }
-            gamecreator.tmpdata.share.setting.title = title;
-
-            if(desc == ''){
-              bee._errDlg('分享描述不能为空。');
-              return;
-            }
-
-            var imgdata = '';
-            var endtitle = $("#offlinemsg").val();
-            if (endtitle == '') {
-              bee._errDlg('下线提示信息不能为空。');
-              return;
-            }
-
-            $.post('/index.php?s=/Home/editor/editshare/appid/'+gamecreator.app_id+'.html', {filedata:JSON.stringify(gamecreator.tmpdata), endtitle:endtitle, imgdata:imgdata}, function(res) {
-                if(res.success){
-                  location.href="/index.php?s=/Home/editor/publish/appid/"+gamecreator.app_id+".html";
-                }
-            });
-
-        });
-
-        //上一页btn定位
-        $(window).scroll(function(){
-          setPrevPagePostion();
-        });
-        setPrevPagePostion();
-        function setPrevPagePostion(){
-          var vtop=$(document).scrollTop();
-          var bottom = 30-vtop;
-          console.log(bottom);
-          $(".prevpage").css("bottom",bottom+"px");
-        }
-
-      });
+    //上一页btn定位
+    $(window).scroll(function(){
+      setPrevPagePostion();
+    });
+    
+    setPrevPagePostion();
+    function setPrevPagePostion(){
+      var vtop=$(document).scrollTop();
+      var bottom = 30 - vtop;
+      $(".prevpage").css("bottom",bottom+"px");
+    }
+  });
   </script>
 </block>
 <block name="footer"></block>

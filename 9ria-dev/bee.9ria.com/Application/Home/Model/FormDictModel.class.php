@@ -49,7 +49,7 @@ class FormDictModel extends Model {
         $ret = array();
         if($rows) {
             foreach ($rows as $key => $row) {
-                $ret[$row['id']] = array(
+                $ret[$key] = array(
                     'id'  => $row['id'],
                     'name'  => $row['name'],
                     'label' => $row['label'],
@@ -64,11 +64,11 @@ class FormDictModel extends Model {
     public function getFormItemByDefault() {
         $map['is_default'] = 1;
         $map['status'] = 1;
-        $rows = $this->where ($map)->order ("sort DESC,id DESC")->select ();
+        $rows = $this->where ($map)->order ("sort DESC,id ASC")->select ();
         $ret = array();
         if($rows) {
             foreach ($rows as $key => $row) {
-                $ret[$row['id']] = array(
+                $ret[$key] = array(
                     'id'  => $row['id'],
                     'name'  => $row['name'],
                     'label' => $row['label'],
@@ -84,11 +84,11 @@ class FormDictModel extends Model {
         $map['uid'] = $uid;
         $map['status'] = 1;
         $map['is_default'] = array('neq', 1);
-        $rows = $this->where ($map)->order ("sort DESC,id DESC")->select ();
+        $rows = $this->where ($map)->order ("sort DESC,id ASC")->select ();
         $ret = array();
         if($rows) {
             foreach ($rows as $key => $row) {
-                $ret[$row['id']] = array(
+                $ret[$key] = array(
                     'id'  => $row['id'],
                     'name'  => $row['name'],
                     'label' => $row['label'],

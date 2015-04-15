@@ -76,30 +76,17 @@ class ProjectController extends HomeController {
         $project->username = $this->user['username'];
         $project->token = $token;
         $project->template_id = $template->id;
-//         $project->create_time = time();
-//         $project->modify_time = 0;
-//         $project->status = 1;
+        $project->create_time = time();
+        $project->modify_time = 0;
+        $project->status = 2; // 开始项目的状态是已上线，先放在controller这里，后期需要移到model里面
         $project->icon_url = $template->icon_url;
-        $project->env = $env;
+        $project->env = \Home\Model\ProjectModel::getCurrentEnv();
         $project->category =$category;
+        $settings = array();
         if(!empty($template->setting)){
             $settings = json_decode($template->setting,true);
-        }else{
-            $settings = array(
-                'FIRST_INIT_TIMES'=>1,
-                'DAY_OF_FREE_TIMES'=>3,
-                'TIMES_PER_SHARE_CLICK'=>1,
-                'DIFFCULT_PROBABILITY'=>1,
-                'MAX_POOL_SIZE'=>'100',
-                'NON_AWARD_ID_PROBABILITY'=>'3000',
-                'ENABLE_FIRST_AWARD'=>true,
-                'ENABLE_APP'=>true,
-                'CLOSE_EXCHANGE'=>false,
-                'sort'=>'max',
-                'order'=>'desc',
-                'RELATION_ACTION'=>'addfriendscore',
-            );
         }
+        
         $project->setting = json_encode($settings);
         $add_result = $project->add();
         if (!$add_result) {
@@ -119,33 +106,24 @@ class ProjectController extends HomeController {
     
     // 上下线
     public function setStatus($appid, $status) {
-    	$Model = D('Project');
-    	if(false !== $Model->checkProjectStatus($status)) {
-    	    $env = (APP_STATUS == 'production') ? $Model::PROJECT_ENV_PRODUCTION : $Model::PROJECT_ENV_TEST;
-    	    $map = array('token'=>$appid, 'env'=>$env);
-    	    if ($status == 2) {
-                $map['status'] = array('neq', 2);
-            } else {
-                $map['status'] = array('eq', 2);
-            }
-    	     
-    	    $Model->where ( $map )->find ();
-    	    $Model->status = $status;
-    	    $Model->save ();
-    	    $this->ajaxReturn (1);
-    	} else {
-    	    $this->ajaxReturn (0);
-    	}
+        $project = D('Project');
+        $res = $project->updateStatusByToken($appid, $status);
+        if ($res) {
+            $this->ajaxOutput($res);
+        } else {
+            $this->ajaxOutput('', 1, $project->getError());
+        }
     }
     
     // 删除
     public function delete($appid) {
         $project = D('Project');
-        $env = (APP_STATUS == 'production') ? 1 : 0;
-        $project->where(array('token'=>$appid, 'status'=>array('neq', 0), 'env'=>$env))->find();
-        $project->status = 0;
-        $project->save();
-        $this->ajaxReturn(1);
+        $res = $project->deleteByToken($appid);
+        if ($res === false) {
+            $this->ajaxOutput('', 1, $project->getError());
+        } else {
+            $this->ajaxOutput($res);
+        }
     }
 
     // 取消删除
@@ -160,20 +138,14 @@ class ProjectController extends HomeController {
     
     // 查看自己的游戏
     public function index() {
-        $Model = D('Project');
-    	// 1表示正式环境，0表示测试环境
-    	$env = (APP_STATUS == 'production') ? $Model::PROJECT_ENV_PRODUCTION : $Model::PROJECT_ENV_TEST;
-    	$page = I ( 'p', 1, 'intval' ); // 默认显示第一页数据
+        // 默认显示第一页数据
+    	$page = I ( 'p', 1, 'intval' );
     	$row = I('list_row', $this->pagesize, 'intval');
-    	$uid = $this->mid;
-    	
-        $map = array();
-    	$map['env'] = $env;
-    	$map['uid'] = $uid;
-        $map['status'] = array('neq', $Model::PROJECT_STATUS_DELETE);
         
-    	$order = '`status` DESC,`id` DESC';
-    	$gameArrs = $Model->where($map)->order($order)->page($page, $row)->select();    	
+        $project = D('Project');
+        $order = '`status` DESC,`id` DESC';
+        $uid = $this->mid;
+        $gameArrs = $project->getInfoByUid($uid, '*', $page, $row, $order);    	
     	$appids = $games = array();
     	foreach ($gameArrs as $game) {
     		$appids[] = $game['id'];
@@ -201,15 +173,10 @@ class ProjectController extends HomeController {
     	if (IS_POST) {
     		$this->success($games);
     	} else {
-    	    $count = $Model->where($map)->count();
+    	    $count = $project->getCountByUid($uid);
     		$userTotalData = $settingModel->getDataByUser($uid);
-    		
-    		$categorys = D('CategoryBee')
-                ->where(array('status'=>1))
-                ->order('sort DESC, id DESC')
-                ->page($page, $row)
-                ->select ();
-            
+            $order = 'sort DESC, id DESC';
+    		$categorys = D('CategoryBee')->getCategories('*', $page, $row, $order);
             $pagenum = ceil($count / $row);
             if ($pagenum > $page) {
                 $this->assign('is_more', true);
@@ -229,20 +196,10 @@ class ProjectController extends HomeController {
     	$category || $category = I('category');
     	
     	$Model = D('Project');
-    	
-    	$env = (APP_STATUS == 'production') ? $Model::PROJECT_ENV_PRODUCTION : $Model::PROJECT_ENV_TEST;
-    	$map = array('token' => $appid, 'env' => $env, 'uid' => $this->mid);
-    	if ($env === $Model::PROJECT_ENV_PRODUCTION) {
-    	    $map['status'] = $Model::PROJECT_STATUS_ONLINE;
-    	} else {
-    	    $map['status'] = array('neq', $Model::PROJECT_STATUS_DELETE);
-    	}
-    	
     	$token = $appid;
-    	$data = $Model->where ( $map )->find ();
-    	if($data) {
+    	$data = $Model->getInfoByToken($appid);
+    	if ($data) {
     		$time = time();
-    		
     		$id = $data['id'];
     		unset($data['id']);
     		$newToken = generate_nonce_str(8);
@@ -250,9 +207,7 @@ class ProjectController extends HomeController {
     		$data['token'] = $newToken;
     		$data['title'] = $title ? $title : $data['title'];
     		$data['category'] = $category ? $category : $data['category'];
-    		
-    		$Model->create($data);
-    		$newId = $Model->add();
+    		$newId = $Model->add($data);
     		if ($newId && is_numeric($newId)) {
     		    if($data['template_id'] > 0) {
     		        $Template = D('Template');

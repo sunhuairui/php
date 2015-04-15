@@ -17,26 +17,14 @@ class SettingsModel extends Model {
     }
     
     // 获取某人的总场景数，浏览量，访客数和转发量
-    public function getDataByUser($uid) {
-        $projectModel = D('Project');
-        $map = array();
-        // 1表示正式环境，0表示测试环境
-    	$map['env'] = (APP_STATUS == 'production') ? 1 : 0;
-    	$map['uid'] = $uid;
-        $map['status'] = array('neq', 0);
-        $appids = array();
-        $projects = $projectModel->where($map)->select();
-        foreach ($projects as $project) {
-    		$appids[] = $project['id'];
-    	}
+    public function getDataByUser($uid) {        
+        $appids = D('Project')->getAppidsByUid($uid);
+        $items = $this->getTotalData($appids);
         
         $result = array();
-        $result['appcount'] = count($appids);
         $result['pageview'] = 0;
         $result['userview'] = 0;
         $result['sharecount'] = 0;
-        
-        $items = $this->getTotalData($appids);
         foreach ($items as $item) {
             $result['pageview'] += $item['pageview'];
             $result['userview'] += $item['userview'];
@@ -88,7 +76,6 @@ class SettingsModel extends Model {
 
         foreach ($appids as $appid) {
             $ret[$appid] = $this->getRedisDataByAppid($appid);
-//             $ret[$appid] = $this->getDataByAppid($appid);
         }
         
     	return $ret;        
@@ -306,16 +293,40 @@ class SettingsModel extends Model {
     private function checkTimestamp($time) {
         if( strtotime(date("Y-m-d H:i:s", $time)) == $time ) return true;
         return false;
-        
     }
     
     // 获取指定key的值
     public function getConf($appid, $key, $default = '') {
-        $data = $this->where (array(
-                'appid'     => $appid,
-                'status'    => 1,
-                'item_key'  => $key
-        ))->find ();
+    	$cond = array('appid'=>$appid, 'status'=>1, 'item_key'=>$key);
+        $data = $this->where($cond)->find();
         return $data ? (isset($data['item_value']) ? $data['item_value'] : $default) : $default;
+    }
+    
+    // 获取指定key的值
+    public function getItemValue($appid, $key, $default = '') {
+    	return $this->getConf($appid, $key, $default);
+    }
+    
+    // 删除指定key的值
+    public function deleteItem($appid, $key) {
+    	$cond = array('appid'=>$appid, 'item_key'=>$key, 'status'=>1);
+    	$fields = array('status'=>0, 'modify_time'=>time());
+    	return $this->where($cond)->setField($fields);
+    }
+    
+    // 更新指定key的值，如果存在，则更新，否则插入
+    public function updateItemValue($appid, $key, $value) {
+    	$cond = array('appid'=>$appid, 'status'=>1, 'item_key'=>$key);
+    	$item = $this->where($cond)->find();
+    	$time = time();
+    	if ($item) {
+    		$fields = array('item_value'=>$value, 'modify_time'=>$time);
+    		return $this->where(array('id'=>$item['id']))->setField($fields);
+    	} else {
+    		$data = array('appid'=>$appid, 'item_key'=>$key, 'item_value'=>$value, 'status'=>1,
+    			'create_time'=>$time, 'modify_time'=>0);
+    		
+    		return $this->add($data);
+    	}
     }
 }

@@ -10,7 +10,7 @@
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" type="text/css" href="/Public/iwatch/styles/pagetemplate.css" />
     <link rel="stylesheet" type="text/css" href="/Public/bee1/css/ppttemplate.css" />
-    <link rel="stylesheet" href="/Public/bee/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Public/bee1/css/bootstrap.min.css" />
     <script href="/Public/bee1/js/ie-css3.htc"></script>
     <link rel="stylesheet" href="/Public/bee1/css/main.css" />
     <script type="text/javascript" src="/Public/iwatch/scripts/jquery.min.js"></script>
@@ -52,11 +52,14 @@
             <!-- 右侧编辑视图 start -->
             <div class="body-right">
                 <div class="line">  
-                    <h3>替换游戏资源</h3> 
+                    <h3>替换游戏资源</h3>
                 </div>
-                <div class="editor pptPage"> 
-                    <div class="cate"> 
-                    <ol class="classify box-container" id="accordion"></ol>
+                <div class="editor pptPage">
+                    <div class="audio">
+                        <ol class="classify box-container"></ol>
+                    </div>
+                    <div class="cate">
+                        <ol class="classify box-container" id="accordion"></ol>
                     </div>
                 </div>
             </div>
@@ -64,11 +67,6 @@
                 <div id="ppitest" style="width:1in;visible:hidden;padding:0px"></div>
                 <div class="p-index main phoneBox editor" id="con" style="display: none;">
             <!--上下滚动 start-->
-            <!-- <div class="top"></div> -->
-            <!-- <div class="phone_menubar"></div> -->
-                    <div class="scene_title_baner" style="display: none">
-                        <div class="scene_title"></div>
-                    </div>
                     <div class="nr">
                         <div id="audio_btn" class="off">
                             <div id="yinfu"></div>
@@ -81,7 +79,6 @@
                             </div>
                         </div>
                     </div>
-            <!-- <div class="bottom"></div> -->
             <!--上下滚动代码 end-->
                 </div>
                 <div class="btnBlue publish"><i class="icoSave"></i>保存修改并下一步</div> 
@@ -106,6 +103,8 @@
             gamecreator.mode = '{$mode}';
             gamecreator.raffletypes = "{$raffletypes}".split(',');
             gamecreator.time = new Date().getTime();
+            gamecreator.uploadurl = '/index.php?s=/Home/editor/pptupload/appid/' + gamecreator.app_id;
+            gamecreator.nextStepUrl = '/index.php?s=/Home/editor/editScene/appid/' + gamecreator.app_id + '.html';
 
             var setting = {$setting};
             var prizes  = {$prizes};
@@ -119,106 +118,4 @@
     <script type="text/javascript" src="/Public/iwatch/scripts/9riapage.js"></script>
     <script type="text/javascript" src="/Public/bee1/js/bee.js"></script>
     <script type="text/javascript" src="/Public/bee1/js/bee.ppt.js"></script>
-    <script type="text/javascript">
-        $(function(){
-        //获取配置文件数据
-            bee.get_template(gamecreator.app_id, function (data){
-                gamecreator.tmpsdata = data;
-                console.log(data);
-                var vars = data.templateVars,var1 = data.share,categories = 
-
-                data.templateCategory,i=1,catelength=Object.keys(categories).length;
-                for (var cateIndex in categories) {
-                if(i == 1 || i== catelength){
-                    var html = '<li>'+
-                    '<h4 class="select-label">' + i + '.' + cateIndex + '</h4>';
-                }else{
-                    var html = '<li>'+
-                    '<h4>' + i + '.<input type="text" value="" placeholder="' + cateIndex + '">'+
-                        '<div class="opbtn">'+
-                            '<div class="addBtn"></div>'+
-                            '<div class="moveBtn"></div>'+
-                            '<div class="delBtn"></div>'+
-                        '</div>'+
-                        '<select name="" form="" class="selectList">'+
-                            '<option value="volvo">板式一</option>'+
-                            '<option value="saab">板式二</option>'+
-                            '<option value="opel">板式三</option>'+
-                            '<option value="audi">板式四</option>'+
-                        '</select>'+
-                    '</h4>';
-                }
-                html +='<div class="panelBox" action-number="' + i + '"><div class="line"></div>';
-                for (var resourcename in categories[cateIndex]) {
-                    var key = categories[cateIndex][resourcename];
-                    if (vars[key]) {
-                        if (vars[key]['type'] == 'IMAGE') {
-                            html +='<div class="item t-image box" action-data="'+ vars[key]['texUrl'] +'" action-type="IMAGE" name="' + key + '" title="' + vars[key]['desc'] + '">\
-                                <div class="icon">\
-                                  <div type="image" class="imgbox" style="background-image: url(\'/Public/gamecreator/app/'+gamecreator.app_id+'/'+vars[key]['texUrl']+'?t='+gamecreator.time+'\');'+AutoResizeImage(100,100,vars[key]['originW'],vars[key]['originH'])+'"></div>\
-                                </div>\
-                                <p><a href="#">'+vars[key]['desc']+'</a> <span>推荐尺寸：<i class="fblue">' + vars[key]['originW'] + 'px*' + vars[key]['originH'] + 'px</i></span></p>\
-                              </div>';
-                            }else if(vars[key]['type'] == 'STRING'){
-                              html+='<div class="item t-text box" name="desc3" title="'+vars[key]['value']+'" action-data="'+ key +'" action-type="STRING" action-name="'+vars[key]['desc']+'">\
-                                <div class="icon">\
-                                  <div type="text" class="strbox" style="word-break:break-word;">'+vars[key]['value']+'</div>\
-                                </div>\
-                                <p>'+vars[key]['desc']+'</p>\
-                              </div>';
-                            }else if(vars[key]['type'] == 'AUDIO'){
-                              html+='<div class="item t-text box" name="'+vars[key]['recommendSize']+'" title="'+vars[key]['desc']+'" action-data="'+ vars[key]['texUrl'] +'" action-type="AUDIO" action-name="'+var1['setting']['switch']+'">\
-                                <div class="icon">\
-                                <div id="audio" name="'+ vars[key]['name']+'" action-name="'+var1['setting']['switch']+'"></div>\
-                                  <div type="image" class="imgbox" style="word-break:break-word;background-image: url(\'/Public/bee1/images/musicicon.png\');"></div>\
-                                </div>\
-                                <p><a href="#">'+vars[key]['desc']+'</a><span>推荐时长：<i class="fblue">'+ vars[key]['recommendTime'] +'</i></span></p>\
-                              </div>';
-                            }else{}
-                    }else{
-                        console.log('vars不存在');
-                    }
-                }
-
-                html+='</div></li>';
-                    $(".box-container").append(html);
-                    i++;
-                }
-
-                // 场景
-                $( "#accordion" ).accordion({
-                    heightStyle : "content",
-                    activate : function(event, ui){
-                        new bee.ppt.pagechange(ui);
-                    }
-                });
-
-                //默认展示第一页
-                $(document).trigger("pagetemplate.play",pageNo);
-
-                // 修改后触发 重新获取数据
-                $(document).bind("bee.reloadgame", function(event){
-                    console.log('bee.reloadgame');
-                    $(document).trigger("pagetemplate.getdata",function(){
-                        $(document).trigger("pagetemplate.play",pageNo);
-                    });
-                });
-
-
-                // 弹出框
-                $(".box-container").on("click", ".box", function (e){
-                    bee.replacepanel($(e.target).closest(".box"));
-                    e.stopPropagation();
-                });
-                
-                $(document).bind("bee.removepopover", function(event){
-                  if(bee.replacetabs.dlg){bee.replacetabs.dlg.remove();}
-                });
-
-                $(document).on("click",function(e){
-                  $(document).trigger('bee.removepopover');
-                });
-            });
-        });
-    </script>
 </body>

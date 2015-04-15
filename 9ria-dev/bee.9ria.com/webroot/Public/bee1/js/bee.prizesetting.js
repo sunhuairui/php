@@ -538,6 +538,7 @@ var bee = bee || {};
             "name":"",
             "triggername" : "",
             "tagname":"",
+            "maxlen": 60,
         };
         $.extend(this._params, params);
         this.initialize(params);
@@ -568,15 +569,18 @@ var bee = bee || {};
         	this._el = $('<p class="infoTit"> '+ this._params.name +'： </p>'+
         		'<div class="regestRuleBox">'+
         	    '<textarea name="regestRule" cols="60" rows="10" class="regestRule">'+this._params.val+'</textarea>'+
-        	    '<span><i id="textCount">0</i>/60</span>'+
+        	    '<span><i id="textCount">0</i>/'+this._params.maxlen+'</span>'+
         	    '</div>');
         },
         validate : function(e){
         	this._params.val = $(e.target).val();
         	var len = this._params.val.length;
-        	var lessLen = (60 - len) >= 0 ? (60 - len) : 0;
-        	$("#textCount").text(lessLen);
-            if(len > 60) {
+        	var maxlen = this._params.maxlen;
+        	var lessLen = (maxlen - len) >= 0 ? (maxlen - len) : 0;
+        	this._el.find("#textCount").text(lessLen);
+            if(len > maxlen) {
+            	this._params.val = this._params.val.toString().substr(0, maxlen);
+            	this._el.find(".regestRule").val(this._params.val);
             	_errDlg("超过字数限制，多出的字将被截断！");
             }
         }
@@ -647,7 +651,6 @@ var bee = bee || {};
         cancelerr : function(el){
             el.removeClass('error');
         },
-
     };
 
     //上传图片组件
@@ -656,9 +659,9 @@ var bee = bee || {};
             "val" : "",
             "tagname" : "lot_url",
             "triggername": ""
-        }
+        };
         this.initialize(params);
-    }
+    };
 
     bee.form.uploader.prototype = {
         initialize : function(params){
@@ -842,7 +845,7 @@ var bee = bee || {};
             this.triggerDelbtn();
         },
         triggerDelbtn : function(){
-            console.log('this._collection.length='+this._collection.length);
+//            console.log('this._collection.length='+this._collection.length);
             if(this._collection.length > 1){
                 $(document).trigger('prizesetting.tabsraffle.show');
             }else{
@@ -1551,9 +1554,10 @@ var bee = bee || {};
              $.extend(this._params, params);
              this._formruledesc = new bee.form.textarea({
                  "name" : "请输入报名规则",
-                 "val":this._params.formruledesc,
+                 "val"	:this._params.formruledesc,
                  "triggername":this._triggername,
-                 "tagname":"formruledesc"
+                 "tagname"	:"formruledesc",
+                 "maxlen"	: 36
              });
 
              this.render();
@@ -1583,7 +1587,7 @@ var bee = bee || {};
      bee.prizesetting.tabsentry.prototype = $.extend(new bee.prizesetting.tabsraffle(),{
              initialize : function(){
             	 var self = this;
-                 bindAll(this, 'addDefaultTabItem', 'addCustomTabItem', 'addCustomTabItemxx', 'addListItem', 'addAll','triggerDelbtn','delitem');
+                 bindAll(this, 'initDefaultTabItem', 'initCustomTabItem', 'addCustomTabItem', 'addListItem', 'addAll','triggerDelbtn','delitem');
                  this._el = this._params.el;
 
                  $.extend(this.settings, this._params.data);
@@ -1593,10 +1597,8 @@ var bee = bee || {};
                      "formruledesc" : this.settings.formruledesc
                  });
                  
-                 //this._entryform = new bee.form.textarea({});
-                 
                  this._pluscheckbox = new bee.btn.pluscheckbox({"name":"添加奖品","triggername":"entrytab.add","tips":"为保证游戏体验，此处建议输入2-5个汉字以内"});
-                 this._pluscheckbox._el.bind("entrytab.add", this.addCustomTabItemxx);
+                 this._pluscheckbox._el.bind("entrytab.add", this.addCustomTabItem);
                  
                  this.render(this._params.data);
                  
@@ -1608,6 +1610,9 @@ var bee = bee || {};
              	     opacity: 0.6                   	//拖动时，透明度为0.6
                  });
                  $( ".registPrizeItem ul" ).disableSelection();
+                 
+                 $(document).bind('prizesetting.entryitem.delete', this.delitem);
+                 
                  return this;
              },
             
@@ -1625,58 +1630,79 @@ var bee = bee || {};
                  this._el.append('<div class="prize-list fl"><div class="prize-item regestRuleBoxText"></div></div>');
                  this._el.find(".registerBox").append(this._pluscheckbox._el);
                  this._el.find(".regestRuleBoxText").append(this._projectitem._el);
-                 // prizeitem
+                 // entryitem
                  this.addAll();
                  // nowinitem
+             },
+             delitem : function() {
+                 this.triggerDelbtn();
              },
              addAll : function() {
             	 var allFormItems = new Array();
             	 for(i in this.settings.default_formitems) {
-            		 this.addDefaultTabItem({}, this.settings.default_formitems[i]);
-            		 allFormItems[i] = this.settings.default_formitems[i];
+            		 var curFormItem = this.settings.default_formitems[i];
+            		 this.initDefaultTabItem({}, curFormItem);
+            		 allFormItems[curFormItem.id] = curFormItem;
             	 }
             	 
             	 for(i in this.settings.custom_formitems) {
-            		 this.addCustomTabItem({}, this.settings.custom_formitems[i]);
-            		 allFormItems[i] = this.settings.custom_formitems[i];
+            		 var curFormItem = this.settings.custom_formitems[i];
+            		 this.initCustomTabItem({}, curFormItem);
+            		 allFormItems[curFormItem.id] = curFormItem;
             	 }
             	 
             	 for(i in this.settings.formitems) {
             		 var itemKey = this.settings.formitems[i];
             		 if(typeof(allFormItems[itemKey]) != 'undefined') {
             			 var curFormItem = allFormItems[itemKey];
-            			 $('.registerTabBox input[type=checkbox][id='+curFormItem.name+']').attr('checked', true);
+            			 $('.registerTabBox #formitem_'+ curFormItem.id).attr('checked', true);
             			 this.addListItem({}, curFormItem);
             		 }
             	 }
             	 
             	 for(i in allFormItems) {
-            		 var tarFormItem = allFormItems[i];
-            		 this.triggerInitTab($('.registerTabBox input[type=checkbox][id='+tarFormItem.name+']'));
+            		 this.triggerInitTab({}, allFormItems[i]);
             	 }
              },
              triggerDelbtn : function(){
-                if(this._collection.length > 1){
+            	 var count = 0;
+            	 var allFormItems = new Array();
+            	 for(i in this._collection) {
+                     if(this._collection[i].hasOwnProperty("_params")) {
+                    	 count ++;
+                    	 var curFormItem = this._collection[i];
+                    	 allFormItems.push(curFormItem._params);
+                     }
+                 }
+            	 
+                 if(count > 1) {
+                	 if(2 == count) {
+                		 for(i in allFormItems) {
+                			 $('.registerTabBox #formitem_'+ allFormItems[i].id).button({disabled: false});
+                		 }
+                	 }
                      $(document).trigger('prizesetting.tabsentry.show');
-                 }else{
+                 } else {
+                	 $('.registerTabBox #formitem_'+ allFormItems[0].id).button({disabled: true});
                      $(document).trigger('prizesetting.tabsentry.hide');
                  }
              },
-             triggerInitTab : function(el){
+             triggerInitTab : function(e, data) {
             	 var self = this;
+            	 var el = $('.registerTabBox ul').find("#formitem_"+ data.id);
             	 el.button()
 	            	 .change(function () {
 	            		 if(this.checked == false) {
-	                		 var itemText = $(this).next().text();
-	                		 var elem = "label:contains(" + itemText + ")";
-	                		 $('.registPrizeItem ul').find(elem).parent().remove();
+	            			 self.delListItem({}, data);
 	                	 } else {
-	                		 var itemProps = $(this).attr('action-data').split("|");
-	                		 self.addListItem({}, {"id":itemProps[0],"name":itemProps[1],"label":itemProps[2],"type":itemProps[3],"rule":itemProps[4]});
+	                		 self.addListItem({}, data);
 	                	 }
 	            	 });
              },
-             triggerDelTab : function(el){
+             triggerDelTab : function(e, data) {
+            	 var self = this;
+            	 var parentEl = $('.registerTabBox ul').find("#formitem_"+ data.id).parent();
+            	 var el = parentEl.find(".delBtnHid");
             	 el.parent().hover(function(){
             		 el.css('display','inline-block'); 
             	 }, function(){
@@ -1684,14 +1710,11 @@ var bee = bee || {};
             	 });
             	 
             	 el.click(function(){
-            		 var actionData = el.parent().find("input[type=checkbox]").attr("action-data").split("|");
-            		 var itemId 	= parseInt(actionData[0]);
-            		 var itemLabel 	= actionData[2];
+            		 var itemId 	= parentEl.find("input[type=checkbox]").val();
                 	 if(false != itemId) {
                  		$.post('/index.php?s=Home/editor/delformdictitem.html', {id:itemId}, function(res) {
                              if(res.status == 1) {
-    	                		 var elem = "label:contains(" + itemLabel + ")";
-    	                		 $('.registPrizeItem ul').find(elem).parent().remove();
+                            	 self.delListItem({}, data);
                             	 el.parent().remove();
                              } else {
                              	_errDlg(res.info);
@@ -1699,43 +1722,50 @@ var bee = bee || {};
                          });
                 	 }
             	 });
-            	 
              },
-             addDefaultTabItem : function(e, data){
+             initDefaultTabItem : function(e, data){
                  var tmpTabObj = new bee.prizesetting.entrytabitem().initialize(data);
                  this._el.find("#registerDefaultTabBox ul").append(tmpTabObj._el);
-//                 this.triggerDelbtn();
+                 tips();
+             },
+             initCustomTabItem : function(e, data){
+                 var tmpTabObj = new bee.prizesetting.entrytabitem().initialize(data);
+                 this._el.find("#registerCustomTabBox ul").append(tmpTabObj._el);
+                 this.triggerDelTab({}, data);
              },
              addCustomTabItem : function(e, data){
                  var tmpTabObj = new bee.prizesetting.entrytabitem().initialize(data);
                  this._el.find("#registerCustomTabBox ul").append(tmpTabObj._el);
-                 this.triggerDelTab(tmpTabObj._el.find(".delBtnHid"));
-                 
-//                 this.triggerDelbtn();
+                 this.triggerInitTab(e, data);
+                 this.triggerDelTab({}, data);
              },
-             addCustomTabItemxx : function(e, data){
-                 var tmpTabObj = new bee.prizesetting.entrytabitem().initialize(data);
-                 this._el.find("#registerCustomTabBox ul").append(tmpTabObj._el);
-                 this.triggerInitTab(tmpTabObj._el.find("input[type=checkbox]"));
-                 this.triggerDelTab(tmpTabObj._el.find(".delBtnHid"));
-                 tips();
-//                 tips();
-//                 this.triggerDelbtn();
+             delListItem : function(e, data){
+            	 $('.registerTabBox ul').find("#formitem_"+ data.id).trigger("prizesetting.del",{});
+            	 if(typeof this._collection[data.id] == 'object ')delete this._collection[data.id]._params;
+            	 this.triggerDelbtn();
              },
              addListItem : function(e, data){
                  var tmpObj = new bee.prizesetting.entryitem().initialize(data);
                  this._el.find(".registPrizeItem ul").append(tmpObj._el);
-                 this._collection.push(tmpObj);
+                 this._collection[data.id] = tmpObj;
                  this.triggerDelbtn();
              },
              getsetting : function(){
             	 this.settings.resultformitems = [];
             	 var collection = $( ".registPrizeItem ul" ).sortable('toArray');
+            	 var count = 0;
             	 for (var i = 0; i < collection.length; i++) {
             		 var colArr = collection[i].split("_");
             		 this.settings.resultformitems.push(colArr[1]);
+            		 count++;
             	 }
-
+            	 
+            	 if(count < 1){
+                     _errDlg('请至少选择一项表单项');
+                     return;
+                 }
+                 
+            	 
             	 this.settings.formruledesc = this._projectitem._params.formruledesc;
                  if(this.settings.formruledesc == ""){
                      _errDlg('请输入报名规则不能为空');
@@ -1772,8 +1802,8 @@ var bee = bee || {};
          },
          render : function(){
         	var actionData = this._params.id+'|'+this._params.name+'|'+this._params.label+'|'+this._params.type;
-        	this._el = $('<li class="fl"><input type="checkbox" id="'+ this._params.name +'" name="formitem['+ this._params.name +']" value="'+ this._params.id +'"\
-        			action-data="'+ actionData +'" /><label for="'+ this._params.name +'">'+ this._params.label +'</label>\
+        	this._el = $('<li class="fl"><input type="checkbox" id="formitem_'+ this._params.id +'" name="formitem['+ this._params.id +']" value="'+ this._params.id +'"\
+        			action-data="'+ actionData +'" /><label for="formitem_'+ this._params.id +'">'+ this._params.label +'</label>\
         			<i class=\"delBtnHid\"></i></li>');
          }
      });
@@ -1795,57 +1825,48 @@ var bee = bee || {};
              
              this.delbtn = new bee.prizesetting.delbtn({parent_tag:'prizesetting.tabsentry', custom_class:'delBtn', custom_node:'i'});
              this.delbtn._el.bind("prizesetting.del",this.destroy);
+             
+             var itemId = this._params.id;
+             $('.registerTabBox ul').find("#formitem_"+ itemId).bind("prizesetting.del", this._params, this.destroy);
+             
              this.movebtn = new bee.prizesetting.movebtn({parent_tag:'prizesetting.tabsentry', custom_class:'moveBtn', custom_node:'i'});
-             this.movebtn._el.bind("prizesetting.move",this.destroy);
+             //this.movebtn._el.bind("prizesetting.move",this.move);
              this.render();
-
-             // 监听变化
-             //this.lot_name._el.bind(this._triggername,this.setval);
              return this;
          },
          render : function(){
-        	 this._el = $('<li id="formlistitem_'+ this._params.id +'">'+ 
-        	         '<label for="">'+ this._params.label +'</label>'+ 
-        	         '<input type="text" disabled="true" name="'+ this._params.name +'" value="用户填写'+ this._params.label +'" />'+ 
-        	         '<i class="moveBtn"></i>'+ 
-        	 		 '</li>');
+        	 if(this._params.name == 'birthday') {
+        		 this._el = $('<li id="formlistitem_'+ this._params.id +'">\
+        				 <label>'+ this._params.label +'</label>\
+            	         <select name="formlistv_'+ this._params.id +'_year" disabled="true"><option>1987 年</option></select>\
+        				 <select name="formlistv_'+ this._params.id +'_month" disabled="true"> <option>06 月</option></select>\
+        				 <select name="formlistv_'+ this._params.id +'_day" disabled="true"><option>06 日</option></select>\
+            	 		 </li>');
+        	 } else if(this._params.name == 'sex') {
+        		 this._el = $('<li id="formlistitem_'+ this._params.id +'">\
+            	         <label>'+ this._params.label +'</label>\
+            	         <input type="radio" disabled="true" name="formlistv_'+ this._params.id +'_0" value="0" checked="checked"/>男\
+            	         <input type="radio" disabled="true" name="formlistv_'+ this._params.id +'_1" value="1" />女\
+            	 		 </li>');
+        	 } else {
+        		 this._el = $('<li id="formlistitem_'+ this._params.id +'">'+ 
+            	         '<label>'+ this._params.label +'</label>'+ 
+            	         '<input type="text" disabled="true" name="formlistv_'+ this._params.id +'" value="用户填写'+ this._params.label +'" />'+ 
+            	 		 '</li>');
+        	 }
+        	 
         	 this._el.append(this.delbtn._el);
         	 this._el.append(this.movebtn._el);
-        	 //this._el = $('<li>'+this._params.label+'</li>');
-             //this._el = $('<div class="prize-item" style=""><ul></ul></div>');
-        	/* if(this._params.name == 'birthday') {
-        		 this._el = $('<div>'+ 
-            	         '<label for="">'+ this._params.label +'</label>'+ 
-            	         '<input type="text" disabled="true" name="'+ this._params.name +'" value="用户填写'+ this._params.label +'" />'+ 
-            	         '<i class="moveBtn"></i>'+ 
-            	         '<i class="delBtn"></i>'+ 
-            	 		 '</div>');
-        	 } else if(this._params.name == 'sex') {
-        		 this._el = $('<div>'+ 
-            	         '<label for="">'+ this._params.label +'</label>'+ 
-            	         '<input type="text" disabled="true" name="'+ this._params.name +'" value="用户填写'+ this._params.label +'" />'+ 
-            	         '<i class="moveBtn"></i>'+ 
-            	         '<i class="delBtn"></i>'+ 
-            	 		 '</div>');
-        	 } else {
-        		 this._el = $('<div>'+ 
-            	         '<label for="">'+ this._params.label +'</label>'+ 
-            	         '<input type="text" disabled="true" name="'+ this._params.name +'" value="用户填写'+ this._params.label +'" />'+ 
-            	         '<i class="moveBtn"></i>'+ 
-            	         '<i class="delBtn"></i>'+ 
-            	 		 '</div>');
-        	 }*/
-        	 
-             //this._el.find("ul").append(this.lot_name._el);
-//             this._el.append(this.delbtn._el);
          },
          destroy : function(params){
              var self = this;
+             var itemId = self._params.id;
              self._el.remove();
-             self._params = null;
-             $(document).trigger(self._triggername+".delete");
-             $('#name').attr('checked', false);
-             $( ".registerTabBox input[type=checkbox]" ).button("refresh");
+             delete self._params;
+//             self._params = null;
+             $(document).trigger(self._triggername +".delete");
+    		 $('.registerTabBox #formitem_'+ itemId).attr('checked', false);
+    		 $('.registerTabBox #formitem_'+ itemId).button("refresh");
          }
      });
     
@@ -1857,7 +1878,6 @@ var bee = bee || {};
              custom_class 	: 'move'
          }
          $.extend(this._params, params);
-//         console.log('parent_tag : '+this._params.parent_tag)
          this.initialize();
      };
      bee.prizesetting.movebtn.prototype = {
@@ -2015,7 +2035,7 @@ var bee = bee || {};
             }
         console.log("initinfo");
         console.log(initinfo);
-        var publish_url = '/index.php?s=Home/editor/setting/appid/' + appid + '.html';
+        var publish_url = '/index.php?s=Home/editor/setting/appid/' + gamecreator.app_id + '.html';
         var settingtabs = new bee.prizesetting.tabs({
                 el : $("#settingtabs"),
                 renddata : [
@@ -2041,33 +2061,38 @@ var bee = bee || {};
             }).initialize();
         //排行榜
         var tabsrank = new bee.prizesetting.tabsrank({
-                el : $("#tabsrank"),
-                raffletype:2,
-                data : initinfo.rank.data
-            }).initialize();
+            el : $("#tabsrank"),
+            raffletype:2,
+            data : initinfo.rank.data
+        }).initialize();
         //报名表单
         var tabsentry = new bee.prizesetting.tabsentry({
-                el : $("#tabsentry"),
-                raffletype:4,
-                data : initinfo.entry.data
-            }).initialize();
+            el : $("#tabsentry"),
+            raffletype:4,
+            data : initinfo.entry.data
+        }).initialize();
         
-        $('.publish').click(function(){
-            var postdata = eval(settingtabs._cur).getsetting();
-            $.extend(postdata, {raffletype:eval(settingtabs._cur).raffletype});
-            if(typeof(postdata) == 'object'){
+        $('.publish').click(function() {
+            // 保持游戏的配置信息，加在这里是为了保持游戏的json文件格式正确
+            bee.write_file('template.json', gamecreator.tmpsdata, function(res) {
+                if (res.success) {
+                    var postdata = eval(settingtabs._cur).getsetting();
+                    $.extend(postdata, {raffletype:eval(settingtabs._cur).raffletype});
+                    if (typeof(postdata) == 'object') {
+                        if (postdata.raffletype != 3 && postdata.raffletype != 4 && postdata.prizes.length == 0) {
+                            _errDlg("至少应存在一个奖项...");
+                            return;
+                        }
 
-                if(postdata.raffletype != 3 && postdata.raffletype != 4 && postdata.prizes.length == 0){
-                    _errDlg("至少应存在一个奖项...");
-                    return;
-                }
-                $.post(publish_url, postdata, function(res){
-                    if(res){
-                        location.href= "/index.php?s=/Home/editor/editScene/appid/"+gamecreator.app_id+'.html';
-                        // console.log(res);
+                        $.post(publish_url, postdata, function(res) {
+                            if(res){
+                                location.href= "/index.php?s=/Home/editor/editScene/appid/"+gamecreator.app_id+'.html';
+                            }
+                        });
                     }
-                });
-            }
+                } else {
+                    _errDlg(res.error);
+                }
+            });
         });
-
     });

@@ -755,11 +755,11 @@ var I9RIAPAGE = function() {
 
     // 后台获取json数据
     function getRequestUrl(sceneId) {
-       return '/index.php?s=/Home/Pagetemplate/combinePagesData/token/'+sceneId+'.html';
+       return '/index.php?s=/Home/Pagetemplate/combinePagesData/token/'+sceneId+'/type/'+ window.projectType +'.html';
     }
 
     // 解析json数据
-    function parseJson(a) {
+    function parseJson(a, callback) {
         document.title = a.obj.name,
         $("#metaDescription").attr("content", a.obj.name + ", " + a.obj.desc),
         isWeixin() && setWeixinShareData(a.obj),
@@ -767,9 +767,29 @@ var I9RIAPAGE = function() {
         pageMode = a.obj.pageMode;
         var b = [];
 
-        return a.obj.property && (a.obj.property = JSON.parse(a.obj.property)),b = a.list,b.length <= 0 ? (alert("此场景不存在!"), void(window.location.href = "http://bee.9ria.com")) : (appendLastPage(a, b))
+        return a.obj.property && (a.obj.property = JSON.parse(a.obj.property)),b = a.list,b.length <= 0 ? (alert("此场景不存在!"), void(window.location.href = "http://bee.9ria.com")) : (appendLastPage(a, b, callback))
     }
 
+    // 如果判断为企业/广告用户，则发请求获取模板 加载最后一页 现在去掉相关逻辑
+    function appendLastPage(a, b, callback) {
+        I9RIAPAGE.pages = b;
+        if(window.projectType == "publish"){
+            parsePage(b, a);
+        }else if(window.projectType == 'editor'){
+            if(typeof(pagetemplatepaly) != "undefined"){
+
+            }else{
+                pagetemplatepaly = $(document).bind("pagetemplate.play",function(evt, pageid){
+                    console.log('b',I9RIAPAGE.pages.length);
+                    $("section.main-page").remove();
+                    parsePage([I9RIAPAGE.pages[pageid - 1]], a);
+                });
+            }
+            callback && callback();
+        }else{
+            parsePage(b, a);
+        }
+    }
 
 
     //
@@ -808,20 +828,7 @@ var I9RIAPAGE = function() {
         } 
     }
 
-    // 如果判断为企业/广告用户，则发请求获取模板 加载最后一页 现在去掉相关逻辑
-    function appendLastPage(a, b) {
-        if(window.projectType == "publish"){
-        }else if(window.projectType == 'editor'){
-            $(document).bind("pagetemplate.play",function(evt, pageid){
-                $("section.main-page").remove();
-                parsePage([b[pageid - 1]], a);
-            });
-        }else{
-
-        }
-    }
-
-    function getTemplateData(){
+    function getTemplateData(callback){
         $.ajax({
             type: "GET",
             url: requestUrl,
@@ -831,7 +838,7 @@ var I9RIAPAGE = function() {
             crossDomain: !0
         }).done(function(a) {
             if(!a.code){
-                parseJson(a.data);
+                parseJson(a.data, callback);
             }
         });
     }
@@ -848,23 +855,24 @@ var I9RIAPAGE = function() {
     }else if(window.location.href.split('/editor/appid/')[1]){
         url = window.location.href.split('/editor/appid/')[1].split(".html")[0]
         window.projectType = 'editor';
-    }else if(window.location.href.split('/editScene/appid/')[1]){
-        url = window.location.href.split('/editScene/appid/')[1].split(".html")[0]
-        window.projectType = 'editScene';
+    }else if(window.location.href.match('/app/proxy/[0-9]{13}/[a-zA-Z0-9]{6,8}')){
+        url = window.location.href.match('/app/proxy/[0-9]{13}/[a-zA-Z0-9]{6,8}')[0].split('/')[4]
+        window.projectType = 'preview';
     }else{
 
     }
 
-    url = /[http|https]:\/\/.*\/play\//.test(window.location.href) ? window.location.href.split("/play/")[1] : (window.location.href.split("/templates/")[1] ? window.location.href.split("/templates/")[1] : window.location.href.split('/appid/')[1].split(".html")[0]);
+    // url = /[http|https]:\/\/.*\/play\//.test(window.location.href) ? window.location.href.split("/play/")[1] : (window.location.href.split("/templates/")[1] ? window.location.href.split("/templates/")[1] : window.location.href.split('/appid/')[1].split(".html")[0]);
     var sceneId = url.split("#")[0].split("&")[0].split("?")[0].split("/")[0],param = url.split(sceneId)[1];
     param.indexOf("preview=preview") > 0 && (preview = !0),param.indexOf("mobileview=mobileview") > 0 && (mobileview = !0),mobilecheck() || addElmentsForPc(sceneId);
     var requestUrl = getRequestUrl(sceneId);
     jQuery.support.cors = !0,
     
-    getTemplateData();
+    // getTemplateData();
 
     $(document).bind("pagetemplate.getdata",function(evt, callback){
-        getTemplateData();
+        console.log('pagetemplate.getdata');
+        getTemplateData(callback);
     })
 
     var imgUrl,descContent,shareTitle

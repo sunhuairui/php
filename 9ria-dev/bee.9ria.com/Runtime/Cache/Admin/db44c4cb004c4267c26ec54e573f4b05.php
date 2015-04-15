@@ -105,21 +105,21 @@
                     </ul>
                 </div>
                 <div class="drop-down  a2">
-                    <span id="select-search" class="sort-txt" action-data="<?php echo ($search_key); ?>">
+                    <span id="select-search" class="sort-txt" data="<?php echo ($search_key); ?>">
                         <?php if($search_key == 'token' || $_GET['type'] == 'token'): ?>Token
                            <?php elseif($search_key == 'title' || $_GET['type'] == 'title'): ?>标题
                            <?php elseif($search_key == 'username' || $_GET['type'] == 'username'): ?>作者
                            <?php else: ?>名称<?php endif; ?>
                     </span>
                     <i class="arrow arrow-down"></i>
-                    <ul id="sub-sch-menu1" class="nav-list hidden" name="<?php echo ($search_key); ?>">
+                    <ul id="sub-sch-menu1" class="nav-list hidden">
                             <li><a href="javascript:;" value="name">名称</a></li>
                             <li><a href="javascript:;" value="title">标题</a></li>
                             <li><a href="javascript:;" value="username">作者</a></li>
                             <li><a href="javascript:;" value="token">Token</a></li>
                     </ul>
                 </div>
-                <input type="text" name="<?php echo ((isset($model['search_key']) && ($model['search_key'] !== ""))?($model['search_key']):'title'); ?>" class="search-input" value="<?php echo I('title');?>" placeholder="请输入关键字">
+                <input type="text" name="<?php echo ((isset($model['search_key']) && ($model['search_key'] !== ""))?($model['search_key']):'title'); ?>" class="search-input" value="<?php echo I($model['search_key']);?>" placeholder="请输入关键字">
                 <a class="sch-btn" href="javascript:;" id="search" url="<?php echo U('Project/index','model='.$model['name'],false);?>"><i class="btn-search"></i></a>
 	    </div>
 
@@ -250,7 +250,7 @@ $(function(){
     $("#search").click(function(){
         var url = $(this).attr('url');
         var status = $("#sch-sort-txt").attr("data");//状态
-        var search_key = $("#select-search").attr("action-data");//下拉选择查询
+        var search_key = $("#select-search").attr("data");//下拉选择查询
         var query  = $('.search-form').find('input').serialize();
         query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
         query = query.replace(/^&/g,'');
@@ -283,7 +283,7 @@ $(function(){
     $("#sub-sch-menu1 li").find("a").each(function(){
             $(this).click(function(){
                     var text = $(this).text();
-                    $("#select-search").text(text).attr("action-data",$(this).attr("value"));
+                    $("#select-search").text(text).attr("data",$(this).attr("value"));
                     $("#sub-sch-menu1").addClass("hidden");
             })
     });

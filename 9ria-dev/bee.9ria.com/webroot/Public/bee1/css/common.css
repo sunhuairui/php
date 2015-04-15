@@ -20,7 +20,7 @@ li{margin: 0;padding: 0;}
 
 
 .container{/*border: #ccc solid 1px*/position: relative;}
-.crumb{font-size: 24px;font-weight: bold;color: #099bee;padding: 15px 0 25px 0}
+.crumb{font-size: 24px;/*font-weight: bold;*/color: #099bee;padding: 15px 0 25px 0}
 .crumb a,.crumb a:hover{color: #3e3e3e;text-decoration: none;}
 ul.tag{position:absolute;top:66px;left:15px;z-index:10;overflow: hidden;padding: 0;margin-bottom: 20px}
 /*ul.tag li li:hover{width: 100%;background-color: red;}*/

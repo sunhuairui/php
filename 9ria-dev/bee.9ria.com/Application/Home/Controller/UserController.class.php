@@ -198,7 +198,7 @@ class UserController extends HomeController {
             D('Member')->logout();
             $this->redirect('template/index');
         } else {
-            $this->redirect('User/login');
+            $this->redirect('User/newlogin');
         }
     }
 

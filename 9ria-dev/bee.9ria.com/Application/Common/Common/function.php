@@ -2068,3 +2068,17 @@ function uploadErr($code){
     }
     return $res;
 }
+        
+/**
+ * 获取单条消息标题
+ * @author changzhengfei
+ */
+function get_message_title($message_id) {
+    if($message_id){
+        $map['id']=$message_id;
+        $message_data = M( 'sdk_message' )->field(array('title'))->where( $map )->find();
+        return $message_data['title'];
+    }else{
+        return false;
+    }
+}

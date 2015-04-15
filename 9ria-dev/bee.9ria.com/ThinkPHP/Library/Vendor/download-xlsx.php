@@ -143,6 +143,7 @@ function getExcel($fileName,$headArr,$data){
             //$objPHPExcel->getActiveSheet()->getColumnDimension(A)->setWidth(30);//设置表格宽度
             $objPHPExcel->getActiveSheet()->getColumnDimension()->setAutoSize(true);
             $objPHPExcel->getActiveSheet()->getColumnDimension($colum)->setWidth(30);//设置表格宽度
+            $objPHPExcel->getActiveSheet()->getRowDimension($colum)->setRowHeight(20);//设置表格高度
             $objPHPExcel->getActiveSheet()->getStyle($colum.'2')->getFont()->setBold(true);
             $objPHPExcel->getActiveSheet()->getStyle($colum.'2')->getAlignment()->setVertical(PHPExcel_Style_Alignment::VERTICAL_CENTER);//垂直居中
             $objPHPExcel->getActiveSheet()->getStyle($colum.'2')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);//左右居中

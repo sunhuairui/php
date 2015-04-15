@@ -90,9 +90,33 @@
         </div>
         <!-- 高级搜索 -->
         <div class="search-form fr cf">
-            <div class="sleft">
-                <input type="text" name="<?php echo ((isset($model['search_key']) && ($model['search_key'] !== ""))?($model['search_key']):'title'); ?>" class="search-input" value="<?php echo I('title');?>" placeholder="请输入关键字">
-                <a class="sch-btn" href="javascript:;" id="search" url="<?php echo U('Project/index','model='.$model['name'],false);?>"><i class="btn-search"></i></a>
+            <span class="status-style"><?php echo ($statusExtra['title']); ?>&nbsp;</span>
+            <div class="sleft"> 
+                <div class="drop-down a1">
+                    <span id="sch-sort-txt" class="sort-txt" data="<?php echo ($status); ?>">
+                        <?php if(get_status_value($statusExtra['extra'],$_GET['status']) == ''): ?>所有<?php else: echo get_status_value($statusExtra['extra'],$_GET['status']); endif; ?>
+                    </span>
+                    <i class="arrow arrow-down"></i>
+                    <ul id="sub-sch-menu" class="nav-list hidden" name="<?php echo ($statusExtra["name"]); ?>">
+                        <li><a href="javascript:;" value="">所有</a></li>
+                        <?php $_result=parse_field_attr($statusExtra['extra']);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><a href="javascript:;" value="<?php echo ($key); ?>"><?php echo ($vo); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                    </ul>
+                </div>
+                <div class="drop-down  a2">
+                    <span id="select-search" class="sort-txt" data="<?php echo ($search_key); ?>">
+                        <?php if($search_key == 'token' || $_GET['type'] == 'token'): ?>Token
+                           <?php elseif($search_key == 'title' || $_GET['type'] == 'title'): ?>标题
+                           <?php else: ?>名称<?php endif; ?>
+                    </span>
+                    <i class="arrow arrow-down"></i>
+                    <ul id="sub-sch-menu1" class="nav-list hidden">
+                            <li><a href="javascript:;" value="name">名称</a></li>
+                            <li><a href="javascript:;" value="title">标题</a></li>
+                            <li><a href="javascript:;" value="token">Token</a></li>
+                    </ul>
+                </div>
+                <input type="text" name="<?php echo ((isset($model['search_key']) && ($model['search_key'] !== ""))?($model['search_key']):'name'); ?>" class="search-input" value="<?php echo I($model['search_key']);?>" placeholder="请输入关键字">
+                <a class="sch-btn" href="javascript:;" id="search" url="<?php echo U('Template/index','model='.$model['name'],false);?>"><i class="btn-search"></i></a>
             </div>
         </div>
     </div>
@@ -219,17 +243,55 @@
 $(function(){
     //搜索功能
     $("#search").click(function(){
-        var url = $(this).attr('url');
+        var url = $(this).attr('url');  
+        var status = $("#sch-sort-txt").attr("data");//状态
+        var search_key = $("#select-search").attr("data");//下拉选择查询
         var query  = $('.search-form').find('input').serialize();
         query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
         query = query.replace(/^&/g,'');
+        query = query.replace("=","/");　
+        if(status != ''){
+	    query = 'status/' + status + "/" + query;
+        }
+        if(search_key != ''){
+	    query = 'type/' + search_key + "/" + query;
+        }
         if( url.indexOf('?')>0 ){
-            url += '&' + query;
+            url += '/' + query;
         }else{
             url += '?' + query;
         }
         window.location.href = url;
     });
+    
+    
+      //状态
+    $(".search-form").find(".a1").hover(function(){
+            $("#sub-sch-menu").removeClass("hidden");
+    },function(){
+            $("#sub-sch-menu").addClass("hidden");
+    });
+    //
+    $(".search-form").find(".a2").hover(function(){
+            $("#sub-sch-menu1").removeClass("hidden");
+    },function(){
+            $("#sub-sch-menu1").addClass("hidden");
+    });
+    $("#sub-sch-menu1 li").find("a").each(function(){
+            $(this).click(function(){
+                    var text = $(this).text();
+                    $("#select-search").attr("data",$(this).attr("value"));
+                    $("#sub-sch-menu1").addClass("hidden");
+            })
+    });
+    $("#sub-sch-menu li").find("a").each(function(){
+            $(this).click(function(){
+                    var text = $(this).text();
+                    $("#sch-sort-txt").text(text).attr("data",$(this).attr("value"));
+                    $("#sub-sch-menu").addClass("hidden");
+            })
+    });
+     
     //回车自动提交
     $('.search-form').find('input').keyup(function(event){
         if(event.keyCode===13){

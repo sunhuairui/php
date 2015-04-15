@@ -44,11 +44,11 @@ class TemplateController extends AdminController {
         }
         //下拉框选择搜索项进行模糊搜索
         $select_search = I('get.type','','htmlspecialchars');//type(名称/标题/作者)
-        $keyword = I('get.name','','htmlspecialchars');//keyword
+        $keyword = I('get.'.$model['search_key'],'','htmlspecialchars');//keyword
         if($keyword){
             if($select_search){//按照下拉选项搜索
                 if($select_search=='token'){
-                    $map[$select_search] =  htmlspecialchars($keyword);
+                    $map['apptoken'] =  htmlspecialchars($keyword);
                 }else{
                     $map[$select_search] = array('like','%' . htmlspecialchars($keyword) . '%');
                 }
@@ -56,17 +56,15 @@ class TemplateController extends AdminController {
                 $map['name'] = array('like','%' . htmlspecialchars($keyword) . '%');
             }
         }
-        
-        
-        
+                
     	$row = empty ( $model ['list_row'] ) ? 20 : $model ['list_row'];
     	
     	// 读取模型数据列表
     	empty ( $fields ) || in_array ( 'id', $fields ) || array_push ( $fields, 'id' );
     	$Model = D ( $this->modelName );
     	$data = $Model->field ( empty ( $fields ) ? true : $fields )->where ( $map )->order ( $order )->page ( $page, $row )->select ();
-    			
-    	/* 查询记录总数 */
+
+        /* 查询记录总数 */
     	$count = $Model->where ( $map )->count ();
     	$list_data ['list_data'] = $data;
     	
@@ -76,11 +74,12 @@ class TemplateController extends AdminController {
     		$page->setConfig ( 'theme', '%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%' );
     		$list_data ['_page'] = $page->show ();
     	}
-    	//下拉状态选项查询 auth@changzhengfei
-        $model_id = M('Model')->field('id')->getByName($this->tableName);
-        $where=array("model_id"=>$model_id['id'],"name"=>"status","status"=>"1");
+    	//下拉状态选项查询 auth@changzhengfei 
+        $where=array("model_id"=>$model['id'],"name"=>"status","status"=>"1");
         $status_extra = M('Attribute')->field(array("title","extra"))->where($where)->find(); 
                 
+        $this->assign('status',$status);
+        $this->assign('search_key',$select_search);
         $this->assign('statusExtra',$status_extra);//项目状态参数
     	$this->assign($list_data);
     	

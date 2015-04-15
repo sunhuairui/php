@@ -42,13 +42,14 @@ class ProjectController extends AdminController {
         if($status=="0" || $status){
             $map['status'] = $status;
         }
-        //下拉框选择搜索项进行模糊搜索
+        
+        //下拉框选择搜索项进行模糊搜索 
         $select_search = I('get.type','','htmlspecialchars');//type(名称/标题/作者)
-        $keyword = I('get.name','','htmlspecialchars');//keyword
+        $keyword = I('get.'.$model['search_key'],'','htmlspecialchars');//keyword
         if($keyword){
             if($select_search){//按照下拉选项搜索
                 if($select_search=='token'){
-                    $map[$select_search] =  htmlspecialchars($keyword);
+                    $map['token'] =  htmlspecialchars($keyword);
                 }else{
                     $map[$select_search] = array('like','%' . htmlspecialchars($keyword) . '%');
                 }
@@ -61,7 +62,7 @@ class ProjectController extends AdminController {
     	$order = 'create_time DESC,id DESC';
     	// 读取模型数据列表
     	empty ( $fields ) || in_array ( 'id', $fields ) || array_push ( $fields, 'id' );
-    	$Model = D($this->modelName);
+    	$Model = D ( $this->modelName );
     	$data = $Model->field ( empty ( $fields ) ? true : $fields )->where ( $map )->order ( $order )->page ( $page, $row )->select ();
     
     	/* 查询记录总数 */
@@ -76,10 +77,11 @@ class ProjectController extends AdminController {
     	}
     	
         //下拉状态选项查询 auth@changzhengfei
-        $model_id = M('Model')->field('id')->getByName($this->tableName); 
-        $where=array("model_id"=>$model_id['id'],"name"=>"status","status"=>"1");
+        $where=array("model_id"=>$model['id'],"name"=>"status","status"=>"1");
         $status_extra = M('Attribute')->field(array("title","extra"))->where($where)->find(); 
          
+        $this->assign('status',$status);
+        $this->assign('search_key',$select_search);
         $this->assign('statusExtra',$status_extra);//项目状态参数
     	$this->assign($list_data);
     	
@@ -160,12 +162,10 @@ class ProjectController extends AdminController {
     	$env = (APP_STATUS == 'production') ? 1 : 0;
     	
     	$id || $id = I ( 'id' );
-    	
     	$model = M('Model')->getByName($this->tableName);
     	$this->assign('model', $model);
     	
     	$Model = D ( $this->modelName );
-    	
     	if (IS_POST) {
     		
     		// 获取数据
@@ -175,7 +175,7 @@ class ProjectController extends AdminController {
     		$template_id = $data['template_id'];
     		
     		$data 	= I('post.');
-    		
+    		//在编辑的时侯改变了模板
     		if($template_id != $data['template_id']) {
     			$map = array('id' => $data['template_id']);
     			if ($env === 1) {
@@ -186,6 +186,7 @@ class ProjectController extends AdminController {
     			
     			$Template = D('Home/Template');
     			$template_info = $Template->where($map)->find();
+    			print_r($Template->getLastSql());exit;
     			if (!$template_info) {
     				$this->error('指定模板不存在！');
     			}
@@ -206,8 +207,7 @@ class ProjectController extends AdminController {
     		}
     		
     		// 获取模型的字段信息
-    		$Model = $this->checkAttr ( $Model, $model ['id'] );
-    		
+    		$Model = $this->checkAttr ( $Model, $model ['id'] );    		
     		if ($Model->create ($data) && $Model->save ()) {
     			$this->success ( '保存' . $model ['title'] . '成功！', U ( 'index' ) );
     		} else {
@@ -218,7 +218,7 @@ class ProjectController extends AdminController {
     		$data = $Model->where(array('env' => $env))->find ( $id );
     		$data || $this->error ( '数据不存在！' );
     		
-    		$fields = get_model_attribute ( $model ['id'] );
+    		$fields = get_model_attribute ($model ['id'] );
     			
     		$this->assign ( 'fields', $fields );
     		$this->assign ( 'data', $data );

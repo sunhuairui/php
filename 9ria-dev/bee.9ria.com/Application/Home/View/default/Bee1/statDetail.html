@@ -125,7 +125,7 @@ ul.bGray li:hover{background-color: #099bee!important;color: #fff!important}
                 </div>
                 <div role="tabpanel" class="tab-pane formInfo" id="baoming">
                     <div class="baomingCon">
-                        <p style="margin-bottom：20px">报名人数：98977</p>
+                        <p style="margin-bottom：20px"><!-- 报名人数：98977 --></p>
 	                    <input type="text" value="输入需要搜索的报名信息(性别、生日、序号除外)" class="txtInp searchInp">
 	                    <input type="button" value="搜索" class="btnBlue searchBtn">
 	                </div>
@@ -136,7 +136,7 @@ ul.bGray li:hover{background-color: #099bee!important;color: #fff!important}
                             <li role="tab" data-toggle="tab" aria-controls="50" class="active">50</li>
                             <li role="tab" data-toggle="tab" aria-controls="100">100</li>
                         </ul>
-                        <span><a href="{:U(\'Export/registerInfo\',array(\'appid\'=>$game[appid]))}" class="exportInfo" id="exportRegisterInfo">导出所有报名信息</a></span>
+                        <span class="export_baoming"></span>
                     </div>
                     <div id="baomingTable"></div>
                 </div>
@@ -358,18 +358,22 @@ ul.bGray li:hover{background-color: #099bee!important;color: #fff!important}
             $.get(target, {code: code, list_row: row},function(data) {
                 if(data.status == 1) {
                 	if(data.info.formTotal != '') {
-                		$(".baomingCon p").html('报名人数：'+ data.info.formTotal);
-                	}
-                	
+                		$(".baomingCon p").html('报名人数：'+ data.info.formTotal); 
+                        }
+                        if(data.info.formTotal !='0') {
+                	    var export_var='<a href="{:U(\'Export/registerInfo\',array(\'appid\'=>$game[appid]))}" class="exportInfo" id="exportRegisterInfo">导出所有报名信息</a>';
+                	    $(".export_baoming").html( export_var );
+                        }
                 	var apphtml = '<table><tbody>';
                 	var colCount = 0;
                 	var formItemArrs = new Array(); 
                 	if(data.info.formItems != '') {
                 		apphtml += '<tr><th>序号</th>';
                         $.each(data.info.formItems, function() {
-                        	 apphtml += '<th>'+ this.label +'</th>';
-                        	 formItemArrs[colCount] = this.name;
-                        	 colCount++;
+                            var formItem = this;
+                        	apphtml += '<th>'+ formItem.label +'</th>';
+                        	formItemArrs[colCount] = formItem.name;
+                        	colCount++;
                         });
                         apphtml += '</tr>';
                         
@@ -383,7 +387,7 @@ ul.bGray li:hover{background-color: #099bee!important;color: #fff!important}
                                 	var itemName = formItemArrs[i];
                                 	var itemStr = '';
                                 	if(itemName == 'sex') {
-                                		itemStr = formItem['sex'] == 1 ? '<span class="fBlue">男</span>' : '<span class="fRed">女</span>';
+                                		itemStr = (formItem['sex'] == 1 || formItem['sex'] == '1' || formItem['sex'] == '男') ? '<span class="fBlue">男</span>' : '<span class="fRed">女</span>';
                                 	} /*else if(itemName == 'birthday') {
                                 		itemStr = formItem['birthday'] == 1 ? '男' : '女';
                                 	} */else {
@@ -394,7 +398,8 @@ ul.bGray li:hover{background-color: #099bee!important;color: #fff!important}
                                 apphtml += '</tr>';
                             });
                         } else {
-                            apphtml += '<tr><td colspan="'+ colCount +'">没有查询结果</td></tr>';
+                            var row_count = colCount + 1;
+                            apphtml += '<tr><td colspan="'+ row_count +'">没有查询结果</td></tr>';
                         }
                         
                     } else {

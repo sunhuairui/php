@@ -593,7 +593,7 @@ ul.introList li span {
 	font-weight: normal;
 }
 /*背景*/
-.icoCreat,.icoC,.icoView,.icoVistor,.icoZ,.online,.offline,.icoDownload,.line2,.icoPublish,.icoSave,.icoSharecount,.icoSharerate,.dataA,#goTop,#sugest,.preStep,.audioBtn,.noAudioBtn,.radio,.checked,.triangleShadow,.checkboxBlock input,.selectBlue,i.delBtn,i.moveBtn,i.delBtnHid,.audioBtn,.noAudioBtn,.pptPage h4,.exportInfo,.ui-state-default .ui-icon{
+.icoCreat,.icoC,.icoView,.icoVistor,.icoZ,.online,.offline,.icoDownload,.line2,.icoPublish,.icoSave,.icoSharecount,.icoSharerate,.dataA,#goTop,#sugest,.preStep,.audioBtn,.noAudioBtn,.radio,.checked,.triangleShadow,.checkboxBlock input,.selectBlue,i.delBtn,i.moveBtn,i.delBtnHid,.audioBtn,.noAudioBtn,.pptPage h4,.exportInfo,.ui-state-default .ui-icon,.caseList li h3 a{
 	background: url(../images/sprite.png) no-repeat;
 }
 
@@ -1981,7 +1981,7 @@ a.dataA {
 }
 
 ul.tabs {
-	width: 642px;
+	/*width: 642px;*/
 	border: 1px solid #dadada;
 	height: 37px;
 	line-height: 37px;
@@ -2235,7 +2235,7 @@ ul.accountForm li input,ul.accountForm li select,ul.accountForm li textarea {
 }
 /*0331排行榜发奖*/
 ul.tabs {
-	width: 682px;
+	/*width: 682px;*/
 	border: none;
 }
 
@@ -2384,14 +2384,14 @@ ul.main h3 {
 .registerBox, .regestRuleBoxText {padding: 17px 20px;}
 .registerBox h4{/*font-size:16px;color:#3e3e3e*/font-size:16px; /*margin:0;*/}
 .registerTabBox {/*margin-bottom:5px; padding:10px 30px; border-bottom: #ccc solid 1px;*/padding:0 30px;}
-.registerTabBox ul li {width: 133px; height: 32px; margin:5px 10px 0 0; padding:0;}
+.registerTabBox ul li {width: 135px; height: 32px; margin:5px 10px 0 0; padding:0;}
 .registerTabBox label {background: url(../images/sprite.png) no-repeat; border:none; }
-.registerTabBox label.ui-state-default{ background-position:3px -1130px;}  
+.registerTabBox label.ui-state-default{ background-position:3px -1445px;}  
 .registerTabBox label.ui-state-hover,.registerTabBox label.ui-state-active { color:#099bee; }
-.registerTabBox label.ui-state-active { background-position:0 -1076px;}
-.registerTabBox label span.ui-button-text {margin-left: 30px; padding:0; font-family: '微软雅黑'!important; font-size:16px; line-height: 32px;text-align:left;}
+.registerTabBox label.ui-state-active { background-position:0 -1494px;}
+.registerTabBox label span.ui-button-text {margin-left: 25px; padding:0; font-family: '微软雅黑'!important; font-size:16px; line-height: 32px;text-align:left;}
 
-ul.tabs{width: 662px}
+ul.tabs{/*width: 662px*/}
 .checkboxBlock input,.checkboxBlockAdd input,.selectBlue{background: url(../images/sprite.png) no-repeat;}
 .checkboxBlock input,.checkboxBlockAdd input{width: 15px;height: 15px;line-height: 15px;margin-right:5px;font-size: 16px;background-position: 0 -1454px;}
 .selectBlue{position:absolute;top:0px;left:-3px;display: inline-block;width: 20px;height: 20px;background-position: 2px -1450px;}
@@ -2432,9 +2432,6 @@ a.aBlue{color: #099bee;text-decoration: underline;font-size: 16px;display: inlin
 .pptPage ol.classify li h4{border: none;}
 .pptPage select{-webkit-appearance: none;padding: 0 15px}
 .pptPage input{background-color: #F8F8F8;border: #dadada solid 1px;padding:5px 10px;}
-
-
-
 /*0403小调整*/
 .registPrize-item form div label{font-size: 16px}
 .prize-item{border-radius: 0}
@@ -2450,8 +2447,229 @@ a.aBlue{color: #099bee;text-decoration: underline;font-size: 16px;display: inlin
 .businessCard h4{padding-top: 5px}
 .erCode{margin: 15px 0 15px}
 .erCode input{width: 703px;margin-left:15px;}  
+/*0410动态分享*/
+.weixinCon{width: 430px;height: 180px;font-size: 18px;}
+#apptitle{height: 25px;line-height: 25px;font-weight: bold;word-wrap: break-word;white-space: nowrap;text-overflow: ellipsis;-o-text-overflow: ellipsis;overflow: hidden;font-size: 22px;}
+#appdesc{margin-left: 112px;overflow: hidden;word-wrap: break-word;height: 100px;line-height: 25px;}
+
+.upload{margin-right: 20px;}
+#iconupload{z-index: 2;}
+.editorTplPage .editorBox .line h3.lTit{width: 252px}
+.editorTplPage .tips{font-size: 16px}
+.editorTplPage .editorBoxIn img{width: 100%;height: 100%}
+.avatarBlock{float:left;position: relative;width: 140px;height: 140px;margin-right:10px;border:#ccc solid 1px;}
+.avatarBlock .intr{position: absolute;bottom: 0;left: 0;width: 100%;height:30px;line-height:30px;color:#fff;font-size:16px;background:#099bee;opacity: 0.6;-webkit-opacity: 0.6;text-align: center;}
+.bBlock{margin-top:15px;}
+.editorTplPage .editorBoxIn textarea{font-size: 18px;color: #696969;width: 647px;height: 140px}
+.editorTplPage input{width: 796px}
+.editorTplPage .editorBoxIn{margin: 7px 0 15px}
+input.set-upload{position: absolute;opacity: 0;filter:alpha(opacity=0);width:140px;height:140px;}
+/*0413*/
+/*new nav*/
+.headerTop{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #1e1e1e;
+  z-index: 100}
+.navNew{
+  width: 1200px;
+  height: 100%;
+  line-height: 60px;
+  margin:0 auto;
+}
+.navNew a.logo {
+  float: left;
+  background: url(../images/logo.png)  0 15px no-repeat;
+  display: inline-block;
+  width: 154px;
+  height: 60px;
+  padding:0;
+  margin-right: 35px
+}
+.navNew a{
+  font-size: 18px;
+  height: 60px;
+  line-height: 30px;
+  padding: 15px 34px;
+  text-decoration: none;
+  color: #fff;
+}
+.navNew a.active,.navNew a:hover{
+  color: #099bee;
+}
+.navNew a.active {
+  border-top: #099bee 3px solid;  
+}
+.navNew .loginInfo{
+  width: 221px;
+}
+.navNew .logout{
+  display: inline-block;
+  width: 48px;
+  line-height: 60px;
+  padding:0 10px;
+}
+.navNew .logout a{
+  display: inline-block;
+}
+.navNew .loginInfo{
+  text-align: right;
+  margin: 0
+}
+.navNew .loginInfo a{
+  float: right;
+  height: 60px;
+  line-height: 60px;
+  padding:0 5px;
+}
+.navNew .userName{
+  display: inline-block;
+  max-width: 140px;  
+  overflow: hidden;
+}
+/*new nav end*/
+.wrapperNew{
+  width: 1200px;
+  min-height: 700px;
+  margin: 0 auto
+}
+.wrapperNew ul.main{
+  margin-top: -12px;
+}
+.wrapperNew .crumb{
+  padding-bottom: 20px;
+}
+.caseList .imgBlock{
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  top:0;
+  left: 0;
+  display: none;
+
+}
+.caseList .imgBlock .opacityBg{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 220px;
+  height: 220px;
+  margin: 0;
+  background: #000;
+  opacity: 0.6;
+  z-index: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.caseList .imgBlock .erCode{
+  display: inline-block;
+  position: absolute;
+  top:5px;
+  left:20px;
+  z-index: 2;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.caseList img{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width:215px;
+  height:214px;
+}
+.caseList .imgBlock .erCode img{
+   width: 180px!important;
+   height: 180px!important;	
+}
+.caseList li{
+  float: left;
+  position: relative;
+  width: 220px;
+  height: 305px;
+  margin: 0 15px 30px 0;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center; 
+}
+.caseList li h3{
+  border-bottom: #F8F8F8 solid 1px;
+  color: #333;
+  margin: 0 10px;
+  padding: 7px 5px;
+  font-size: 18px;
+  text-align: left;;
+}
+.caseList li h3 a{
+  float: right;
+  display: inline-block;
+  width: 20px;
+  height: 24px;
+  background-position: 0 -2500px;
+}
+.caseList .intro{
+  padding: 10px;
+  text-align: left;
+  color:#b4b4b4 ;
+}
+
+/*分页样式*/
+.pages {text-align: center;margin-top: 50px;padding:30px 0px;}
+.pages a,.pages span.current {width: 38px;height: 38px; border-radius: 19px; background: #fff;color:#888;font-size: 18px;display: inline-block;text-align: center;line-height: 38px;margin-right: 15px;}
+.pages a:hover,.pages a.current,.pages span.current {background: #2686d0;color:#fff;}
 
 
+/*兑换管理05/03/02*/
+.exchangeCon input[type=text]{width: 896px;height: 30px;padding:0 40px;background-color:#eeeeee;border: #b4b4b4 solid 1px;font-size: 16px;color: #8d8d8d }
+.exchangeCon input[type=button]{background-color: #099bee;color: #fff;border: none;width: 133px;height: 30px;font-size: 16px;margin-left: 15px}
+.dataTabs li.active a{height: 43px;}
 
-
-
+/*报名信息*/
+.fRed{color: #f35a5b!important}
+.formInfo .selectBox{font-size: 16px;margin-top: 15px}
+.formInfo .selectBox ul{display: inline-block;vertical-align: bottom;}
+.formInfo .selectBox ul li,.selectBox ul li.active{float: left;background: url(/Public/bee1/images/sprite.png) no-repeat;padding-left: 28px;margin-right: 35px;}
+.formInfo .selectBox ul li{background-position: 0 -1816px;}
+.formInfo .selectBox ul li.active{background-position: 0 -1842px;}
+.formInfo .txtInp{width: 70%;margin-top: 20px;padding:2px 10px;height: 40px;line-height: 40px;background-color: #eeeeee;border: #dadada;}
+.formInfo .btnBlue{border: none;}
+.formInfo .exportInfo{float:right;background: url(/Public/bee1/images/sprite.png) no-repeat;background-position: 0 -1877px;padding-left: 22px;color: #099bee;cursor: pointer;text-decoration: underline;}
+.formInfo table{margin-top:30px;}
+.formInfo table td,.formInfo table th{border: #dadada solid 1px;text-align: center;width: 210px;height:50px;padding: 12px 25px}
+.formInfo table th{color: #5e5e5e;font-size: 16px;}
+.formInfo table td{font-size: 14px;color: #b4b4b4}
+/*0414 bootstrap*/
+.modal-header h3{
+text-align: center;
+}
+.artical .modal-body h4{
+font-size: 18px;
+color: #333;
+text-align: left!important;
+}
+.artical .modal-body p{
+color: #333;
+text-align: left!important;
+}
+.artical .modal-backdrop{
+display: none;
+}
+.modal-body{
+ text-align: left;
+ margin-left: 20px;
+}
+.modal-footer {
+  margin-bottom: 0;
+  text-align: right;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  -moz-box-shadow: inset 0 1px 0 #fff;
+  box-shadow: inset 0 1px 0 #fff;
+}
+/* 替换文字弹出框提示文字样式修改**/
+p.word-tips{font-weight: bold;}
